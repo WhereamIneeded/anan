@@ -1,0 +1,3494 @@
+{
+  "说明": "原照片与旧制作档案均逐字节保存；所有路径仅记录来源，不是运行时配置。",
+  "交接日期": "2026-10-21",
+  "原始档案": {
+    "原文件名": "制作档案.zip",
+    "字节数": 81997154,
+    "SHA256": "f751442daec26ea30d6fb096263c2a23d061c1ec49c1dcca2a603e63966800da",
+    "保存方式": "完整展开全部文件，不重复上传 ZIP"
+  },
+  "原始照片": [
+    {
+      "原文件名": "0.jpg",
+      "原始位置": "D:/WAIN/Cat/0.jpg",
+      "仓库路径": "资料/原始照片/0.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 1078,
+      "原始像素高": 1316,
+      "EXIF方向": 1,
+      "字节数": 270019,
+      "SHA256": "f779b9ad023356d9a0edd9245fa2870e807a162466bdc448f8472267358a8dd4"
+    },
+    {
+      "原文件名": "00.jpg",
+      "原始位置": "D:/WAIN/Cat/00.jpg",
+      "仓库路径": "资料/原始照片/00.jpg",
+      "会话明确提供": false,
+      "原始像素宽": 2048,
+      "原始像素高": 2731,
+      "EXIF方向": 1,
+      "字节数": 722551,
+      "SHA256": "a013401131b63826b881ee8784556a2f842aaa87a9aac795b418490d53a2f8d3"
+    },
+    {
+      "原文件名": "1.jpg",
+      "原始位置": "D:/WAIN/Cat/1.jpg",
+      "仓库路径": "资料/原始照片/1.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 1080,
+      "原始像素高": 1730,
+      "EXIF方向": 1,
+      "字节数": 201424,
+      "SHA256": "00b8f3dd0c64b3f79496e5776bb6b9c62f8ecdf71471c8d6cdbf0cc332c1a30d"
+    },
+    {
+      "原文件名": "2.jpg",
+      "原始位置": "D:/WAIN/Cat/2.jpg",
+      "仓库路径": "资料/原始照片/2.jpg",
+      "会话明确提供": false,
+      "原始像素宽": 720,
+      "原始像素高": 971,
+      "EXIF方向": 1,
+      "字节数": 102889,
+      "SHA256": "65434948eeb6b841fbca1fc3777d3e778fa0ac6da97bda15790c097a43e2f476"
+    },
+    {
+      "原文件名": "3.jpg",
+      "原始位置": "D:/WAIN/Cat/3.jpg",
+      "仓库路径": "资料/原始照片/3.jpg",
+      "会话明确提供": false,
+      "原始像素宽": 4368,
+      "原始像素高": 5824,
+      "EXIF方向": 1,
+      "字节数": 4165239,
+      "SHA256": "d3a8a0d06c5a92e5f114e2ec8f4f39faec6cc67fd357b30c41d11ca54bf67faf"
+    },
+    {
+      "原文件名": "4.jpg",
+      "原始位置": "D:/WAIN/Cat/4.jpg",
+      "仓库路径": "资料/原始照片/4.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 960,
+      "原始像素高": 1282,
+      "EXIF方向": 1,
+      "字节数": 65256,
+      "SHA256": "fb52085c42ec013606656e578a867c9717c95713887f09d7bdb707aad3bdc13b"
+    },
+    {
+      "原文件名": "5.jpg",
+      "原始位置": "D:/WAIN/Cat/5.jpg",
+      "仓库路径": "资料/原始照片/5.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 960,
+      "原始像素高": 1282,
+      "EXIF方向": 1,
+      "字节数": 128261,
+      "SHA256": "ade5e5941378947bc45d75a4a521d256415d188ec7c934174672b179b812290e"
+    },
+    {
+      "原文件名": "6.jpg",
+      "原始位置": "D:/WAIN/Cat/6.jpg",
+      "仓库路径": "资料/原始照片/6.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 960,
+      "原始像素高": 1282,
+      "EXIF方向": 1,
+      "字节数": 111604,
+      "SHA256": "168d1d2636dcd3d124ec4a7be889a729fab274644b7164ef26dcf342fdb0eb88"
+    },
+    {
+      "原文件名": "微信图片_20261019220735_42213_118.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261019220735_42213_118.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261019220735_42213_118.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 3024,
+      "原始像素高": 4032,
+      "EXIF方向": 1,
+      "字节数": 1474503,
+      "SHA256": "b391a31793e8a6fdafb58d32ef9001a4865a6a120aedbaff18aa2ba3e7a750f5"
+    },
+    {
+      "原文件名": "微信图片_20261019220737_42214_118.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261019220737_42214_118.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261019220737_42214_118.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 4032,
+      "原始像素高": 3024,
+      "EXIF方向": 6,
+      "字节数": 2271588,
+      "SHA256": "8c1c12f277da52aea30f030c56544f752411535fa6288f762761ae96047ea80f"
+    },
+    {
+      "原文件名": "微信图片_20261021021615_47_662.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261021021615_47_662.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261021021615_47_662.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 1279,
+      "原始像素高": 1706,
+      "EXIF方向": 1,
+      "字节数": 296865,
+      "SHA256": "302fb5fa1e5e2c6c17a7ea0b4365ba6601e6d8a7d349090f16ceb743a1713ad9"
+    },
+    {
+      "原文件名": "微信图片_20261021021704_48_662.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261021021704_48_662.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261021021704_48_662.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 1279,
+      "原始像素高": 1706,
+      "EXIF方向": 1,
+      "字节数": 137706,
+      "SHA256": "41ec95f04d0cf22d8777225550f8ba70214ebd2549ea0ba832c43d9460543d2e"
+    },
+    {
+      "原文件名": "微信图片_20261021021759_49_662.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261021021759_49_662.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261021021759_49_662.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 1279,
+      "原始像素高": 1706,
+      "EXIF方向": 1,
+      "字节数": 348971,
+      "SHA256": "49e4c4dafb344f4ad843ce88760f96457a8629c0cd5ebd2d919f668794d62276"
+    },
+    {
+      "原文件名": "微信图片_20261021021814_50_662.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261021021814_50_662.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261021021814_50_662.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 960,
+      "原始像素高": 1282,
+      "EXIF方向": 1,
+      "字节数": 169448,
+      "SHA256": "2daedcb8f60c9bec2c2eda3987c430d6659010e6cb51a8da26c4d326495e2bd1"
+    },
+    {
+      "原文件名": "微信图片_20261021021838_51_662.jpg",
+      "原始位置": "D:/WAIN/Cat/微信图片_20261021021838_51_662.jpg",
+      "仓库路径": "资料/原始照片/微信图片_20261021021838_51_662.jpg",
+      "会话明确提供": true,
+      "原始像素宽": 960,
+      "原始像素高": 1282,
+      "EXIF方向": 1,
+      "字节数": 140023,
+      "SHA256": "22a6920824d4b689a8c771995f2dbb4612963b9dc785685b912f4eeb7a3627e0"
+    }
+  ],
+  "历史档案文件": [
+    {
+      "档案内路径": "源图与校验/decoded/base.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/base.png",
+      "字节数": 2116394,
+      "SHA256": "dac1cf54ec35646051338fe9c452b0b87cd4f2adda39f05d4cb1e423f3689d4c"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/failed.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/failed.png",
+      "字节数": 1675914,
+      "SHA256": "a8478d2c07b23c1f57636ec0d0c75ea7cb3886e73c8b10697876f310bde960be"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/idle.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/idle.png",
+      "字节数": 1887504,
+      "SHA256": "2908cc1d3fb94266a279a3427008d69c11930023bd6b9c89cd01fffd794a7c98"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/jumping.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/jumping.png",
+      "字节数": 1777941,
+      "SHA256": "5f3f454af869132fc06eb82cc38f39e08f04b6e147555fa09c39eaee8669f284"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-anchors/000.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/000.png",
+      "字节数": 52388,
+      "SHA256": "20e1c492b69e820b30c62751333f39c520a31b11fef45ca00f9fb32f5aaa02f4"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-anchors/090.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/090.png",
+      "字节数": 51127,
+      "SHA256": "d36e201193d46923021bc0c1accf6c403906b674d69160b60835248e4027c393"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-anchors/180.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/180.png",
+      "字节数": 56379,
+      "SHA256": "b6cffa0020b1ba734a21dd4b9fadafb1031ea2bd762d63deed61907cacbc080d"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-anchors/270.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/270.png",
+      "字节数": 51058,
+      "SHA256": "f71ba18f3fc8f7c813dd46a88c8b8733cefab10bb7baa27603a8da8d3f144863"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-anchors-approved.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors-approved.png",
+      "字节数": 206694,
+      "SHA256": "dcca6e8a7cb488f9afc213deebbdd50aed7c008dd8cc54c443d762357304ae43"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-cardinals.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-cardinals.png",
+      "字节数": 1990054,
+      "SHA256": "b18dca99097e215eb93c3d7608c4d38ebfc6d11297f783a6dfd3dc1b55d6155d"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-row-10.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-row-10.png",
+      "字节数": 1435891,
+      "SHA256": "5d12988743c368ace3f2a8b1ab8476123d04cab497c03c338322a7ab2068814d"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/look-row-9.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-row-9.png",
+      "字节数": 1576726,
+      "SHA256": "4a90d4ca167d6e327f92dc5e6b5a49ebf5fe223781073bc42c74649eff3cbdac"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/review.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/review.png",
+      "字节数": 1779939,
+      "SHA256": "deb5bc8b6811099a96ff2bf008c83f594c76a0f2a6a0e3511e296cbfe5683f2c"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/running-left.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/running-left.png",
+      "字节数": 1511252,
+      "SHA256": "d1ec6f214fe9feb71e70964d6247269948797787a108a6afcfb11f99ee8dcaca"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/running-right.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/running-right.png",
+      "字节数": 1505299,
+      "SHA256": "52c186fd3b85227f9f005ace0f90c70f8d41dbf51597303036815ba2b5607c33"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/running.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/running.png",
+      "字节数": 1914657,
+      "SHA256": "b03170cf7ab87d31ca0949d4d87a62b6bc5996b081294d328045e62b4523404b"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/waiting.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/waiting.png",
+      "字节数": 1659068,
+      "SHA256": "420f03743908caa425f2e82c53211706e6df4a904ad701046e0752bbae12f35e"
+    },
+    {
+      "档案内路径": "源图与校验/decoded/waving.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/waving.png",
+      "字节数": 1988049,
+      "SHA256": "7d89b4b9b9cfe81cedf26913776d93a4943e21cc0335cbbf144ae5e250712785"
+    },
+    {
+      "档案内路径": "源图与校验/final/spritesheet-extended-raw.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/final/spritesheet-extended-raw.png",
+      "字节数": 2989436,
+      "SHA256": "d14b279b820679ee39099a345aded7c059f2abc5ee732489239bd9c62d9a2e66"
+    },
+    {
+      "档案内路径": "源图与校验/final/spritesheet-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/final/spritesheet-manifest.json",
+      "字节数": 1691,
+      "SHA256": "097ab24e1b63048c40a9b62e7be80ca7eefb382510ad71339cb1114daf302ed4"
+    },
+    {
+      "档案内路径": "源图与校验/final/validation-extended.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/final/validation-extended.json",
+      "字节数": 19156,
+      "SHA256": "e4fcb67295255227bbbf3cd8f2367f154a6f47188ab727a1fa8522e8d15869bf"
+    },
+    {
+      "档案内路径": "源图与校验/imagegen-jobs.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/imagegen-jobs.json",
+      "字节数": 20743,
+      "SHA256": "529192674d58ac55974356e92b7140647591f379193f3c4b42167c7baf7ed1f1"
+    },
+    {
+      "档案内路径": "源图与校验/pet_request.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/pet_request.json",
+      "字节数": 9549,
+      "SHA256": "78c4edd1962cc652e58d39ca7d9ceaf76838f2ef2cf9b0851bcdfcd7a95f700f"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/base-pet.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/base-pet.md",
+      "字节数": 1217,
+      "SHA256": "2bc32ee116921056a54ca9869d45e9f24b540255e9a97187a21679ae6c2bf71c"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/look-anchor-repairs/000.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/000.md",
+      "字节数": 849,
+      "SHA256": "f545ac22fc1859a32d5b882e12a40ad55411564a597425c75759a0b357bb27ed"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/look-anchor-repairs/090.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/090.md",
+      "字节数": 866,
+      "SHA256": "8062dd703d6487c544cccae47f7992c5cd5eb858af3b78a534409f93d74a3393"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/look-anchor-repairs/180.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/180.md",
+      "字节数": 854,
+      "SHA256": "6e1637931236bf4ed80078a94e19097c88c70a0fd399acf02e4724ff40f16931"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/look-anchor-repairs/270.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/270.md",
+      "字节数": 864,
+      "SHA256": "6b1cc518a53b4e1a755229cddd3d68f65e1c59aeda48e1339410da70c27d72d0"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/look-cardinals.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-cardinals.md",
+      "字节数": 1437,
+      "SHA256": "b0121375a451ed2d3c62beb00f8bd2547548dfbd3387a3f3c4a563b7965d4e8c"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/failed.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/failed.md",
+      "字节数": 1431,
+      "SHA256": "7e8b697ea544cb96ad15a6a4f80dcd0a64f8603aef3a1b33c2aa9be18d4ed0b6"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/idle.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/idle.md",
+      "字节数": 1971,
+      "SHA256": "85aa4010e5f4178e2fda446659606140d7af9df1262255bf351519c172f8d199"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/jumping.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/jumping.md",
+      "字节数": 1429,
+      "SHA256": "b8602691d133ec50498014acc1c4b8912c8fcae10ff3c195a8bdfc47fbcb204a"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/look-row-10.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/look-row-10.md",
+      "字节数": 3677,
+      "SHA256": "e51b65df16c89cc621c41015454e98a63b92105166a3decce24955865231ca1a"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/look-row-9.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/look-row-9.md",
+      "字节数": 3593,
+      "SHA256": "061fa665cdcd763c61f02674263f8c5ade5ef28eb9e31e86b555bb0fffb63689"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/review.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/review.md",
+      "字节数": 1314,
+      "SHA256": "535ffa74b433dcc6e811ebb414a1387f45adba111ad589ae6484132588295f69"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/running-left.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/running-left.md",
+      "字节数": 1422,
+      "SHA256": "0c99a2f2976a406f4810a11097f573ef18bafb52e3614ce62f7ff361914c8b7c"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/running-right.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/running-right.md",
+      "字节数": 1427,
+      "SHA256": "25898c7e0ad68d5fcdf2ad68c46f9da92744b64eb905982f1858ace9aa52c504"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/running.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/running.md",
+      "字节数": 1659,
+      "SHA256": "aa449328eaefed429883111b06ddf4cc6e003b612def2ccc06a317e6f612b686"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/waiting.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/waiting.md",
+      "字节数": 1227,
+      "SHA256": "c7a5c9570c129962a2d60c98c7b4a68c0e330e7c494348bc975bb806f11ade6e"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/row-retries/waving.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/waving.md",
+      "字节数": 1237,
+      "SHA256": "185029d3e9c6c618b67c7cab298e398d449350d0d57e852450ed1a7868c2dde6"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/failed.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/failed.md",
+      "字节数": 2319,
+      "SHA256": "fe7a8e89822977f3ce78bf13ff880187f801c7045f348136b5529a3345f4ad74"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/idle.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/idle.md",
+      "字节数": 2859,
+      "SHA256": "e78d4f12884b1b7a90344d210d16356f1920ea20153f5c39a8716ed08a83219b"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/jumping.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/jumping.md",
+      "字节数": 2317,
+      "SHA256": "5fe6f9fc03942cfdd339bb1425377049f69a0332ce08e54db3ec7325a90ba478"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/look-row-10.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/look-row-10.md",
+      "字节数": 4793,
+      "SHA256": "468cc01e2181659381e01e5c1f8e83d5999e2b9fad9503d2cde7e41c1e612687"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/look-row-9.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/look-row-9.md",
+      "字节数": 4723,
+      "SHA256": "a7bed5bb90361129d5bd421f45cb5cc283e2b88cba2e41f4ffd822416e5cbb64"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/review.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/review.md",
+      "字节数": 2202,
+      "SHA256": "de7d6d3a6fe6d94ced0d4901f8ebfde7c7355b75a1cbc20f6a6677a6306397a2"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/running-left.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/running-left.md",
+      "字节数": 2310,
+      "SHA256": "82f0e665d78281a61126b3d10da168e2657c7147a534b49618dd2c2613b741e2"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/running-right.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/running-right.md",
+      "字节数": 2315,
+      "SHA256": "9f0ab86c13bf138fa60035f909b68fca070de8b9a34c34364fdc3a5a111aafa8"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/running.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/running.md",
+      "字节数": 2547,
+      "SHA256": "38b1fd89e151e48f8f1970c1334bc7404e6320fcd44606e83edcbc536645e0fa"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/waiting.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/waiting.md",
+      "字节数": 2115,
+      "SHA256": "83db633b696fbb60f1142830e28894540fb77c90630ec4457faf06978ca0583c"
+    },
+    {
+      "档案内路径": "源图与校验/prompts/rows/waving.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/waving.md",
+      "字节数": 2125,
+      "SHA256": "3376be413ecfd4d2b2a26afcad25e0d2b753f5edcdfffbe88c83b16ef61e9285"
+    },
+    {
+      "档案内路径": "源图与校验/qa/blind-answer-key.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-answer-key.json",
+      "字节数": 4442,
+      "SHA256": "1c1394df423dda961aa2be8cf0ece3e944cbccb8165da383acb05debb0b97cb0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/blind-combined.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-combined.json",
+      "字节数": 4069,
+      "SHA256": "69855d58b45e7ae83e39e6ac1cb41d40e0ccac8e605767f542201059e72c3443"
+    },
+    {
+      "档案内路径": "源图与校验/qa/blind-directions.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-directions.png",
+      "字节数": 950932,
+      "SHA256": "91d6668315a043e48aacf66f4048b64e0f3665c2cc62f20cc2c1b21e4d29a58a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/blind-horizontal.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-horizontal.png",
+      "字节数": 474634,
+      "SHA256": "51897175f207d589c5aef0a2d688c94f03548913767e13e45a8d02ffb16ad014"
+    },
+    {
+      "档案内路径": "源图与校验/qa/blind-validation.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-validation.json",
+      "字节数": 5613,
+      "SHA256": "5a2c57a128792a8fa529164ea99840110a060fda53a93591b427b9c4322a12ce"
+    },
+    {
+      "档案内路径": "源图与校验/qa/blind-vertical.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-vertical.png",
+      "字节数": 476566,
+      "SHA256": "ef589d9e9ab8cbb02504c857c408c14554add67c69be379f787aaf7ffe5004d9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/cardinal-review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/cardinal-review.json",
+      "字节数": 1523,
+      "SHA256": "8c1a3b5c8961274a9b426052305c51f27b9e0a8fdf6a4a9d0afbc0a40dd5398a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/chroma-despill-extended.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/chroma-despill-extended.json",
+      "字节数": 2065,
+      "SHA256": "c12a1da62dd3d699f40ff80b061897eda4cfe7d2af66e1409f7d8c3250289dc3"
+    },
+    {
+      "档案内路径": "源图与校验/qa/contact-sheet.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/contact-sheet.png",
+      "字节数": 1983956,
+      "SHA256": "f99a77b83bcddce3f58c2fc78a93fbfca0fcbc6455b40f5e4cae5c1c308ccf4e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/direction-qa.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/direction-qa.png",
+      "字节数": 858744,
+      "SHA256": "a134cd1431bb620404b965eb8bedb413ad07db51457f0febd3ef3b4840e2bc5e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/direction-semantics.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/direction-semantics.json",
+      "字节数": 3999,
+      "SHA256": "adeebeb441e9e06d48c34be344cca2e42f08b2a72bd1f6208ecc001c6ba4d956"
+    },
+    {
+      "档案内路径": "源图与校验/qa/final-contact.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/final-contact.png",
+      "字节数": 2450366,
+      "SHA256": "8ea9ecaf7c1b66bbedc4a247aa6ce4a15fb027deb125d82ae507e29f320a2889"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/00.png",
+      "字节数": 41459,
+      "SHA256": "f2df7458931ea2e07d598edd07f9d8f8bb4451c639bd9699e8d0650940965ea0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/01.png",
+      "字节数": 39723,
+      "SHA256": "17fe5c5c1fe3db7ecf96b72d999be83f74d4d017bbe5affef5324a7124eeee34"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/02.png",
+      "字节数": 38296,
+      "SHA256": "7cc82744c088ab29f1791777c129cacb17f464e8d05095d7d96f2e3a8591b9bc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/03.png",
+      "字节数": 36507,
+      "SHA256": "3223d1e664e47e2a7bcda0807cc14f48e12ebdcca9c30f4ac90b79fd92681a50"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/04.png",
+      "字节数": 35360,
+      "SHA256": "e5fe30f1d034fcf73c8095d85751f46f8a527241dd9c62259652a69074ca00e4"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/05.png",
+      "字节数": 37915,
+      "SHA256": "b69cee56fe132a8f1036c41829ae689c9053ee4770e750eb4763196adebaa265"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/06.png",
+      "字节数": 40317,
+      "SHA256": "82f8acacbab000592b90f50a7bf09f9368f1094a66a74d631e3abb4b24cf63f9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/failed/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/07.png",
+      "字节数": 41078,
+      "SHA256": "d99a62570f8fc4f1b19a8f4a214c091e7d989a1067293a5612d6f8fa7298fabd"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/frames-manifest.json",
+      "字节数": 8130,
+      "SHA256": "1e188e3d06d6107757fcf1f5b832bb7332344c966b0d46295323765a261bc868"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/idle/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/00.png",
+      "字节数": 45133,
+      "SHA256": "f86da317cfbfd6eeebe56f608f3b5082336df3891f0b81315f39abe7b9f4f505"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/idle/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/01.png",
+      "字节数": 44493,
+      "SHA256": "7f0b93ce8813f448a0f1395cb6d9f25f3b4ab47a9b818eba7b3fc4dc2d91f4f8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/idle/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/02.png",
+      "字节数": 44588,
+      "SHA256": "53ea97d0eba39dc748f9951c4f2ab1e1c48f286b14f4a8b850cf136338377e09"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/idle/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/03.png",
+      "字节数": 44296,
+      "SHA256": "6eecde6f8fb2a7a0d3c1163d150a283da7a024503c4cd72c1aa0a6d82efb0a86"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/idle/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/04.png",
+      "字节数": 44305,
+      "SHA256": "7258a5232e3596e75e0f638ae79c1097903662083acca2f4f416a5e720865008"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/idle/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/05.png",
+      "字节数": 44267,
+      "SHA256": "f57b035c1a6303ac7b916c91c432f9b55ecb08cac35cb9c1e27fbf78869c6dc4"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/jumping/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/00.png",
+      "字节数": 44001,
+      "SHA256": "a9199c0a79de90460490fa0a965f0c2ff266dfe02e2b1247e4b7504815de823e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/jumping/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/01.png",
+      "字节数": 43064,
+      "SHA256": "55de3ddc26a00d52ffd0856ae7c6083068a96b8b43c103c8a5f5b96752e238a6"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/jumping/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/02.png",
+      "字节数": 37631,
+      "SHA256": "9ac71512e9b3ffbbad940a625363cb3a1eb5f197d9bc7e3098245c0e177a90b3"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/jumping/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/03.png",
+      "字节数": 40756,
+      "SHA256": "59d127fac81e8deba15a464edab7e7ce7273f904ab08e4fd32c72fd2d4ea2600"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/jumping/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/04.png",
+      "字节数": 45247,
+      "SHA256": "2b539f29d56f9dc0c24f18bf2fd34d09d2d661d89a22193b1f0b1f8075e43870"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/review/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/00.png",
+      "字节数": 45271,
+      "SHA256": "cfafef598cf818469efdd97565c80bc20712a2f1ab46ed6ceb5c6c0a89d375e9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/review/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/01.png",
+      "字节数": 45521,
+      "SHA256": "6397279dd8ae5b139c12cc6b8163344ea13c541d32feb14fc4c5a9bf32920f37"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/review/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/02.png",
+      "字节数": 45862,
+      "SHA256": "d186e149e0bfa2f25d8be3618c20f4dca103b7408e65226be997f7e1b5cb85f9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/review/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/03.png",
+      "字节数": 45565,
+      "SHA256": "81477471b9b365bf5a45c1bcc68c65e2940159cdb117888ae04881dde8a1f7d0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/review/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/04.png",
+      "字节数": 46158,
+      "SHA256": "2e9ce17413ede06c4a9df705c6ab59f580c64b472edb47ad96b38b17f7df06be"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/review/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/05.png",
+      "字节数": 45484,
+      "SHA256": "2b0d837f9477d4f666ff02db32ab61148834b9bf49449254bc932bd95eb97ebf"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/00.png",
+      "字节数": 41635,
+      "SHA256": "28d3b45aaad9d8494e010dfa434e2bf93a0f4076368f10a689a6c81761f67973"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/01.png",
+      "字节数": 41460,
+      "SHA256": "c5049d8f1c9e4c924f9db4dd0e1483d4fbed5df8e945e7673918209e9035d8c4"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/02.png",
+      "字节数": 43125,
+      "SHA256": "b5b7de9ace7afe1ae89734ce9ba6797431b358e1fb950aff9b92278aa719b921"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/03.png",
+      "字节数": 41167,
+      "SHA256": "ebaaf664dd057c4b29a5f41028f6d29fcce7633c0a92fd6ceb47934fa0d6bc8d"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/04.png",
+      "字节数": 42814,
+      "SHA256": "4505cad429dccf1c1381e2d54ced0c4ccca2f5fed1ef54c476a799b533c5e9b8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/05.png",
+      "字节数": 41142,
+      "SHA256": "67cd93652d326fb0e010927eb1b6c55d89c0e06467e84a457eed8e310184ef89"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/00.png",
+      "字节数": 43777,
+      "SHA256": "6ea344d537dc290af78bd39c3874541a5e6d5c5b1a1bf0eec320553d1b5a57ef"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/01.png",
+      "字节数": 36774,
+      "SHA256": "764f321fe0617cc8de57071af98e2ef459410074deb10eab7f92abd73b989c3b"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/02.png",
+      "字节数": 38451,
+      "SHA256": "a2b449165a75f8aa663d859efcacee0e3c52ff135e3f8e52da2156424be8521c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/03.png",
+      "字节数": 35838,
+      "SHA256": "3db255704563bf2270753939d57d115305281e66087cee4e5ff8126e3bff9ee0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/04.png",
+      "字节数": 42095,
+      "SHA256": "fff43cb61683ece374ca5a427902b8d17a761a6a8b435974e94c819157ebc64f"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/05.png",
+      "字节数": 39823,
+      "SHA256": "e14e1ae34f4ba99e4786345f384b3c2dcb6b71f60244ba5ebd85be5f0c6da9c9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/06.png",
+      "字节数": 40495,
+      "SHA256": "3b5dc81d5b5c3c63410c836e535eb5e5a2802742beff75c9f49379486c985411"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-left/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/07.png",
+      "字节数": 38427,
+      "SHA256": "6705fc9999693d635ac3b588969dd1eb1f37f90d7b4bedacb854a452dde54143"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/00.png",
+      "字节数": 41509,
+      "SHA256": "294ed43d74c049132e48173e2ffd9fb461d8c74e418c02267064735331ffb3cc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/01.png",
+      "字节数": 39938,
+      "SHA256": "44a2e49cdb032369e917941fba8494d63deae53626d904e09004e56ee3376555"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/02.png",
+      "字节数": 40777,
+      "SHA256": "24d7864d121fef6c30764b35d759e972de051912b33c21c2440966ea5a50302c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/03.png",
+      "字节数": 37486,
+      "SHA256": "ac350bb0bae7c385a71aa76810b6261faef7021cd4decef80790613a344cfc21"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/04.png",
+      "字节数": 38933,
+      "SHA256": "4c63fda5aa4926ffc8e985caa74cdc666af09286a8bd4aecfb4d60c33130d860"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/05.png",
+      "字节数": 37114,
+      "SHA256": "c2fc6e1dd30bc037496695f969ce17194875dd476721b60441ac994b14d9984c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/06.png",
+      "字节数": 41875,
+      "SHA256": "27abae282f7b71091d15752df1b7465e030fd8611e2df1cd14dfc230a4cf991b"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/running-right/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/07.png",
+      "字节数": 41640,
+      "SHA256": "10c9841eb56000ff10da3a1ab25250c46147339e1324417785cc6d2bdb39f950"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waiting/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/00.png",
+      "字节数": 40546,
+      "SHA256": "87cb25ba7f05baa9b23d1d9fe001eb21184901891a9336a044037f14994e97ea"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waiting/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/01.png",
+      "字节数": 41982,
+      "SHA256": "abff16beff5bd832fe0f973c28a6a508562ca750f28852df397b30d2049f3236"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waiting/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/02.png",
+      "字节数": 39759,
+      "SHA256": "ec2d022185bc8060219c16970d9ec5ca2c937d6fab542dea7fca8031afebe7b9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waiting/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/03.png",
+      "字节数": 40800,
+      "SHA256": "a4bbf40492b99b60ff268461dddb86e28392d55026a4bcfea84ea2bf88e8b56e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waiting/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/04.png",
+      "字节数": 42738,
+      "SHA256": "f8aade2c3af3be950f5a1a984ecd031d17fd4ea5da0feb4ea13d5ebaaa85b6a0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waiting/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/05.png",
+      "字节数": 41946,
+      "SHA256": "965613755b34d6c6e60b79a98e4ea5160dfa9e1cbe017a9a1eab843b8aa009a3"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waving/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/00.png",
+      "字节数": 43983,
+      "SHA256": "a48cd09936bd62ed83fc262ca2b21b2f2fa194f267ac6f615d2b8c0b8dc93a0d"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waving/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/01.png",
+      "字节数": 44596,
+      "SHA256": "eb5e21deb33d77866a73d20c28e7d7a6c680055ffaec11d359c70a11516b3998"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waving/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/02.png",
+      "字节数": 45047,
+      "SHA256": "ceb85ab5396fa5356aabad4477fd801601286a7e1a3cc6838105ad43f694a6b4"
+    },
+    {
+      "档案内路径": "源图与校验/qa/frames/waving/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/03.png",
+      "字节数": 43526,
+      "SHA256": "f0a841af8af4d8c6b4f69e60d610a7fe4deb7c34dfb1d44397c14838509f2007"
+    },
+    {
+      "档案内路径": "源图与校验/qa/independent-boundary-review.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/independent-boundary-review.png",
+      "字节数": 264619,
+      "SHA256": "70d907d059a59a284342c92f2c8d8e03fbf09e96a0fadd4bb4c5714915feb32f"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-continuity-reference.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-continuity-reference.png",
+      "字节数": 3368248,
+      "SHA256": "4589a7b768b58768f7c7a16350f7568ba27f8bdaf89266d5e3749402039f88f1"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-continuity.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-continuity.json",
+      "字节数": 3818,
+      "SHA256": "8be6638b92ce69791859fe3e538963c7eb38192410c50c1049c5e97cd15c6dcc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-mechanics.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-mechanics.md",
+      "字节数": 1571,
+      "SHA256": "b6e829370d39d5008185abc4581500cdc68b28fbb99f632ada749d3fe048d2b7"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-preliminary-continuity.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-preliminary-continuity.json",
+      "字节数": 3818,
+      "SHA256": "8be6638b92ce69791859fe3e538963c7eb38192410c50c1049c5e97cd15c6dcc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-preliminary.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-preliminary.png",
+      "字节数": 892925,
+      "SHA256": "27b031133021bb3cbfaca393604aa04c0a40f972c8cd2c48a33cec45fbfb560c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-row-9-registered.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-row-9-registered.png",
+      "字节数": 316044,
+      "SHA256": "23916f3ea2ce2918c7e09c4a075fc9a72a85990232a5e8abfbef204ea25ce27b"
+    },
+    {
+      "档案内路径": "源图与校验/qa/look-row-9-registration.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-row-9-registration.json",
+      "字节数": 37,
+      "SHA256": "0dca288fea9117c60bec06fab9561890d1f51e4d4c7b56a02f754d853c6e4634"
+    },
+    {
+      "档案内路径": "源图与校验/qa/pet-quality.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/pet-quality.json",
+      "字节数": 1605,
+      "SHA256": "0bdf1f21adce9024fb97ca6710a9c1c3938d8d267bc3cdf98ffc1e10eb45f9fb"
+    },
+    {
+      "档案内路径": "源图与校验/qa/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/review.json",
+      "字节数": 27956,
+      "SHA256": "531d5e56f7c16a353b3944e653b7136bcf5baf922e2933f696c1f0ab9ef9142f"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/00.png",
+      "字节数": 50025,
+      "SHA256": "d36263f345528deb2c759cd31338233983c427cc7fce38af34a0e0ccf63043ab"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/01.png",
+      "字节数": 47760,
+      "SHA256": "a154767e6ee57bf637b3f92a9b55e7018853a74242f75afe99d76199a5d5cee1"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/02.png",
+      "字节数": 46084,
+      "SHA256": "c02b79fdcb092dc64042cf46b5586de10c2ad63a96843d765f9f358091a9d395"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/03.png",
+      "字节数": 43598,
+      "SHA256": "283fba37882a05d51307d22461f8c84cf725e01961f24b323c633f80c14fbede"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/04.png",
+      "字节数": 42354,
+      "SHA256": "9360b16526ad13f3958b881f4272b82afc3df588cd4eb1b24b381a8c4d9feeba"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/05.png",
+      "字节数": 45437,
+      "SHA256": "2faedd69890524bf813dfc4d1b0092b963b553cdfdcd52a5144bf78add3d9efb"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/06.png",
+      "字节数": 48606,
+      "SHA256": "49bdb4c7a5797e01f28e89d8e371000c0dab82a05053926ce0dd68fb5714beb5"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/failed/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/07.png",
+      "字节数": 49453,
+      "SHA256": "710f4b0b17594d20be03c512de4e0957b4ad78f7453c3e514c468bd496bef8d6"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/frames-manifest.json",
+      "字节数": 1349,
+      "SHA256": "a5db7fe43f97aca2616c65a0805204e893acee4f07e13d0e711f6acc6013c261"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/review.json",
+      "字节数": 4145,
+      "SHA256": "089d276a0b403d2e39cdfb474fe38eee0d23878d435eb77e489947862e2fc1c8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/原始生成-01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/原始生成-01.png",
+      "字节数": 1736411,
+      "SHA256": "8adeb0d62fdabc252a5b92fce16d18c8a79059e0ffc5c3a1e1d1f0bda0bc46b0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/原始生成-02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/原始生成-02.png",
+      "字节数": 1675914,
+      "SHA256": "a8478d2c07b23c1f57636ec0d0c75ea7cb3886e73c8b10697876f310bde960be"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/检查-01.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/检查-01.json",
+      "字节数": 5127,
+      "SHA256": "a7f97bc50c9e109e8f34d3cc0dae6c8d50804411b77e03d2f1d88bb026855067"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/failed/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/生成提示.md",
+      "字节数": 4555,
+      "SHA256": "cab06bb743902670365540e10b55e5f829295a5733a7f96bdc2f0c0fe9123deb"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/frames-manifest.json",
+      "字节数": 1051,
+      "SHA256": "882ead19f1f6bb6243d8682d157c780d55520118f893bf42657ebaf63196afe7"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/idle/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/00.png",
+      "字节数": 54414,
+      "SHA256": "d605b8daa720ca1b35634944712b29e7409ce7615f11c5b21c108f55e1548678"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/idle/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/01.png",
+      "字节数": 53561,
+      "SHA256": "95f6e7fc822365dec2873bad849541a6aca74f856890a8d54b4fea9e879daa66"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/idle/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/02.png",
+      "字节数": 53453,
+      "SHA256": "02420189be65fcdbaa30045363e99dc73dc72d916913066df1647721fca1697e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/idle/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/03.png",
+      "字节数": 53281,
+      "SHA256": "35d8f8c5f579ca1340f0cd9badf7f0db9189675b90e2e70c326ee4d1f3e4747e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/idle/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/04.png",
+      "字节数": 53505,
+      "SHA256": "dcabf1d784d09b286c8f851ee5fc88c4bcee822cc6c7d9384e60be70642986ac"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/frames/idle/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/05.png",
+      "字节数": 53167,
+      "SHA256": "0dd6d9ef6b50ba04835e39820c21cbe9a1ae43dc1f7fd8b17541004a30cba3c2"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/review.json",
+      "字节数": 3191,
+      "SHA256": "02a4491246c4a997faa7baa2007789af5400b10c5c7a3f525bf91daddcf2b3d9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/idle/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/生成提示.md",
+      "字节数": 1832,
+      "SHA256": "90f107a92bf377de24fac23f97a7725c061e227dfc19cf08e0f11f61e487ee76"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/frames-manifest.json",
+      "字节数": 952,
+      "SHA256": "09ad5c5755112ef2595fdb8b535b3290ef0d0fbdfcc5fec336f665ff2672d73a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/frames/jumping/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/00.png",
+      "字节数": 44001,
+      "SHA256": "a9199c0a79de90460490fa0a965f0c2ff266dfe02e2b1247e4b7504815de823e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/frames/jumping/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/01.png",
+      "字节数": 43064,
+      "SHA256": "55de3ddc26a00d52ffd0856ae7c6083068a96b8b43c103c8a5f5b96752e238a6"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/frames/jumping/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/02.png",
+      "字节数": 37631,
+      "SHA256": "9ac71512e9b3ffbbad940a625363cb3a1eb5f197d9bc7e3098245c0e177a90b3"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/frames/jumping/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/03.png",
+      "字节数": 40756,
+      "SHA256": "59d127fac81e8deba15a464edab7e7ce7273f904ab08e4fd32c72fd2d4ea2600"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/frames/jumping/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/04.png",
+      "字节数": 45247,
+      "SHA256": "2b539f29d56f9dc0c24f18bf2fd34d09d2d661d89a22193b1f0b1f8075e43870"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/review.json",
+      "字节数": 2779,
+      "SHA256": "9a3bb532751572f85a29707ba9450c19b2fc15bdb74310d1ec31438c4af4b78a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/原始版本01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/原始版本01.png",
+      "字节数": 1738221,
+      "SHA256": "e6fcca16cd703314c6936440ee579f2370556af85bb0514b9cd2e248d91bfbd3"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/生成提示.md",
+      "字节数": 2280,
+      "SHA256": "2f81c9f11bd354fbdac2c8c0aa7bc192fbd24c51c2e98def3e2229d17c409494"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/jumping/生成提示02.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/生成提示02.md",
+      "字节数": 2631,
+      "SHA256": "9ea3974b609c9f1b8ffd416572bb7b4e80f4ce0246cae4eaa18705520f1b37e8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/frames-manifest.json",
+      "字节数": 1077,
+      "SHA256": "11702a09ce1820b401cd2d9a6cf284a34ee16a279e37e0c2813de60880259aac"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/review/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/00.png",
+      "字节数": 54255,
+      "SHA256": "f63ad5bf4a34e64890c7afc82b76cff58a5b18815b996ef551e3055fe7c9c847"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/review/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/01.png",
+      "字节数": 54877,
+      "SHA256": "73b536c83933d124b0dd6a40fffafe944d8d47a0a1ec546d2275adec46776adb"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/review/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/02.png",
+      "字节数": 55309,
+      "SHA256": "5dba719369a2ddc9eae3a18d9f18540b3776b10544e559df7c0a0bccd4729b7e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/review/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/03.png",
+      "字节数": 54724,
+      "SHA256": "647af1355c94c797f8b33832031c9ea3adf9607dfea629f799ef690989f33267"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/review/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/04.png",
+      "字节数": 55591,
+      "SHA256": "f0f95694d73d878d5305017fe6b695fa9e9ba82f8d9ca39da9872a5edd530f45"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/frames/review/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/05.png",
+      "字节数": 54413,
+      "SHA256": "ab5a4b903cb57960bf8e707260d20e04b9f130c6b9ecb5ca3c129df82b7ac689"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/review.json",
+      "字节数": 3221,
+      "SHA256": "bb7fc61d2b9e1c2798475c633d7a14add2006705356a7b7896198c03841fd3c5"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/review/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/生成提示.md",
+      "字节数": 2831,
+      "SHA256": "d950b7670fff7dcfeaba3e3219fffdaf01795d5e5b6208a1fa57fe6f568fe399"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/frames-manifest.json",
+      "字节数": 1090,
+      "SHA256": "febd5dc93a382b0faa51bb616f6b5ac743f830e2bfb9626d7f4d78f0d986e723"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/running/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/00.png",
+      "字节数": 50143,
+      "SHA256": "04943d52f9ee6837b5595b705b259e416cc69c3db788b54b5cef39c1d2494f29"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/running/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/01.png",
+      "字节数": 49861,
+      "SHA256": "c468790b8dd17eb2b973d286042be7563edfa3552cc27fa57ec0a44cbb673a31"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/running/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/02.png",
+      "字节数": 52047,
+      "SHA256": "cf9c060fb6a992c1029f48205a3d683b4daa49479153566ebb3b912fd55594d0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/running/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/03.png",
+      "字节数": 49683,
+      "SHA256": "b864716468c0af6aecf3e9561925462ca47c22e4e009005a7a2a38f5613aebbc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/running/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/04.png",
+      "字节数": 51482,
+      "SHA256": "27defed390efe2836fddf20246e4ee843e2edc07b6da687c00df1dd3c2d62caa"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/frames/running/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/05.png",
+      "字节数": 49563,
+      "SHA256": "e67e52f518fdbe7d98605aab136537f4e97f918ab37d51478ceb32e2d49fb5e8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/review.json",
+      "字节数": 3241,
+      "SHA256": "54b349a250fab94b31b3580232e430f1ca6c7fef3121cda27ed7a2710422d41d"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/生成提示.md",
+      "字节数": 2370,
+      "SHA256": "ff05a4f4e058e79d55246c3069c696e0f58bf23201cedf60314696ba6789f9d6"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/frames-manifest.json",
+      "字节数": 1451,
+      "SHA256": "c1f26e16c94d070068d9897466d384ae84934d6194d9e4ba2139cfaf3b771e68"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/00.png",
+      "字节数": 43777,
+      "SHA256": "6ea344d537dc290af78bd39c3874541a5e6d5c5b1a1bf0eec320553d1b5a57ef"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/01.png",
+      "字节数": 36774,
+      "SHA256": "764f321fe0617cc8de57071af98e2ef459410074deb10eab7f92abd73b989c3b"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/02.png",
+      "字节数": 38451,
+      "SHA256": "a2b449165a75f8aa663d859efcacee0e3c52ff135e3f8e52da2156424be8521c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/03.png",
+      "字节数": 35838,
+      "SHA256": "3db255704563bf2270753939d57d115305281e66087cee4e5ff8126e3bff9ee0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/04.png",
+      "字节数": 42095,
+      "SHA256": "fff43cb61683ece374ca5a427902b8d17a761a6a8b435974e94c819157ebc64f"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/05.png",
+      "字节数": 39823,
+      "SHA256": "e14e1ae34f4ba99e4786345f384b3c2dcb6b71f60244ba5ebd85be5f0c6da9c9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/06.png",
+      "字节数": 40495,
+      "SHA256": "3b5dc81d5b5c3c63410c836e535eb5e5a2802742beff75c9f49379486c985411"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/frames/running-left/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/07.png",
+      "字节数": 38427,
+      "SHA256": "6705fc9999693d635ac3b588969dd1eb1f37f90d7b4bedacb854a452dde54143"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/review.json",
+      "字节数": 4259,
+      "SHA256": "cc9f21828bd5ab3f321940dec6156caeb5887d0c278f229b520640c06621e2d8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/原始生成-01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/原始生成-01.png",
+      "字节数": 1541009,
+      "SHA256": "17d41a82cfa3eaf6f60821a294cc1734970db32164281e936e6362ece8337fe7"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/原始生成-02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/原始生成-02.png",
+      "字节数": 1511252,
+      "SHA256": "d1ec6f214fe9feb71e70964d6247269948797787a108a6afcfb11f99ee8dcaca"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-left/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/生成提示.md",
+      "字节数": 4302,
+      "SHA256": "7b2dc671127075dccd16aa7630795d2904c4851e499cb6a5153131a29ff136f0"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/frames-manifest.json",
+      "字节数": 1468,
+      "SHA256": "cab00e6e8d8289fea833b78442fe3cb4217fb83d8d448785423d1ec3ecf63406"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/00.png",
+      "字节数": 41509,
+      "SHA256": "294ed43d74c049132e48173e2ffd9fb461d8c74e418c02267064735331ffb3cc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/01.png",
+      "字节数": 39938,
+      "SHA256": "44a2e49cdb032369e917941fba8494d63deae53626d904e09004e56ee3376555"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/02.png",
+      "字节数": 40777,
+      "SHA256": "24d7864d121fef6c30764b35d759e972de051912b33c21c2440966ea5a50302c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/03.png",
+      "字节数": 37486,
+      "SHA256": "ac350bb0bae7c385a71aa76810b6261faef7021cd4decef80790613a344cfc21"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/04.png",
+      "字节数": 38933,
+      "SHA256": "4c63fda5aa4926ffc8e985caa74cdc666af09286a8bd4aecfb4d60c33130d860"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/05.png",
+      "字节数": 37114,
+      "SHA256": "c2fc6e1dd30bc037496695f969ce17194875dd476721b60441ac994b14d9984c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/06.png",
+      "字节数": 41875,
+      "SHA256": "27abae282f7b71091d15752df1b7465e030fd8611e2df1cd14dfc230a4cf991b"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/frames/running-right/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/07.png",
+      "字节数": 41640,
+      "SHA256": "10c9841eb56000ff10da3a1ab25250c46147339e1324417785cc6d2bdb39f950"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/review.json",
+      "字节数": 4275,
+      "SHA256": "3bbeec6636857cacb2e8da6557a466f0a7870601dd793005430cc47f8fbc798e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/running-right/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/生成提示.md",
+      "字节数": 1860,
+      "SHA256": "aa1523f50085233dd213b1eb6275c595c4539b6a0f24b37355edb3f28eb6ad50"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/frames-manifest.json",
+      "字节数": 1090,
+      "SHA256": "bea11565b7499121b77f0f67d5cfabca80fdd7e594090cf74cbb747c109e38ab"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/waiting/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/00.png",
+      "字节数": 48755,
+      "SHA256": "0f14cd0dff05987ed3ea0b884d7909e1209f7a6ba1b5984b592d1a49f68e05ff"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/waiting/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/01.png",
+      "字节数": 50630,
+      "SHA256": "3bc4c0198b7b87342d1d2b6a425a00c9020ed9415fa17856b107e6d9c0580553"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/waiting/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/02.png",
+      "字节数": 47562,
+      "SHA256": "c349c0a2ddb570ca3ecfd21c78ea7cd785ebc6a35161d2f7ad305cae057910b1"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/waiting/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/03.png",
+      "字节数": 49114,
+      "SHA256": "848fb9c715d470b090da518836080d8806c6483e35385eb496ae23df3999194a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/waiting/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/04.png",
+      "字节数": 51391,
+      "SHA256": "3c976a82a5bb7ae37d9e0d452208bb331ace0c3579e864233d2432d92fc8b719"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/frames/waiting/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/05.png",
+      "字节数": 50207,
+      "SHA256": "69694205e0ea07a25cf9f089ab9de53670f37e0a7961e3bc768056a19512c616"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/review.json",
+      "字节数": 3237,
+      "SHA256": "3bee8dd3f3f3b4099801ec2f3561effe52b57a945dbe944eb76d60fb3f7d4550"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/生成提示.md",
+      "字节数": 2491,
+      "SHA256": "aa18fd77c0427d03ec3c397d162e25d99cafee7d50a4d74047ad5750fb102787"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/重试生成提示.md",
+      "字节数": 3052,
+      "SHA256": "0d87f9ffc3d61962160659f1af66c24019437afc59209def33de3e308292af0c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waiting/首次生成-间距失败.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/首次生成-间距失败.png",
+      "字节数": 1971456,
+      "SHA256": "308ae46a2b38ed03652c582a1da82811856803f860aa807c1042a71caaa4cf45"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/frames-manifest.json",
+      "字节数": 805,
+      "SHA256": "2a526d5a5564bd933d55bac247bd6f86686cb5fbfc13e00c388177be9261ae75"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/frames/waving/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/00.png",
+      "字节数": 52791,
+      "SHA256": "5af0ddb25718c0e5be3f87426d1c02ecaf15e2d0389e6a79f8b4ca6a01e3cec9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/frames/waving/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/01.png",
+      "字节数": 53737,
+      "SHA256": "3f50ffc2f1c122fb140409f856fcfadc89491972fe26420881f4a4d3ac19adbf"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/frames/waving/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/02.png",
+      "字节数": 54051,
+      "SHA256": "34b523bc9924e3d7a02c2ea88f6edd82a06be949559dbd09e2187c98ca779611"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/frames/waving/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/03.png",
+      "字节数": 52225,
+      "SHA256": "a2d7324c0ce1cfbef2c914a6f3ede00c1b644e1cd80f751af5ab46399ec21667"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/review.json",
+      "字节数": 2303,
+      "SHA256": "91c46fe9e7a185b65cfa00735df569939e441b42926f3195e409c5d2bf1d8c51"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/生成提示.md",
+      "字节数": 2135,
+      "SHA256": "801de6385af54a7db7e8da9775c92f391a0ccf5f49c051fbff2087c09e96c520"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/重试生成提示.md",
+      "字节数": 2706,
+      "SHA256": "0b8e35355d50a912883d58f3183db8634e4ca060567f5962d72fc25bc2a45742"
+    },
+    {
+      "档案内路径": "源图与校验/qa/rows/waving/首次生成-末帧换爪.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/首次生成-末帧换爪.png",
+      "字节数": 2054682,
+      "SHA256": "5fea732bcfc875ad966f7ff04f8fdd290728221f072b243df3a8d585e38a4214"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-atlas.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-atlas.png",
+      "字节数": 2346018,
+      "SHA256": "03c6322cd726bf57a5f5ec970740559ae3e4f8c727d44763021a95139307fc39"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/failed.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/failed.gif",
+      "字节数": 80665,
+      "SHA256": "ce1bffc4f7ab8289d88c6b06479c008a495fc05a3924130d6db0696c95fdcf2a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/idle.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/idle.gif",
+      "字节数": 69033,
+      "SHA256": "5070d10e1ef4245bcc73fe370888ed360219163bfb83f48c8f23a4b1eb607bb8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/jumping.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/jumping.gif",
+      "字节数": 54116,
+      "SHA256": "9f058e53f9c05ada970a5352dd20224d1c04f8cd8482beda88628591fd3c89b7"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/review.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/review.gif",
+      "字节数": 68977,
+      "SHA256": "5d4f1de70ccb752a0d3048483f10a4787ab2973817c297afd1110f112f765f44"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/running-left.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/running-left.gif",
+      "字节数": 85244,
+      "SHA256": "801b9e5d4a4921a6269f2fbea3e95b8ceb7b103d97416b68e563b1e4b5906c29"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/running-right.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/running-right.gif",
+      "字节数": 83306,
+      "SHA256": "1dfe4994d5772f580233d60846b996939eecc285fcdf6fd128c11d75973c3ca1"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/running.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/running.gif",
+      "字节数": 63891,
+      "SHA256": "395d56d6f837b1dce4238526515238faa0c24fcde0bb7c845a04e822a2409a53"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/waiting.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/waiting.gif",
+      "字节数": 63058,
+      "SHA256": "cab03874ac6c2aa106099272d194f479db721564112825c64768ed56ba94c70d"
+    },
+    {
+      "档案内路径": "源图与校验/qa/standard-previews/waving.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/waving.gif",
+      "字节数": 45010,
+      "SHA256": "6f9a4c014f6a3ad95d38111f9f5208796b2100190d9d2557e92107417d869fb8"
+    },
+    {
+      "档案内路径": "源图与校验/qa/两半圈比例校准前.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/两半圈比例校准前.png",
+      "字节数": 3043669,
+      "SHA256": "ae4e9d7ebbc96affe718078232fac5927adc2910b37df6f318cc9be23dc22174"
+    },
+    {
+      "档案内路径": "源图与校验/qa/四方向生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/四方向生成提示.md",
+      "字节数": 1736,
+      "SHA256": "b794e51499cfeb65693d4c8edb2de515af84b418ef4c3b51d7b7719d82887403"
+    },
+    {
+      "档案内路径": "源图与校验/qa/坐姿注册记录.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/坐姿注册记录.json",
+      "字节数": 501,
+      "SHA256": "82aad43da26a49ae953ecc8b66954183a9af132cf009d957b16a3494fdd4db78"
+    },
+    {
+      "档案内路径": "源图与校验/qa/最终方向独立目视审查.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/最终方向独立目视审查.md",
+      "字节数": 901,
+      "SHA256": "dd1b2c55a803533ec0624d0e90c84fc14065a0a8e78c1fecb35abfb6067cbc4f"
+    },
+    {
+      "档案内路径": "源图与校验/qa/服务端预检.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/服务端预检.json",
+      "字节数": 250,
+      "SHA256": "45758adaaff604f6d00c6a4fa9859f20850fe17f70ff532b47ea6c47f06dce13"
+    },
+    {
+      "档案内路径": "源图与校验/qa/标准动作目视审查.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/标准动作目视审查.md",
+      "字节数": 829,
+      "SHA256": "91d6ade9ca947dee15b2781e550276571c82a222bd166343bc0dec82804446e1"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾上半圈-首次注册失败.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈-首次注册失败.json",
+      "字节数": 38,
+      "SHA256": "3706ebf4c39f0fb940c7a17b75c882ebce0a9bc0da8ab6a7266a47375a590cf2"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾上半圈-首次间距失败.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈-首次间距失败.png",
+      "字节数": 1764334,
+      "SHA256": "53f7438c7e517fd17d80740017fe3bd86ed068624c71343f59a6940d349975c9"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾上半圈生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈生成提示.md",
+      "字节数": 2122,
+      "SHA256": "94205bcca9d2b4174b7ba56b54209b20be9759b9d992912507585a194ed5219e"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾上半圈重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈重试生成提示.md",
+      "字节数": 1915,
+      "SHA256": "94a4457ee3ddce769c5ed42ab9f0ea843465f87013be0561e783a6fc63ba189c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾下半圈-原始显示比例.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈-原始显示比例.png",
+      "字节数": 1664581,
+      "SHA256": "305882f37d55b577831e446674e9987bae1b93efcb0fab0c219e4abf5a1b5c0c"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾下半圈-首次方向失败.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈-首次方向失败.png",
+      "字节数": 1669523,
+      "SHA256": "6ea39a7ce80092049a1b546358d9deb828165ac6844827022087a98d515eb0fc"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾下半圈生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈生成提示.md",
+      "字节数": 2000,
+      "SHA256": "ca2608142d5cbe008f2f1fbf1729de2d048788084f2d030543676103984d67df"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾下半圈重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈重试生成提示.md",
+      "字节数": 2252,
+      "SHA256": "f7610a357bdb385ad933a31793eb7af3e09e089e4842084a841cbfe1b4f21c40"
+    },
+    {
+      "档案内路径": "源图与校验/qa/环顾源图比例注册.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾源图比例注册.json",
+      "字节数": 709,
+      "SHA256": "7a1062a8752f81921545db9e3b63dd7d3e770f32a9f45d23d20c457a5a7f649a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/盲审-1.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/盲审-1.json",
+      "字节数": 2731,
+      "SHA256": "634a372c93bb437d3d61adb9cef5ffa74bb9eff8678ad40bbabe60bc0ee42729"
+    },
+    {
+      "档案内路径": "源图与校验/qa/盲审-2.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/盲审-2.json",
+      "字节数": 2663,
+      "SHA256": "30aa625c313566596a6bbf163c4e1e17fd42373ccd6f69403690f932f302fc7a"
+    },
+    {
+      "档案内路径": "源图与校验/qa/盲审-3.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/盲审-3.json",
+      "字节数": 2555,
+      "SHA256": "90a48106790ad2b19fa09bd1f26301ef6e85a1833568ea9c8b880ff47a22ddae"
+    },
+    {
+      "档案内路径": "源图与校验/references/canonical-base.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/canonical-base.png",
+      "字节数": 2116394,
+      "SHA256": "dac1cf54ec35646051338fe9c452b0b87cd4f2adda39f05d4cb1e423f3689d4c"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/failed.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/failed.png",
+      "字节数": 2355,
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/idle.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/idle.png",
+      "字节数": 1942,
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/jumping.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/jumping.png",
+      "字节数": 1740,
+      "SHA256": "dd6f193a159ae50013b1c4368d9a02ab29bdffaa48fa978a9628801cfd0a0a29"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/look-cardinals.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-cardinals.png",
+      "字节数": 1522,
+      "SHA256": "5ccc2ce66b4677a2891ddc78b2e0c1457c8dd4c48ee03135135bf334ee782002"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/look-row-10-spaced.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-10-spaced.png",
+      "字节数": 6671,
+      "SHA256": "525810cdf6dc1f5e25e1646ec1c8814b9d9674dcfe9a77cb629fa60a1dec0900"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/look-row-10.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-10.png",
+      "字节数": 2355,
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/look-row-9-spaced.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-9-spaced.png",
+      "字节数": 6671,
+      "SHA256": "525810cdf6dc1f5e25e1646ec1c8814b9d9674dcfe9a77cb629fa60a1dec0900"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/look-row-9.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-9.png",
+      "字节数": 2355,
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/review.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/review.png",
+      "字节数": 1942,
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/running-left.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/running-left.png",
+      "字节数": 2355,
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/running-right.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/running-right.png",
+      "字节数": 2355,
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/running.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/running.png",
+      "字节数": 1942,
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/waiting.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/waiting.png",
+      "字节数": 1942,
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "档案内路径": "源图与校验/references/layout-guides/waving.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/waving.png",
+      "字节数": 1522,
+      "SHA256": "5ccc2ce66b4677a2891ddc78b2e0c1457c8dd4c48ee03135135bf334ee782002"
+    },
+    {
+      "档案内路径": "源图与校验/references/reference-01.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/reference-01.jpg",
+      "字节数": 201424,
+      "SHA256": "00b8f3dd0c64b3f79496e5776bb6b9c62f8ecdf71471c8d6cdbf0cc332c1a30d"
+    },
+    {
+      "档案内路径": "源图与校验/references/reference-02.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/reference-02.jpg",
+      "字节数": 128261,
+      "SHA256": "ade5e5941378947bc45d75a4a521d256415d188ec7c934174672b179b812290e"
+    },
+    {
+      "档案内路径": "源图与校验/references/reference-03.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/reference-03.jpg",
+      "字节数": 2271588,
+      "SHA256": "8c1c12f277da52aea30f030c56544f752411535fa6288f762761ae96047ea80f"
+    },
+    {
+      "档案内路径": "源图与校验/references/俯视体态.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/俯视体态.jpg",
+      "字节数": 2271588,
+      "SHA256": "8c1c12f277da52aea30f030c56544f752411535fa6288f762761ae96047ea80f"
+    },
+    {
+      "档案内路径": "源图与校验/references/正面全身.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/正面全身.jpg",
+      "字节数": 201424,
+      "SHA256": "00b8f3dd0c64b3f79496e5776bb6b9c62f8ecdf71471c8d6cdbf0cc332c1a30d"
+    },
+    {
+      "档案内路径": "源图与校验/references/照片参考合辑.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/照片参考合辑.png",
+      "字节数": 1140210,
+      "SHA256": "9e6831a2a44706c63309909ddd6fb0f9b3ceca83cc98cb7fa202fe57b6a2fb07"
+    },
+    {
+      "档案内路径": "源图与校验/references/面部花色.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/面部花色.jpg",
+      "字节数": 128261,
+      "SHA256": "ade5e5941378947bc45d75a4a521d256415d188ec7c934174672b179b812290e"
+    },
+    {
+      "档案内路径": "成品与预览/制作说明.md",
+      "仓库路径": "资料/历史制作档案/成品与预览/制作说明.md",
+      "字节数": 2121,
+      "SHA256": "2c7f536019695263fdbf918c890336115fa776e58e5c271b2b8a21ecd6613c4e"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/专心思考.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/专心思考.gif",
+      "字节数": 110661,
+      "SHA256": "c8de5d166346f50e48d2a31874e0f47193278051c5d242f4447cc33e61a028e0"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/仔细检查.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/仔细检查.gif",
+      "字节数": 122834,
+      "SHA256": "07a9abeb23ff9a2072ae837e2da274ccfb1c0473e49bf05d6a67460ebdcdd838"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/全部动作.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/全部动作.gif",
+      "字节数": 1060681,
+      "SHA256": "ae67547aea2ad7e530a6b7396fd4c5e062e6a53f8883837900bc1e48d31fb455"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/全部动作.mp4",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/全部动作.mp4",
+      "字节数": 113495,
+      "SHA256": "f21fb7713484c79f4a46315d6e07735fb6b00741235c492c0ab65804e50241d6"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/全部姿势.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/全部姿势.png",
+      "字节数": 2439741,
+      "SHA256": "0dacea8c04e9e271f9d6ef3e530c9cf141ab191fc60e3592b6612dd554435b4c"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/动作静帧.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/动作静帧.png",
+      "字节数": 150043,
+      "SHA256": "85a22d9282b7e5f1051fef2df879020c27a819c33f1bed1becffbf4789f1687a"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/向右移动.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/向右移动.gif",
+      "字节数": 139791,
+      "SHA256": "a45ddbb12f45131c054e3520ffb4052b26df2a95a819abf7f3b20488b5278b46"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/向左移动.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/向左移动.gif",
+      "字节数": 136459,
+      "SHA256": "8377c73a1f8f90526cf252f0bd534cc011dc149195586679ce06d0310ccdef6a"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/安静陪伴.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/安静陪伴.gif",
+      "字节数": 122900,
+      "SHA256": "86df12c2cf554e6892ea8291015f4bab7f6586aaf97150f93bdccc7c1b9f2c98"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/抬爪招呼.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/抬爪招呼.gif",
+      "字节数": 80871,
+      "SHA256": "5d8627c31e229dd974fbcb0279699bf39d317f36c473ec1972c5bfe7c4711e24"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/有点失落.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/有点失落.gif",
+      "字节数": 144341,
+      "SHA256": "6f639d646deb58230fba8a5cf34433f16bffc968c12a21deab9c127be5a8343a"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/期待回应.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/期待回应.gif",
+      "字节数": 113036,
+      "SHA256": "6aa9842c19aa69beaa7424892aad41b693ed5ebbac6ccaef28ae5aa800aeb33f"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/环顾四周.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/环顾四周.gif",
+      "字节数": 311311,
+      "SHA256": "e9e4dfb09636dcab0b5fb0735316111b85540715a873dcfe6201f5b9bd6f93d5"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/跳跃衔接.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/跳跃衔接.gif",
+      "字节数": 348682,
+      "SHA256": "bf691ed08111552e6c572d6e70375e4222ac623c14fc02f24d49f4fc7e88c002"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/轻轻跳跃.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/轻轻跳跃.gif",
+      "字节数": 95317,
+      "SHA256": "46513c412ea77dc4f1bffda71f8688344f97512c3b5cf032979b79787f9a7ba5"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/静帧_仔细检查.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_仔细检查.png",
+      "字节数": 39960,
+      "SHA256": "d058e6166a150f48cb3ced5d8de9f82df25ca69a29ef6843c1975ef794b55beb"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/静帧_安静陪伴.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_安静陪伴.png",
+      "字节数": 40149,
+      "SHA256": "871a55e10afbe2321f8ac299fd780920422409810ba6a0d7d0ecc8ab9d7ab6dd"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/静帧_抬爪招呼.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_抬爪招呼.png",
+      "字节数": 39765,
+      "SHA256": "d6f587d07d810913ce0896cae1c02b2ba8ba3493814de4ff80a74b471a13f412"
+    },
+    {
+      "档案内路径": "成品与预览/动态预览/静帧_跳跃腾空.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_跳跃腾空.png",
+      "字节数": 34739,
+      "SHA256": "8dff318ee4b3b72f30fa1fa30a2877ff0edeadede91f1481b61ef8d798e79d42"
+    },
+    {
+      "档案内路径": "成品与预览/基础形象.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/基础形象.png",
+      "字节数": 2116394,
+      "SHA256": "dac1cf54ec35646051338fe9c452b0b87cd4f2adda39f05d4cb1e423f3689d4c"
+    },
+    {
+      "档案内路径": "成品与预览/基础形象生成提示.md",
+      "仓库路径": "资料/历史制作档案/成品与预览/基础形象生成提示.md",
+      "字节数": 1252,
+      "SHA256": "046641ce3872541c4688e626ff44b187276180074f057f80ee9abe4f8cce5515"
+    },
+    {
+      "档案内路径": "成品与预览/安安精灵图.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/安安精灵图.png",
+      "字节数": 2975886,
+      "SHA256": "d0002453c7fe3e930d9e117d0a5d462455d7b293dfbd38111ced06714b0aca1e"
+    },
+    {
+      "档案内路径": "成品与预览/宠物记录.json",
+      "仓库路径": "资料/历史制作档案/成品与预览/宠物记录.json",
+      "字节数": 638,
+      "SHA256": "3557b065a7cf5b8e7a8ee89da870d2695b8b770aea94eb39e9dcd1eb1320870e"
+    },
+    {
+      "档案内路径": "成品与预览/生成提示合集.md",
+      "仓库路径": "资料/历史制作档案/成品与预览/生成提示合集.md",
+      "字节数": 45466,
+      "SHA256": "a6fcecccca820128aa133bdd00406a4677168e84333c965bd03be4f3e275f643"
+    }
+  ],
+  "本地源文件对照": [
+    {
+      "原相对路径": "work/anan/decoded/base.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/base.png",
+      "SHA256": "dac1cf54ec35646051338fe9c452b0b87cd4f2adda39f05d4cb1e423f3689d4c"
+    },
+    {
+      "原相对路径": "work/anan/decoded/failed.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/failed.png",
+      "SHA256": "a8478d2c07b23c1f57636ec0d0c75ea7cb3886e73c8b10697876f310bde960be"
+    },
+    {
+      "原相对路径": "work/anan/decoded/idle.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/idle.png",
+      "SHA256": "2908cc1d3fb94266a279a3427008d69c11930023bd6b9c89cd01fffd794a7c98"
+    },
+    {
+      "原相对路径": "work/anan/decoded/jumping.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/jumping.png",
+      "SHA256": "5f3f454af869132fc06eb82cc38f39e08f04b6e147555fa09c39eaee8669f284"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-anchors/000.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/000.png",
+      "SHA256": "20e1c492b69e820b30c62751333f39c520a31b11fef45ca00f9fb32f5aaa02f4"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-anchors/090.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/090.png",
+      "SHA256": "d36e201193d46923021bc0c1accf6c403906b674d69160b60835248e4027c393"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-anchors/180.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/180.png",
+      "SHA256": "b6cffa0020b1ba734a21dd4b9fadafb1031ea2bd762d63deed61907cacbc080d"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-anchors/270.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors/270.png",
+      "SHA256": "f71ba18f3fc8f7c813dd46a88c8b8733cefab10bb7baa27603a8da8d3f144863"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-anchors-approved.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-anchors-approved.png",
+      "SHA256": "dcca6e8a7cb488f9afc213deebbdd50aed7c008dd8cc54c443d762357304ae43"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-cardinals.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-cardinals.png",
+      "SHA256": "b18dca99097e215eb93c3d7608c4d38ebfc6d11297f783a6dfd3dc1b55d6155d"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-row-10.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-row-10.png",
+      "SHA256": "5d12988743c368ace3f2a8b1ab8476123d04cab497c03c338322a7ab2068814d"
+    },
+    {
+      "原相对路径": "work/anan/decoded/look-row-9.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/look-row-9.png",
+      "SHA256": "4a90d4ca167d6e327f92dc5e6b5a49ebf5fe223781073bc42c74649eff3cbdac"
+    },
+    {
+      "原相对路径": "work/anan/decoded/review.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/review.png",
+      "SHA256": "deb5bc8b6811099a96ff2bf008c83f594c76a0f2a6a0e3511e296cbfe5683f2c"
+    },
+    {
+      "原相对路径": "work/anan/decoded/running-left.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/running-left.png",
+      "SHA256": "d1ec6f214fe9feb71e70964d6247269948797787a108a6afcfb11f99ee8dcaca"
+    },
+    {
+      "原相对路径": "work/anan/decoded/running-right.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/running-right.png",
+      "SHA256": "52c186fd3b85227f9f005ace0f90c70f8d41dbf51597303036815ba2b5607c33"
+    },
+    {
+      "原相对路径": "work/anan/decoded/running.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/running.png",
+      "SHA256": "b03170cf7ab87d31ca0949d4d87a62b6bc5996b081294d328045e62b4523404b"
+    },
+    {
+      "原相对路径": "work/anan/decoded/waiting.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/waiting.png",
+      "SHA256": "420f03743908caa425f2e82c53211706e6df4a904ad701046e0752bbae12f35e"
+    },
+    {
+      "原相对路径": "work/anan/decoded/waving.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/decoded/waving.png",
+      "SHA256": "7d89b4b9b9cfe81cedf26913776d93a4943e21cc0335cbbf144ae5e250712785"
+    },
+    {
+      "原相对路径": "work/anan/final/spritesheet-extended-raw.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/final/spritesheet-extended-raw.png",
+      "SHA256": "d14b279b820679ee39099a345aded7c059f2abc5ee732489239bd9c62d9a2e66"
+    },
+    {
+      "原相对路径": "work/anan/final/spritesheet-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/final/spritesheet-manifest.json",
+      "SHA256": "097ab24e1b63048c40a9b62e7be80ca7eefb382510ad71339cb1114daf302ed4"
+    },
+    {
+      "原相对路径": "work/anan/final/validation-extended.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/final/validation-extended.json",
+      "SHA256": "e4fcb67295255227bbbf3cd8f2367f154a6f47188ab727a1fa8522e8d15869bf"
+    },
+    {
+      "原相对路径": "work/anan/imagegen-jobs.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/imagegen-jobs.json",
+      "SHA256": "529192674d58ac55974356e92b7140647591f379193f3c4b42167c7baf7ed1f1"
+    },
+    {
+      "原相对路径": "work/anan/pet_request.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/pet_request.json",
+      "SHA256": "78c4edd1962cc652e58d39ca7d9ceaf76838f2ef2cf9b0851bcdfcd7a95f700f"
+    },
+    {
+      "原相对路径": "work/anan/prompts/base-pet.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/base-pet.md",
+      "SHA256": "2bc32ee116921056a54ca9869d45e9f24b540255e9a97187a21679ae6c2bf71c"
+    },
+    {
+      "原相对路径": "work/anan/prompts/look-anchor-repairs/000.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/000.md",
+      "SHA256": "f545ac22fc1859a32d5b882e12a40ad55411564a597425c75759a0b357bb27ed"
+    },
+    {
+      "原相对路径": "work/anan/prompts/look-anchor-repairs/090.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/090.md",
+      "SHA256": "8062dd703d6487c544cccae47f7992c5cd5eb858af3b78a534409f93d74a3393"
+    },
+    {
+      "原相对路径": "work/anan/prompts/look-anchor-repairs/180.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/180.md",
+      "SHA256": "6e1637931236bf4ed80078a94e19097c88c70a0fd399acf02e4724ff40f16931"
+    },
+    {
+      "原相对路径": "work/anan/prompts/look-anchor-repairs/270.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-anchor-repairs/270.md",
+      "SHA256": "6b1cc518a53b4e1a755229cddd3d68f65e1c59aeda48e1339410da70c27d72d0"
+    },
+    {
+      "原相对路径": "work/anan/prompts/look-cardinals.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/look-cardinals.md",
+      "SHA256": "b0121375a451ed2d3c62beb00f8bd2547548dfbd3387a3f3c4a563b7965d4e8c"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/failed.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/failed.md",
+      "SHA256": "7e8b697ea544cb96ad15a6a4f80dcd0a64f8603aef3a1b33c2aa9be18d4ed0b6"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/idle.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/idle.md",
+      "SHA256": "85aa4010e5f4178e2fda446659606140d7af9df1262255bf351519c172f8d199"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/jumping.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/jumping.md",
+      "SHA256": "b8602691d133ec50498014acc1c4b8912c8fcae10ff3c195a8bdfc47fbcb204a"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/look-row-10.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/look-row-10.md",
+      "SHA256": "e51b65df16c89cc621c41015454e98a63b92105166a3decce24955865231ca1a"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/look-row-9.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/look-row-9.md",
+      "SHA256": "061fa665cdcd763c61f02674263f8c5ade5ef28eb9e31e86b555bb0fffb63689"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/review.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/review.md",
+      "SHA256": "535ffa74b433dcc6e811ebb414a1387f45adba111ad589ae6484132588295f69"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/running-left.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/running-left.md",
+      "SHA256": "0c99a2f2976a406f4810a11097f573ef18bafb52e3614ce62f7ff361914c8b7c"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/running-right.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/running-right.md",
+      "SHA256": "25898c7e0ad68d5fcdf2ad68c46f9da92744b64eb905982f1858ace9aa52c504"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/running.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/running.md",
+      "SHA256": "aa449328eaefed429883111b06ddf4cc6e003b612def2ccc06a317e6f612b686"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/waiting.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/waiting.md",
+      "SHA256": "c7a5c9570c129962a2d60c98c7b4a68c0e330e7c494348bc975bb806f11ade6e"
+    },
+    {
+      "原相对路径": "work/anan/prompts/row-retries/waving.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/row-retries/waving.md",
+      "SHA256": "185029d3e9c6c618b67c7cab298e398d449350d0d57e852450ed1a7868c2dde6"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/failed.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/failed.md",
+      "SHA256": "fe7a8e89822977f3ce78bf13ff880187f801c7045f348136b5529a3345f4ad74"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/idle.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/idle.md",
+      "SHA256": "e78d4f12884b1b7a90344d210d16356f1920ea20153f5c39a8716ed08a83219b"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/jumping.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/jumping.md",
+      "SHA256": "5fe6f9fc03942cfdd339bb1425377049f69a0332ce08e54db3ec7325a90ba478"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/look-row-10.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/look-row-10.md",
+      "SHA256": "468cc01e2181659381e01e5c1f8e83d5999e2b9fad9503d2cde7e41c1e612687"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/look-row-9.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/look-row-9.md",
+      "SHA256": "a7bed5bb90361129d5bd421f45cb5cc283e2b88cba2e41f4ffd822416e5cbb64"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/review.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/review.md",
+      "SHA256": "de7d6d3a6fe6d94ced0d4901f8ebfde7c7355b75a1cbc20f6a6677a6306397a2"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/running-left.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/running-left.md",
+      "SHA256": "82f0e665d78281a61126b3d10da168e2657c7147a534b49618dd2c2613b741e2"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/running-right.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/running-right.md",
+      "SHA256": "9f0ab86c13bf138fa60035f909b68fca070de8b9a34c34364fdc3a5a111aafa8"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/running.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/running.md",
+      "SHA256": "38b1fd89e151e48f8f1970c1334bc7404e6320fcd44606e83edcbc536645e0fa"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/waiting.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/waiting.md",
+      "SHA256": "83db633b696fbb60f1142830e28894540fb77c90630ec4457faf06978ca0583c"
+    },
+    {
+      "原相对路径": "work/anan/prompts/rows/waving.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/prompts/rows/waving.md",
+      "SHA256": "3376be413ecfd4d2b2a26afcad25e0d2b753f5edcdfffbe88c83b16ef61e9285"
+    },
+    {
+      "原相对路径": "work/anan/qa/blind-answer-key.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-answer-key.json",
+      "SHA256": "1c1394df423dda961aa2be8cf0ece3e944cbccb8165da383acb05debb0b97cb0"
+    },
+    {
+      "原相对路径": "work/anan/qa/blind-combined.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-combined.json",
+      "SHA256": "69855d58b45e7ae83e39e6ac1cb41d40e0ccac8e605767f542201059e72c3443"
+    },
+    {
+      "原相对路径": "work/anan/qa/blind-directions.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-directions.png",
+      "SHA256": "91d6668315a043e48aacf66f4048b64e0f3665c2cc62f20cc2c1b21e4d29a58a"
+    },
+    {
+      "原相对路径": "work/anan/qa/blind-horizontal.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-horizontal.png",
+      "SHA256": "51897175f207d589c5aef0a2d688c94f03548913767e13e45a8d02ffb16ad014"
+    },
+    {
+      "原相对路径": "work/anan/qa/blind-validation.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-validation.json",
+      "SHA256": "5a2c57a128792a8fa529164ea99840110a060fda53a93591b427b9c4322a12ce"
+    },
+    {
+      "原相对路径": "work/anan/qa/blind-vertical.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/blind-vertical.png",
+      "SHA256": "ef589d9e9ab8cbb02504c857c408c14554add67c69be379f787aaf7ffe5004d9"
+    },
+    {
+      "原相对路径": "work/anan/qa/cardinal-review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/cardinal-review.json",
+      "SHA256": "8c1a3b5c8961274a9b426052305c51f27b9e0a8fdf6a4a9d0afbc0a40dd5398a"
+    },
+    {
+      "原相对路径": "work/anan/qa/chroma-despill-extended.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/chroma-despill-extended.json",
+      "SHA256": "c12a1da62dd3d699f40ff80b061897eda4cfe7d2af66e1409f7d8c3250289dc3"
+    },
+    {
+      "原相对路径": "work/anan/qa/contact-sheet.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/contact-sheet.png",
+      "SHA256": "f99a77b83bcddce3f58c2fc78a93fbfca0fcbc6455b40f5e4cae5c1c308ccf4e"
+    },
+    {
+      "原相对路径": "work/anan/qa/direction-qa.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/direction-qa.png",
+      "SHA256": "a134cd1431bb620404b965eb8bedb413ad07db51457f0febd3ef3b4840e2bc5e"
+    },
+    {
+      "原相对路径": "work/anan/qa/direction-semantics.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/direction-semantics.json",
+      "SHA256": "adeebeb441e9e06d48c34be344cca2e42f08b2a72bd1f6208ecc001c6ba4d956"
+    },
+    {
+      "原相对路径": "work/anan/qa/final-contact.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/final-contact.png",
+      "SHA256": "8ea9ecaf7c1b66bbedc4a247aa6ce4a15fb027deb125d82ae507e29f320a2889"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/00.png",
+      "SHA256": "f2df7458931ea2e07d598edd07f9d8f8bb4451c639bd9699e8d0650940965ea0"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/01.png",
+      "SHA256": "17fe5c5c1fe3db7ecf96b72d999be83f74d4d017bbe5affef5324a7124eeee34"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/02.png",
+      "SHA256": "7cc82744c088ab29f1791777c129cacb17f464e8d05095d7d96f2e3a8591b9bc"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/03.png",
+      "SHA256": "3223d1e664e47e2a7bcda0807cc14f48e12ebdcca9c30f4ac90b79fd92681a50"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/04.png",
+      "SHA256": "e5fe30f1d034fcf73c8095d85751f46f8a527241dd9c62259652a69074ca00e4"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/05.png",
+      "SHA256": "b69cee56fe132a8f1036c41829ae689c9053ee4770e750eb4763196adebaa265"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/06.png",
+      "SHA256": "82f8acacbab000592b90f50a7bf09f9368f1094a66a74d631e3abb4b24cf63f9"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/failed/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/failed/07.png",
+      "SHA256": "d99a62570f8fc4f1b19a8f4a214c091e7d989a1067293a5612d6f8fa7298fabd"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/frames-manifest.json",
+      "SHA256": "1e188e3d06d6107757fcf1f5b832bb7332344c966b0d46295323765a261bc868"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/idle/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/00.png",
+      "SHA256": "f86da317cfbfd6eeebe56f608f3b5082336df3891f0b81315f39abe7b9f4f505"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/idle/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/01.png",
+      "SHA256": "7f0b93ce8813f448a0f1395cb6d9f25f3b4ab47a9b818eba7b3fc4dc2d91f4f8"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/idle/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/02.png",
+      "SHA256": "53ea97d0eba39dc748f9951c4f2ab1e1c48f286b14f4a8b850cf136338377e09"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/idle/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/03.png",
+      "SHA256": "6eecde6f8fb2a7a0d3c1163d150a283da7a024503c4cd72c1aa0a6d82efb0a86"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/idle/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/04.png",
+      "SHA256": "7258a5232e3596e75e0f638ae79c1097903662083acca2f4f416a5e720865008"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/idle/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/idle/05.png",
+      "SHA256": "f57b035c1a6303ac7b916c91c432f9b55ecb08cac35cb9c1e27fbf78869c6dc4"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/jumping/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/00.png",
+      "SHA256": "a9199c0a79de90460490fa0a965f0c2ff266dfe02e2b1247e4b7504815de823e"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/jumping/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/01.png",
+      "SHA256": "55de3ddc26a00d52ffd0856ae7c6083068a96b8b43c103c8a5f5b96752e238a6"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/jumping/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/02.png",
+      "SHA256": "9ac71512e9b3ffbbad940a625363cb3a1eb5f197d9bc7e3098245c0e177a90b3"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/jumping/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/03.png",
+      "SHA256": "59d127fac81e8deba15a464edab7e7ce7273f904ab08e4fd32c72fd2d4ea2600"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/jumping/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/jumping/04.png",
+      "SHA256": "2b539f29d56f9dc0c24f18bf2fd34d09d2d661d89a22193b1f0b1f8075e43870"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/review/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/00.png",
+      "SHA256": "cfafef598cf818469efdd97565c80bc20712a2f1ab46ed6ceb5c6c0a89d375e9"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/review/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/01.png",
+      "SHA256": "6397279dd8ae5b139c12cc6b8163344ea13c541d32feb14fc4c5a9bf32920f37"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/review/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/02.png",
+      "SHA256": "d186e149e0bfa2f25d8be3618c20f4dca103b7408e65226be997f7e1b5cb85f9"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/review/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/03.png",
+      "SHA256": "81477471b9b365bf5a45c1bcc68c65e2940159cdb117888ae04881dde8a1f7d0"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/review/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/04.png",
+      "SHA256": "2e9ce17413ede06c4a9df705c6ab59f580c64b472edb47ad96b38b17f7df06be"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/review/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/review/05.png",
+      "SHA256": "2b0d837f9477d4f666ff02db32ab61148834b9bf49449254bc932bd95eb97ebf"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/00.png",
+      "SHA256": "28d3b45aaad9d8494e010dfa434e2bf93a0f4076368f10a689a6c81761f67973"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/01.png",
+      "SHA256": "c5049d8f1c9e4c924f9db4dd0e1483d4fbed5df8e945e7673918209e9035d8c4"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/02.png",
+      "SHA256": "b5b7de9ace7afe1ae89734ce9ba6797431b358e1fb950aff9b92278aa719b921"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/03.png",
+      "SHA256": "ebaaf664dd057c4b29a5f41028f6d29fcce7633c0a92fd6ceb47934fa0d6bc8d"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/04.png",
+      "SHA256": "4505cad429dccf1c1381e2d54ced0c4ccca2f5fed1ef54c476a799b533c5e9b8"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running/05.png",
+      "SHA256": "67cd93652d326fb0e010927eb1b6c55d89c0e06467e84a457eed8e310184ef89"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/00.png",
+      "SHA256": "6ea344d537dc290af78bd39c3874541a5e6d5c5b1a1bf0eec320553d1b5a57ef"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/01.png",
+      "SHA256": "764f321fe0617cc8de57071af98e2ef459410074deb10eab7f92abd73b989c3b"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/02.png",
+      "SHA256": "a2b449165a75f8aa663d859efcacee0e3c52ff135e3f8e52da2156424be8521c"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/03.png",
+      "SHA256": "3db255704563bf2270753939d57d115305281e66087cee4e5ff8126e3bff9ee0"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/04.png",
+      "SHA256": "fff43cb61683ece374ca5a427902b8d17a761a6a8b435974e94c819157ebc64f"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/05.png",
+      "SHA256": "e14e1ae34f4ba99e4786345f384b3c2dcb6b71f60244ba5ebd85be5f0c6da9c9"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/06.png",
+      "SHA256": "3b5dc81d5b5c3c63410c836e535eb5e5a2802742beff75c9f49379486c985411"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-left/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-left/07.png",
+      "SHA256": "6705fc9999693d635ac3b588969dd1eb1f37f90d7b4bedacb854a452dde54143"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/00.png",
+      "SHA256": "294ed43d74c049132e48173e2ffd9fb461d8c74e418c02267064735331ffb3cc"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/01.png",
+      "SHA256": "44a2e49cdb032369e917941fba8494d63deae53626d904e09004e56ee3376555"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/02.png",
+      "SHA256": "24d7864d121fef6c30764b35d759e972de051912b33c21c2440966ea5a50302c"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/03.png",
+      "SHA256": "ac350bb0bae7c385a71aa76810b6261faef7021cd4decef80790613a344cfc21"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/04.png",
+      "SHA256": "4c63fda5aa4926ffc8e985caa74cdc666af09286a8bd4aecfb4d60c33130d860"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/05.png",
+      "SHA256": "c2fc6e1dd30bc037496695f969ce17194875dd476721b60441ac994b14d9984c"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/06.png",
+      "SHA256": "27abae282f7b71091d15752df1b7465e030fd8611e2df1cd14dfc230a4cf991b"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/running-right/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/running-right/07.png",
+      "SHA256": "10c9841eb56000ff10da3a1ab25250c46147339e1324417785cc6d2bdb39f950"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waiting/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/00.png",
+      "SHA256": "87cb25ba7f05baa9b23d1d9fe001eb21184901891a9336a044037f14994e97ea"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waiting/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/01.png",
+      "SHA256": "abff16beff5bd832fe0f973c28a6a508562ca750f28852df397b30d2049f3236"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waiting/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/02.png",
+      "SHA256": "ec2d022185bc8060219c16970d9ec5ca2c937d6fab542dea7fca8031afebe7b9"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waiting/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/03.png",
+      "SHA256": "a4bbf40492b99b60ff268461dddb86e28392d55026a4bcfea84ea2bf88e8b56e"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waiting/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/04.png",
+      "SHA256": "f8aade2c3af3be950f5a1a984ecd031d17fd4ea5da0feb4ea13d5ebaaa85b6a0"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waiting/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waiting/05.png",
+      "SHA256": "965613755b34d6c6e60b79a98e4ea5160dfa9e1cbe017a9a1eab843b8aa009a3"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waving/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/00.png",
+      "SHA256": "a48cd09936bd62ed83fc262ca2b21b2f2fa194f267ac6f615d2b8c0b8dc93a0d"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waving/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/01.png",
+      "SHA256": "eb5e21deb33d77866a73d20c28e7d7a6c680055ffaec11d359c70a11516b3998"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waving/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/02.png",
+      "SHA256": "ceb85ab5396fa5356aabad4477fd801601286a7e1a3cc6838105ad43f694a6b4"
+    },
+    {
+      "原相对路径": "work/anan/qa/frames/waving/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/frames/waving/03.png",
+      "SHA256": "f0a841af8af4d8c6b4f69e60d610a7fe4deb7c34dfb1d44397c14838509f2007"
+    },
+    {
+      "原相对路径": "work/anan/qa/independent-boundary-review.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/independent-boundary-review.png",
+      "SHA256": "70d907d059a59a284342c92f2c8d8e03fbf09e96a0fadd4bb4c5714915feb32f"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-continuity-reference.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-continuity-reference.png",
+      "SHA256": "4589a7b768b58768f7c7a16350f7568ba27f8bdaf89266d5e3749402039f88f1"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-continuity.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-continuity.json",
+      "SHA256": "8be6638b92ce69791859fe3e538963c7eb38192410c50c1049c5e97cd15c6dcc"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-mechanics.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-mechanics.md",
+      "SHA256": "b6e829370d39d5008185abc4581500cdc68b28fbb99f632ada749d3fe048d2b7"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-preliminary-continuity.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-preliminary-continuity.json",
+      "SHA256": "8be6638b92ce69791859fe3e538963c7eb38192410c50c1049c5e97cd15c6dcc"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-preliminary.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-preliminary.png",
+      "SHA256": "27b031133021bb3cbfaca393604aa04c0a40f972c8cd2c48a33cec45fbfb560c"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-row-9-registered.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-row-9-registered.png",
+      "SHA256": "23916f3ea2ce2918c7e09c4a075fc9a72a85990232a5e8abfbef204ea25ce27b"
+    },
+    {
+      "原相对路径": "work/anan/qa/look-row-9-registration.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/look-row-9-registration.json",
+      "SHA256": "0dca288fea9117c60bec06fab9561890d1f51e4d4c7b56a02f754d853c6e4634"
+    },
+    {
+      "原相对路径": "work/anan/qa/pet-quality.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/pet-quality.json",
+      "SHA256": "0bdf1f21adce9024fb97ca6710a9c1c3938d8d267bc3cdf98ffc1e10eb45f9fb"
+    },
+    {
+      "原相对路径": "work/anan/qa/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/review.json",
+      "SHA256": "531d5e56f7c16a353b3944e653b7136bcf5baf922e2933f696c1f0ab9ef9142f"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/00.png",
+      "SHA256": "d36263f345528deb2c759cd31338233983c427cc7fce38af34a0e0ccf63043ab"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/01.png",
+      "SHA256": "a154767e6ee57bf637b3f92a9b55e7018853a74242f75afe99d76199a5d5cee1"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/02.png",
+      "SHA256": "c02b79fdcb092dc64042cf46b5586de10c2ad63a96843d765f9f358091a9d395"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/03.png",
+      "SHA256": "283fba37882a05d51307d22461f8c84cf725e01961f24b323c633f80c14fbede"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/04.png",
+      "SHA256": "9360b16526ad13f3958b881f4272b82afc3df588cd4eb1b24b381a8c4d9feeba"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/05.png",
+      "SHA256": "2faedd69890524bf813dfc4d1b0092b963b553cdfdcd52a5144bf78add3d9efb"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/06.png",
+      "SHA256": "49bdb4c7a5797e01f28e89d8e371000c0dab82a05053926ce0dd68fb5714beb5"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/failed/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/failed/07.png",
+      "SHA256": "710f4b0b17594d20be03c512de4e0957b4ad78f7453c3e514c468bd496bef8d6"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/frames/frames-manifest.json",
+      "SHA256": "a5db7fe43f97aca2616c65a0805204e893acee4f07e13d0e711f6acc6013c261"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/review.json",
+      "SHA256": "089d276a0b403d2e39cdfb474fe38eee0d23878d435eb77e489947862e2fc1c8"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/原始生成-01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/原始生成-01.png",
+      "SHA256": "8adeb0d62fdabc252a5b92fce16d18c8a79059e0ffc5c3a1e1d1f0bda0bc46b0"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/原始生成-02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/原始生成-02.png",
+      "SHA256": "a8478d2c07b23c1f57636ec0d0c75ea7cb3886e73c8b10697876f310bde960be"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/检查-01.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/检查-01.json",
+      "SHA256": "a7f97bc50c9e109e8f34d3cc0dae6c8d50804411b77e03d2f1d88bb026855067"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/failed/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/failed/生成提示.md",
+      "SHA256": "cab06bb743902670365540e10b55e5f829295a5733a7f96bdc2f0c0fe9123deb"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/frames-manifest.json",
+      "SHA256": "882ead19f1f6bb6243d8682d157c780d55520118f893bf42657ebaf63196afe7"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/idle/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/00.png",
+      "SHA256": "d605b8daa720ca1b35634944712b29e7409ce7615f11c5b21c108f55e1548678"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/idle/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/01.png",
+      "SHA256": "95f6e7fc822365dec2873bad849541a6aca74f856890a8d54b4fea9e879daa66"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/idle/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/02.png",
+      "SHA256": "02420189be65fcdbaa30045363e99dc73dc72d916913066df1647721fca1697e"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/idle/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/03.png",
+      "SHA256": "35d8f8c5f579ca1340f0cd9badf7f0db9189675b90e2e70c326ee4d1f3e4747e"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/idle/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/04.png",
+      "SHA256": "dcabf1d784d09b286c8f851ee5fc88c4bcee822cc6c7d9384e60be70642986ac"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/frames/idle/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/frames/idle/05.png",
+      "SHA256": "0dd6d9ef6b50ba04835e39820c21cbe9a1ae43dc1f7fd8b17541004a30cba3c2"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/review.json",
+      "SHA256": "02a4491246c4a997faa7baa2007789af5400b10c5c7a3f525bf91daddcf2b3d9"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/idle/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/idle/生成提示.md",
+      "SHA256": "90f107a92bf377de24fac23f97a7725c061e227dfc19cf08e0f11f61e487ee76"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/frames-manifest.json",
+      "SHA256": "09ad5c5755112ef2595fdb8b535b3290ef0d0fbdfcc5fec336f665ff2672d73a"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/frames/jumping/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/00.png",
+      "SHA256": "a9199c0a79de90460490fa0a965f0c2ff266dfe02e2b1247e4b7504815de823e"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/frames/jumping/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/01.png",
+      "SHA256": "55de3ddc26a00d52ffd0856ae7c6083068a96b8b43c103c8a5f5b96752e238a6"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/frames/jumping/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/02.png",
+      "SHA256": "9ac71512e9b3ffbbad940a625363cb3a1eb5f197d9bc7e3098245c0e177a90b3"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/frames/jumping/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/03.png",
+      "SHA256": "59d127fac81e8deba15a464edab7e7ce7273f904ab08e4fd32c72fd2d4ea2600"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/frames/jumping/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/frames/jumping/04.png",
+      "SHA256": "2b539f29d56f9dc0c24f18bf2fd34d09d2d661d89a22193b1f0b1f8075e43870"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/review.json",
+      "SHA256": "9a3bb532751572f85a29707ba9450c19b2fc15bdb74310d1ec31438c4af4b78a"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/原始版本01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/原始版本01.png",
+      "SHA256": "e6fcca16cd703314c6936440ee579f2370556af85bb0514b9cd2e248d91bfbd3"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/生成提示.md",
+      "SHA256": "2f81c9f11bd354fbdac2c8c0aa7bc192fbd24c51c2e98def3e2229d17c409494"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/jumping/生成提示02.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/jumping/生成提示02.md",
+      "SHA256": "9ea3974b609c9f1b8ffd416572bb7b4e80f4ce0246cae4eaa18705520f1b37e8"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/frames-manifest.json",
+      "SHA256": "11702a09ce1820b401cd2d9a6cf284a34ee16a279e37e0c2813de60880259aac"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/review/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/00.png",
+      "SHA256": "f63ad5bf4a34e64890c7afc82b76cff58a5b18815b996ef551e3055fe7c9c847"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/review/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/01.png",
+      "SHA256": "73b536c83933d124b0dd6a40fffafe944d8d47a0a1ec546d2275adec46776adb"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/review/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/02.png",
+      "SHA256": "5dba719369a2ddc9eae3a18d9f18540b3776b10544e559df7c0a0bccd4729b7e"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/review/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/03.png",
+      "SHA256": "647af1355c94c797f8b33832031c9ea3adf9607dfea629f799ef690989f33267"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/review/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/04.png",
+      "SHA256": "f0f95694d73d878d5305017fe6b695fa9e9ba82f8d9ca39da9872a5edd530f45"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/frames/review/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/frames/review/05.png",
+      "SHA256": "ab5a4b903cb57960bf8e707260d20e04b9f130c6b9ecb5ca3c129df82b7ac689"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/review.json",
+      "SHA256": "bb7fc61d2b9e1c2798475c633d7a14add2006705356a7b7896198c03841fd3c5"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/review/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/review/生成提示.md",
+      "SHA256": "d950b7670fff7dcfeaba3e3219fffdaf01795d5e5b6208a1fa57fe6f568fe399"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/frames-manifest.json",
+      "SHA256": "febd5dc93a382b0faa51bb616f6b5ac743f830e2bfb9626d7f4d78f0d986e723"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/running/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/00.png",
+      "SHA256": "04943d52f9ee6837b5595b705b259e416cc69c3db788b54b5cef39c1d2494f29"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/running/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/01.png",
+      "SHA256": "c468790b8dd17eb2b973d286042be7563edfa3552cc27fa57ec0a44cbb673a31"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/running/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/02.png",
+      "SHA256": "cf9c060fb6a992c1029f48205a3d683b4daa49479153566ebb3b912fd55594d0"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/running/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/03.png",
+      "SHA256": "b864716468c0af6aecf3e9561925462ca47c22e4e009005a7a2a38f5613aebbc"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/running/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/04.png",
+      "SHA256": "27defed390efe2836fddf20246e4ee843e2edc07b6da687c00df1dd3c2d62caa"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/frames/running/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/frames/running/05.png",
+      "SHA256": "e67e52f518fdbe7d98605aab136537f4e97f918ab37d51478ceb32e2d49fb5e8"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/review.json",
+      "SHA256": "54b349a250fab94b31b3580232e430f1ca6c7fef3121cda27ed7a2710422d41d"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running/生成提示.md",
+      "SHA256": "ff05a4f4e058e79d55246c3069c696e0f58bf23201cedf60314696ba6789f9d6"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/frames-manifest.json",
+      "SHA256": "c1f26e16c94d070068d9897466d384ae84934d6194d9e4ba2139cfaf3b771e68"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/00.png",
+      "SHA256": "6ea344d537dc290af78bd39c3874541a5e6d5c5b1a1bf0eec320553d1b5a57ef"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/01.png",
+      "SHA256": "764f321fe0617cc8de57071af98e2ef459410074deb10eab7f92abd73b989c3b"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/02.png",
+      "SHA256": "a2b449165a75f8aa663d859efcacee0e3c52ff135e3f8e52da2156424be8521c"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/03.png",
+      "SHA256": "3db255704563bf2270753939d57d115305281e66087cee4e5ff8126e3bff9ee0"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/04.png",
+      "SHA256": "fff43cb61683ece374ca5a427902b8d17a761a6a8b435974e94c819157ebc64f"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/05.png",
+      "SHA256": "e14e1ae34f4ba99e4786345f384b3c2dcb6b71f60244ba5ebd85be5f0c6da9c9"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/06.png",
+      "SHA256": "3b5dc81d5b5c3c63410c836e535eb5e5a2802742beff75c9f49379486c985411"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/frames/running-left/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/frames/running-left/07.png",
+      "SHA256": "6705fc9999693d635ac3b588969dd1eb1f37f90d7b4bedacb854a452dde54143"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/review.json",
+      "SHA256": "cc9f21828bd5ab3f321940dec6156caeb5887d0c278f229b520640c06621e2d8"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/原始生成-01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/原始生成-01.png",
+      "SHA256": "17d41a82cfa3eaf6f60821a294cc1734970db32164281e936e6362ece8337fe7"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/原始生成-02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/原始生成-02.png",
+      "SHA256": "d1ec6f214fe9feb71e70964d6247269948797787a108a6afcfb11f99ee8dcaca"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-left/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-left/生成提示.md",
+      "SHA256": "7b2dc671127075dccd16aa7630795d2904c4851e499cb6a5153131a29ff136f0"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/frames-manifest.json",
+      "SHA256": "cab00e6e8d8289fea833b78442fe3cb4217fb83d8d448785423d1ec3ecf63406"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/00.png",
+      "SHA256": "294ed43d74c049132e48173e2ffd9fb461d8c74e418c02267064735331ffb3cc"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/01.png",
+      "SHA256": "44a2e49cdb032369e917941fba8494d63deae53626d904e09004e56ee3376555"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/02.png",
+      "SHA256": "24d7864d121fef6c30764b35d759e972de051912b33c21c2440966ea5a50302c"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/03.png",
+      "SHA256": "ac350bb0bae7c385a71aa76810b6261faef7021cd4decef80790613a344cfc21"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/04.png",
+      "SHA256": "4c63fda5aa4926ffc8e985caa74cdc666af09286a8bd4aecfb4d60c33130d860"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/05.png",
+      "SHA256": "c2fc6e1dd30bc037496695f969ce17194875dd476721b60441ac994b14d9984c"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/06.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/06.png",
+      "SHA256": "27abae282f7b71091d15752df1b7465e030fd8611e2df1cd14dfc230a4cf991b"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/frames/running-right/07.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/frames/running-right/07.png",
+      "SHA256": "10c9841eb56000ff10da3a1ab25250c46147339e1324417785cc6d2bdb39f950"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/review.json",
+      "SHA256": "3bbeec6636857cacb2e8da6557a466f0a7870601dd793005430cc47f8fbc798e"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/running-right/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/running-right/生成提示.md",
+      "SHA256": "aa1523f50085233dd213b1eb6275c595c4539b6a0f24b37355edb3f28eb6ad50"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/frames-manifest.json",
+      "SHA256": "bea11565b7499121b77f0f67d5cfabca80fdd7e594090cf74cbb747c109e38ab"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/waiting/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/00.png",
+      "SHA256": "0f14cd0dff05987ed3ea0b884d7909e1209f7a6ba1b5984b592d1a49f68e05ff"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/waiting/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/01.png",
+      "SHA256": "3bc4c0198b7b87342d1d2b6a425a00c9020ed9415fa17856b107e6d9c0580553"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/waiting/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/02.png",
+      "SHA256": "c349c0a2ddb570ca3ecfd21c78ea7cd785ebc6a35161d2f7ad305cae057910b1"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/waiting/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/03.png",
+      "SHA256": "848fb9c715d470b090da518836080d8806c6483e35385eb496ae23df3999194a"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/waiting/04.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/04.png",
+      "SHA256": "3c976a82a5bb7ae37d9e0d452208bb331ace0c3579e864233d2432d92fc8b719"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/frames/waiting/05.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/frames/waiting/05.png",
+      "SHA256": "69694205e0ea07a25cf9f089ab9de53670f37e0a7961e3bc768056a19512c616"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/review.json",
+      "SHA256": "3bee8dd3f3f3b4099801ec2f3561effe52b57a945dbe944eb76d60fb3f7d4550"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/生成提示.md",
+      "SHA256": "aa18fd77c0427d03ec3c397d162e25d99cafee7d50a4d74047ad5750fb102787"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/重试生成提示.md",
+      "SHA256": "0d87f9ffc3d61962160659f1af66c24019437afc59209def33de3e308292af0c"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waiting/首次生成-间距失败.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waiting/首次生成-间距失败.png",
+      "SHA256": "308ae46a2b38ed03652c582a1da82811856803f860aa807c1042a71caaa4cf45"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/frames/frames-manifest.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/frames-manifest.json",
+      "SHA256": "2a526d5a5564bd933d55bac247bd6f86686cb5fbfc13e00c388177be9261ae75"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/frames/waving/00.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/00.png",
+      "SHA256": "5af0ddb25718c0e5be3f87426d1c02ecaf15e2d0389e6a79f8b4ca6a01e3cec9"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/frames/waving/01.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/01.png",
+      "SHA256": "3f50ffc2f1c122fb140409f856fcfadc89491972fe26420881f4a4d3ac19adbf"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/frames/waving/02.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/02.png",
+      "SHA256": "34b523bc9924e3d7a02c2ea88f6edd82a06be949559dbd09e2187c98ca779611"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/frames/waving/03.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/frames/waving/03.png",
+      "SHA256": "a2d7324c0ce1cfbef2c914a6f3ede00c1b644e1cd80f751af5ab46399ec21667"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/review.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/review.json",
+      "SHA256": "91c46fe9e7a185b65cfa00735df569939e441b42926f3195e409c5d2bf1d8c51"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/生成提示.md",
+      "SHA256": "801de6385af54a7db7e8da9775c92f391a0ccf5f49c051fbff2087c09e96c520"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/重试生成提示.md",
+      "SHA256": "0b8e35355d50a912883d58f3183db8634e4ca060567f5962d72fc25bc2a45742"
+    },
+    {
+      "原相对路径": "work/anan/qa/rows/waving/首次生成-末帧换爪.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/rows/waving/首次生成-末帧换爪.png",
+      "SHA256": "5fea732bcfc875ad966f7ff04f8fdd290728221f072b243df3a8d585e38a4214"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-atlas.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-atlas.png",
+      "SHA256": "03c6322cd726bf57a5f5ec970740559ae3e4f8c727d44763021a95139307fc39"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/failed.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/failed.gif",
+      "SHA256": "ce1bffc4f7ab8289d88c6b06479c008a495fc05a3924130d6db0696c95fdcf2a"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/idle.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/idle.gif",
+      "SHA256": "5070d10e1ef4245bcc73fe370888ed360219163bfb83f48c8f23a4b1eb607bb8"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/jumping.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/jumping.gif",
+      "SHA256": "9f058e53f9c05ada970a5352dd20224d1c04f8cd8482beda88628591fd3c89b7"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/review.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/review.gif",
+      "SHA256": "5d4f1de70ccb752a0d3048483f10a4787ab2973817c297afd1110f112f765f44"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/running-left.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/running-left.gif",
+      "SHA256": "801b9e5d4a4921a6269f2fbea3e95b8ceb7b103d97416b68e563b1e4b5906c29"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/running-right.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/running-right.gif",
+      "SHA256": "1dfe4994d5772f580233d60846b996939eecc285fcdf6fd128c11d75973c3ca1"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/running.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/running.gif",
+      "SHA256": "395d56d6f837b1dce4238526515238faa0c24fcde0bb7c845a04e822a2409a53"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/waiting.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/waiting.gif",
+      "SHA256": "cab03874ac6c2aa106099272d194f479db721564112825c64768ed56ba94c70d"
+    },
+    {
+      "原相对路径": "work/anan/qa/standard-previews/waving.gif",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/standard-previews/waving.gif",
+      "SHA256": "6f9a4c014f6a3ad95d38111f9f5208796b2100190d9d2557e92107417d869fb8"
+    },
+    {
+      "原相对路径": "work/anan/qa/两半圈比例校准前.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/两半圈比例校准前.png",
+      "SHA256": "ae4e9d7ebbc96affe718078232fac5927adc2910b37df6f318cc9be23dc22174"
+    },
+    {
+      "原相对路径": "work/anan/qa/四方向生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/四方向生成提示.md",
+      "SHA256": "b794e51499cfeb65693d4c8edb2de515af84b418ef4c3b51d7b7719d82887403"
+    },
+    {
+      "原相对路径": "work/anan/qa/坐姿注册记录.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/坐姿注册记录.json",
+      "SHA256": "82aad43da26a49ae953ecc8b66954183a9af132cf009d957b16a3494fdd4db78"
+    },
+    {
+      "原相对路径": "work/anan/qa/最终方向独立目视审查.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/最终方向独立目视审查.md",
+      "SHA256": "dd1b2c55a803533ec0624d0e90c84fc14065a0a8e78c1fecb35abfb6067cbc4f"
+    },
+    {
+      "原相对路径": "work/anan/qa/服务端预检.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/服务端预检.json",
+      "SHA256": "45758adaaff604f6d00c6a4fa9859f20850fe17f70ff532b47ea6c47f06dce13"
+    },
+    {
+      "原相对路径": "work/anan/qa/标准动作目视审查.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/标准动作目视审查.md",
+      "SHA256": "91d6ade9ca947dee15b2781e550276571c82a222bd166343bc0dec82804446e1"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾上半圈-首次注册失败.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈-首次注册失败.json",
+      "SHA256": "3706ebf4c39f0fb940c7a17b75c882ebce0a9bc0da8ab6a7266a47375a590cf2"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾上半圈-首次间距失败.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈-首次间距失败.png",
+      "SHA256": "53f7438c7e517fd17d80740017fe3bd86ed068624c71343f59a6940d349975c9"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾上半圈生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈生成提示.md",
+      "SHA256": "94205bcca9d2b4174b7ba56b54209b20be9759b9d992912507585a194ed5219e"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾上半圈重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾上半圈重试生成提示.md",
+      "SHA256": "94a4457ee3ddce769c5ed42ab9f0ea843465f87013be0561e783a6fc63ba189c"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾下半圈-原始显示比例.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈-原始显示比例.png",
+      "SHA256": "305882f37d55b577831e446674e9987bae1b93efcb0fab0c219e4abf5a1b5c0c"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾下半圈-首次方向失败.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈-首次方向失败.png",
+      "SHA256": "6ea39a7ce80092049a1b546358d9deb828165ac6844827022087a98d515eb0fc"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾下半圈生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈生成提示.md",
+      "SHA256": "ca2608142d5cbe008f2f1fbf1729de2d048788084f2d030543676103984d67df"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾下半圈重试生成提示.md",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾下半圈重试生成提示.md",
+      "SHA256": "f7610a357bdb385ad933a31793eb7af3e09e089e4842084a841cbfe1b4f21c40"
+    },
+    {
+      "原相对路径": "work/anan/qa/环顾源图比例注册.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/环顾源图比例注册.json",
+      "SHA256": "7a1062a8752f81921545db9e3b63dd7d3e770f32a9f45d23d20c457a5a7f649a"
+    },
+    {
+      "原相对路径": "work/anan/qa/盲审-1.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/盲审-1.json",
+      "SHA256": "634a372c93bb437d3d61adb9cef5ffa74bb9eff8678ad40bbabe60bc0ee42729"
+    },
+    {
+      "原相对路径": "work/anan/qa/盲审-2.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/盲审-2.json",
+      "SHA256": "30aa625c313566596a6bbf163c4e1e17fd42373ccd6f69403690f932f302fc7a"
+    },
+    {
+      "原相对路径": "work/anan/qa/盲审-3.json",
+      "仓库路径": "资料/历史制作档案/源图与校验/qa/盲审-3.json",
+      "SHA256": "90a48106790ad2b19fa09bd1f26301ef6e85a1833568ea9c8b880ff47a22ddae"
+    },
+    {
+      "原相对路径": "work/anan/references/canonical-base.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/canonical-base.png",
+      "SHA256": "dac1cf54ec35646051338fe9c452b0b87cd4f2adda39f05d4cb1e423f3689d4c"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/failed.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/failed.png",
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/idle.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/idle.png",
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/jumping.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/jumping.png",
+      "SHA256": "dd6f193a159ae50013b1c4368d9a02ab29bdffaa48fa978a9628801cfd0a0a29"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/look-cardinals.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-cardinals.png",
+      "SHA256": "5ccc2ce66b4677a2891ddc78b2e0c1457c8dd4c48ee03135135bf334ee782002"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/look-row-10-spaced.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-10-spaced.png",
+      "SHA256": "525810cdf6dc1f5e25e1646ec1c8814b9d9674dcfe9a77cb629fa60a1dec0900"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/look-row-10.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-10.png",
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/look-row-9-spaced.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-9-spaced.png",
+      "SHA256": "525810cdf6dc1f5e25e1646ec1c8814b9d9674dcfe9a77cb629fa60a1dec0900"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/look-row-9.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/look-row-9.png",
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/review.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/review.png",
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/running-left.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/running-left.png",
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/running-right.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/running-right.png",
+      "SHA256": "6d67d00f341f39f1535fd37776b19b366e4e78ee38f7ef002d368ecb1d765c40"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/running.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/running.png",
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/waiting.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/waiting.png",
+      "SHA256": "8530deda4e33f28621ebd871739ad0414e0721bdd45eb363cc13b5305aa35545"
+    },
+    {
+      "原相对路径": "work/anan/references/layout-guides/waving.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/layout-guides/waving.png",
+      "SHA256": "5ccc2ce66b4677a2891ddc78b2e0c1457c8dd4c48ee03135135bf334ee782002"
+    },
+    {
+      "原相对路径": "work/anan/references/reference-01.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/reference-01.jpg",
+      "SHA256": "00b8f3dd0c64b3f79496e5776bb6b9c62f8ecdf71471c8d6cdbf0cc332c1a30d"
+    },
+    {
+      "原相对路径": "work/anan/references/reference-02.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/reference-02.jpg",
+      "SHA256": "ade5e5941378947bc45d75a4a521d256415d188ec7c934174672b179b812290e"
+    },
+    {
+      "原相对路径": "work/anan/references/reference-03.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/reference-03.jpg",
+      "SHA256": "8c1c12f277da52aea30f030c56544f752411535fa6288f762761ae96047ea80f"
+    },
+    {
+      "原相对路径": "work/anan/references/俯视体态.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/俯视体态.jpg",
+      "SHA256": "8c1c12f277da52aea30f030c56544f752411535fa6288f762761ae96047ea80f"
+    },
+    {
+      "原相对路径": "work/anan/references/正面全身.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/正面全身.jpg",
+      "SHA256": "00b8f3dd0c64b3f79496e5776bb6b9c62f8ecdf71471c8d6cdbf0cc332c1a30d"
+    },
+    {
+      "原相对路径": "work/anan/references/照片参考合辑.png",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/照片参考合辑.png",
+      "SHA256": "9e6831a2a44706c63309909ddd6fb0f9b3ceca83cc98cb7fa202fe57b6a2fb07"
+    },
+    {
+      "原相对路径": "work/anan/references/面部花色.jpg",
+      "仓库路径": "资料/历史制作档案/源图与校验/references/面部花色.jpg",
+      "SHA256": "ade5e5941378947bc45d75a4a521d256415d188ec7c934174672b179b812290e"
+    }
+  ],
+  "本地成品对照": [
+    {
+      "原相对路径": "outputs/Pets/安安/制作说明.md",
+      "仓库路径": "资料/历史制作档案/成品与预览/制作说明.md",
+      "SHA256": "2c7f536019695263fdbf918c890336115fa776e58e5c271b2b8a21ecd6613c4e"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/专心思考.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/专心思考.gif",
+      "SHA256": "c8de5d166346f50e48d2a31874e0f47193278051c5d242f4447cc33e61a028e0"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/仔细检查.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/仔细检查.gif",
+      "SHA256": "07a9abeb23ff9a2072ae837e2da274ccfb1c0473e49bf05d6a67460ebdcdd838"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/全部动作.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/全部动作.gif",
+      "SHA256": "ae67547aea2ad7e530a6b7396fd4c5e062e6a53f8883837900bc1e48d31fb455"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/全部动作.mp4",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/全部动作.mp4",
+      "SHA256": "f21fb7713484c79f4a46315d6e07735fb6b00741235c492c0ab65804e50241d6"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/全部姿势.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/全部姿势.png",
+      "SHA256": "0dacea8c04e9e271f9d6ef3e530c9cf141ab191fc60e3592b6612dd554435b4c"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/动作静帧.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/动作静帧.png",
+      "SHA256": "85a22d9282b7e5f1051fef2df879020c27a819c33f1bed1becffbf4789f1687a"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/向右移动.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/向右移动.gif",
+      "SHA256": "a45ddbb12f45131c054e3520ffb4052b26df2a95a819abf7f3b20488b5278b46"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/向左移动.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/向左移动.gif",
+      "SHA256": "8377c73a1f8f90526cf252f0bd534cc011dc149195586679ce06d0310ccdef6a"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/安静陪伴.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/安静陪伴.gif",
+      "SHA256": "86df12c2cf554e6892ea8291015f4bab7f6586aaf97150f93bdccc7c1b9f2c98"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/抬爪招呼.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/抬爪招呼.gif",
+      "SHA256": "5d8627c31e229dd974fbcb0279699bf39d317f36c473ec1972c5bfe7c4711e24"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/有点失落.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/有点失落.gif",
+      "SHA256": "6f639d646deb58230fba8a5cf34433f16bffc968c12a21deab9c127be5a8343a"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/期待回应.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/期待回应.gif",
+      "SHA256": "6aa9842c19aa69beaa7424892aad41b693ed5ebbac6ccaef28ae5aa800aeb33f"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/环顾四周.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/环顾四周.gif",
+      "SHA256": "e9e4dfb09636dcab0b5fb0735316111b85540715a873dcfe6201f5b9bd6f93d5"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/跳跃衔接.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/跳跃衔接.gif",
+      "SHA256": "bf691ed08111552e6c572d6e70375e4222ac623c14fc02f24d49f4fc7e88c002"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/轻轻跳跃.gif",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/轻轻跳跃.gif",
+      "SHA256": "46513c412ea77dc4f1bffda71f8688344f97512c3b5cf032979b79787f9a7ba5"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/静帧_仔细检查.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_仔细检查.png",
+      "SHA256": "d058e6166a150f48cb3ced5d8de9f82df25ca69a29ef6843c1975ef794b55beb"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/静帧_安静陪伴.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_安静陪伴.png",
+      "SHA256": "871a55e10afbe2321f8ac299fd780920422409810ba6a0d7d0ecc8ab9d7ab6dd"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/静帧_抬爪招呼.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_抬爪招呼.png",
+      "SHA256": "d6f587d07d810913ce0896cae1c02b2ba8ba3493814de4ff80a74b471a13f412"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/动态预览/静帧_跳跃腾空.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/动态预览/静帧_跳跃腾空.png",
+      "SHA256": "8dff318ee4b3b72f30fa1fa30a2877ff0edeadede91f1481b61ef8d798e79d42"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/基础形象.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/基础形象.png",
+      "SHA256": "dac1cf54ec35646051338fe9c452b0b87cd4f2adda39f05d4cb1e423f3689d4c"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/基础形象生成提示.md",
+      "仓库路径": "资料/历史制作档案/成品与预览/基础形象生成提示.md",
+      "SHA256": "046641ce3872541c4688e626ff44b187276180074f057f80ee9abe4f8cce5515"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/安安精灵图.png",
+      "仓库路径": "资料/历史制作档案/成品与预览/安安精灵图.png",
+      "SHA256": "d0002453c7fe3e930d9e117d0a5d462455d7b293dfbd38111ced06714b0aca1e"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/宠物记录.json",
+      "仓库路径": "资料/历史制作档案/成品与预览/宠物记录.json",
+      "SHA256": "3557b065a7cf5b8e7a8ee89da870d2695b8b770aea94eb39e9dcd1eb1320870e"
+    },
+    {
+      "原相对路径": "outputs/Pets/安安/生成提示合集.md",
+      "仓库路径": "资料/历史制作档案/成品与预览/生成提示合集.md",
+      "SHA256": "a6fcecccca820128aa133bdd00406a4677168e84333c965bd03be4f3e275f643"
+    }
+  ]
+}

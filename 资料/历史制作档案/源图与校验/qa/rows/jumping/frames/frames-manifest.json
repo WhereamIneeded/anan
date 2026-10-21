@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "chroma_key": {
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "threshold": 96.0
+  },
+  "rows": [
+    {
+      "state": "jumping",
+      "frames": [
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\jumping\\frames\\jumping\\00.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\jumping\\frames\\jumping\\01.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\jumping\\frames\\jumping\\02.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\jumping\\frames\\jumping\\03.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\jumping\\frames\\jumping\\04.png"
+      ],
+      "method": "components"
+    }
+  ]
+}

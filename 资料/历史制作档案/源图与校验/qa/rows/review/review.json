@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "frames_root": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames",
+  "states": [
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames\\review\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23944,
+          "bbox": [
+            14,
+            9,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 612
+        },
+        {
+          "index": 1,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames\\review\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24112,
+          "bbox": [
+            14,
+            7,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 617
+        },
+        {
+          "index": 2,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames\\review\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24254,
+          "bbox": [
+            14,
+            6,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 595
+        },
+        {
+          "index": 3,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames\\review\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24198,
+          "bbox": [
+            14,
+            8,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 608
+        },
+        {
+          "index": 4,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames\\review\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24438,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 601
+        },
+        {
+          "index": 5,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\review\\frames\\review\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23992,
+          "bbox": [
+            14,
+            6,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 619
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "strip": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\decoded\\look-cardinals.png",
+  "directions": [
+    "000",
+    "090",
+    "180",
+    "270"
+  ],
+  "errors": [],
+  "anchors": [
+    {
+      "direction": "000",
+      "source_box": [
+        0,
+        0,
+        542,
+        725
+      ],
+      "used_pixels": 210780,
+      "edge_pixels": 2,
+      "output": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\decoded\\look-anchors\\000.png"
+    },
+    {
+      "direction": "090",
+      "source_box": [
+        542,
+        0,
+        1085,
+        725
+      ],
+      "used_pixels": 207856,
+      "edge_pixels": 0,
+      "output": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\decoded\\look-anchors\\090.png"
+    },
+    {
+      "direction": "180",
+      "source_box": [
+        1085,
+        0,
+        1628,
+        725
+      ],
+      "used_pixels": 207649,
+      "edge_pixels": 0,
+      "output": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\decoded\\look-anchors\\180.png"
+    },
+    {
+      "direction": "270",
+      "source_box": [
+        1628,
+        0,
+        2170,
+        725
+      ],
+      "used_pixels": 206776,
+      "edge_pixels": 0,
+      "output": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\decoded\\look-anchors\\270.png"
+    }
+  ]
+}

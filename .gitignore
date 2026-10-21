@@ -1,0 +1,21 @@
+# 本地环境和缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+
+# 构建结果和本机偏好
+build/
+dist/
+*.spec.bak
+*.log
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

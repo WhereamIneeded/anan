@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "chroma_key": {
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "threshold": 96.0
+  },
+  "rows": [
+    {
+      "state": "waiting",
+      "frames": [
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\waiting\\frames\\waiting\\00.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\waiting\\frames\\waiting\\01.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\waiting\\frames\\waiting\\02.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\waiting\\frames\\waiting\\03.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\waiting\\frames\\waiting\\04.png",
+        "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\waiting\\frames\\waiting\\05.png"
+      ],
+      "method": "components"
+    }
+  ]
+}

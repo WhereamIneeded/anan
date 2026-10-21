@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames",
+  "states": [
+    "running-left"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16567,
+          "bbox": [
+            9,
+            25,
+            183,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 496
+        },
+        {
+          "index": 1,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13843,
+          "bbox": [
+            25,
+            24,
+            167,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 397
+        },
+        {
+          "index": 2,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14363,
+          "bbox": [
+            25,
+            24,
+            167,
+            186
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 455
+        },
+        {
+          "index": 3,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 13247,
+          "bbox": [
+            25,
+            22,
+            167,
+            177
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 399
+        },
+        {
+          "index": 4,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15982,
+          "bbox": [
+            5,
+            27,
+            187,
+            183
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 474
+        },
+        {
+          "index": 5,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14917,
+          "bbox": [
+            20,
+            23,
+            171,
+            187
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 493
+        },
+        {
+          "index": 6,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15258,
+          "bbox": [
+            18,
+            21,
+            174,
+            187
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 500
+        },
+        {
+          "index": 7,
+          "file": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\work\\anan\\qa\\rows\\running-left\\frames\\running-left\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14539,
+          "bbox": [
+            23,
+            24,
+            168,
+            187
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 474
+        }
+      ]
+    }
+  ]
+}

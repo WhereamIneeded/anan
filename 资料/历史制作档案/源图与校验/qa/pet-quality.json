@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "atlas": "D:\\AI\\Codex\\Chat\\2026-10-19\\pets-plugin-work-pets-openai-curated\\outputs\\Pets\\\u5b89\u5b89\\\u5b89\u5b89\u7cbe\u7075\u56fe.png",
+  "encoded_bytes": 2975886,
+  "sha256": "d0002453c7fe3e930d9e117d0a5d462455d7b293dfbd38111ced06714b0aca1e",
+  "jump": {
+    "idle_baseline": 201,
+    "jump_baselines": [
+      201,
+      195,
+      154,
+      198,
+      202
+    ],
+    "airborne_lift_pixels": 48,
+    "landing_delta_pixels": 1
+  },
+  "look_registration": {
+    "neutral_center_x": 96.5,
+    "look_centers_x": [
+      97.0,
+      97.5,
+      97.0,
+      97.5,
+      97.0,
+      97.0,
+      96.5,
+      96.5,
+      96.0,
+      96.5,
+      96.5,
+      97.0,
+      96.0,
+      96.5,
+      96.5,
+      97.0
+    ],
+    "look_widths": [
+      138,
+      139,
+      138,
+      139,
+      140,
+      140,
+      141,
+      141,
+      140,
+      137,
+      137,
+      138,
+      136,
+      137,
+      137,
+      136
+    ],
+    "maximum_center_drift_pixels": 1.0,
+    "maximum_width_ratio": 1.036764705882353
+  },
+  "errors": [],
+  "warnings": [
+    "look direction 022.5 accepted with a reviewed warning",
+    "look direction 067.5 accepted with a reviewed warning",
+    "look direction 157.5 accepted with a reviewed warning",
+    "look direction 247.5 accepted with a reviewed warning",
+    "look direction 337.5 accepted with a reviewed warning",
+    "067.5->090 diff is a local outlier (1297 pixels vs neighbor average 880)",
+    "157.5->180 diff is a local outlier (1969 pixels vs neighbor average 1357)"
+  ]
+}

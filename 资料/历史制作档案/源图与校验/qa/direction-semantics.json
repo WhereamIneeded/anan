@@ -1,0 +1,21 @@
+{
+  "说明": "依据最终去溢色精灵图的普通尺寸方向表及放大头部目视记录。中间姿态相似仅记警告；基本方向均明确。两半圈通过统一源图比例注册消除整体尺寸差异。",
+  "directions": [
+    {"label":"000","expected":"up","observed":"正面抬头看上方","verdict":"pass","evidence":"下巴抬起可见，粉鼻尖相对双眼及头部中心上移，双眼朝上；下半身和脚底固定。"},
+    {"label":"022.5","expected":"up-right","observed":"右上，向右转头较明显","verdict":"warning","evidence":"鼻尖向画面右侧突出，下巴仍抬起、眼球朝右上；与后两格相似，但没有进入错误象限。"},
+    {"label":"045","expected":"up-right","observed":"右上","verdict":"pass","evidence":"头向画面右侧转，鼻尖位于头中心右侧并抬高，蓝灰眼球朝右上，围脖以下保持坐姿。"},
+    {"label":"067.5","expected":"up-right","observed":"右上，靠近水平右方","verdict":"warning","evidence":"口鼻朝右、下巴轻抬，眼睛仍向右上；相邻上斜姿态变化较小，进入水平右方时头部转向更明显。"},
+    {"label":"090","expected":"right","observed":"明确看画面右方","verdict":"pass","evidence":"侧向口鼻突出至头部右侧，近远眼符合右转解剖关系，目光向右；身体和尾巴仍正面固定。"},
+    {"label":"112.5","expected":"down-right","observed":"轻微低头看右下","verdict":"pass","evidence":"鼻尖继续在头中心右侧，额头开始向前俯、口鼻较水平右格降低，眼睑与目光朝右下。"},
+    {"label":"135","expected":"down-right","observed":"明显低头看右下","verdict":"pass","evidence":"头部俯下，粉鼻尖下移且位于躯干中线右侧，眉额压低、目光朝右下；脚底没有位移。"},
+    {"label":"157.5","expected":"down-right","observed":"右下，低头加强但仍有明显右转","verdict":"warning","evidence":"鼻尖低于前格且仍在身体中线右侧，目光向下；与135度相似。接180度时头部向中间回正较明显，但身体尺度和锚定连贯，没有整身跳动或反向。"},
+    {"label":"180","expected":"down","observed":"正面明显低头","verdict":"pass","evidence":"头顶部面可见、耳朵外展，粉鼻尖位于脸部下方中央，双眼及眼睑向下，下颌收近围脖。"},
+    {"label":"202.5","expected":"down-left","observed":"低头并稍朝画面左","verdict":"pass","evidence":"鼻尖较躯干中心偏画面左，头部仍俯低，眼球朝左下；双前爪和右侧尾巴保持原位。"},
+    {"label":"225","expected":"down-left","observed":"左下","verdict":"pass","evidence":"口鼻向画面左突出、头部俯下，鼻尖位置及目光低于水平左方姿态，保留同一白面纹。"},
+    {"label":"247.5","expected":"down-left","observed":"左方略向下","verdict":"warning","evidence":"鼻尖与口鼻轮廓明确朝画面左，头部与眼睑仍略向下；垂直差异较细微，与水平左方接近但未朝上反转。"},
+    {"label":"270","expected":"left","observed":"明确看画面左方","verdict":"pass","evidence":"口鼻突出到头部中心左侧，近远眼符合左转解剖关系，双眼朝左，身体保持正面坐姿。"},
+    {"label":"292.5","expected":"up-left","observed":"左方轻微仰头","verdict":"pass","evidence":"鼻尖位于头中心左侧并较水平左格抬高，下巴开始露出，眼球朝左上。"},
+    {"label":"315","expected":"up-left","observed":"明确看画面左上","verdict":"pass","evidence":"粉鼻尖向画面左上突出，下巴明显抬起、双眼看左上；没有首次失败版本的朝右反转。"},
+    {"label":"337.5","expected":"up-left","observed":"主要看上方，略朝画面左","verdict":"warning","evidence":"头部仰起、下巴可见，粉鼻尖较头部中心略偏画面左，眼球朝上；水平线索较细微，回到0度时自然朝正上，身体大小及脚底稳定。"}
+  ]
+}

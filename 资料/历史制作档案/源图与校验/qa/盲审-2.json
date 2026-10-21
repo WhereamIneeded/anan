@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"screen-left","B":"screen-right","reason":"A鼻尖位于脸部中轴左侧，口鼻和双眼均偏向画面左上；B鼻尖突出于脸部右侧，眼睛朝画面右上。"},
+    {"pair":"horizontal-2","A":"screen-left","B":"screen-right","reason":"A左侧口鼻轮廓明显伸出，鼻尖位于躯干中线左侧；B口鼻向右伸出，鼻尖与瞳孔朝向画面右侧。"},
+    {"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"A鼻尖在头部右缘，眼睛朝右上；B鼻尖在头部左缘，左向口鼻轮廓及偏左的瞳孔清楚可见。"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A呈左向侧脸，鼻尖和下巴在左边；B呈右向侧脸，鼻尖和下巴在右边。"},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A头部偏向右侧，鼻尖和口鼻位于右缘；B头部偏向左侧，鼻尖和口鼻位于左缘。"},
+    {"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A虽低头但鼻尖明显在头部右侧，眼睛朝右下；B鼻尖位于脸部中轴左侧，眼睛和口鼻偏向左下。"},
+    {"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A低头时鼻尖仍偏向画面左侧，两眼和口鼻集中于头部左下；B侧脸朝右，鼻尖突出在右下方。"},
+    {"pair":"vertical-1","A":"up","B":"down","reason":"A鼻尖抬高，能看到下巴与口鼻下方，视线向上；B头顶和额部面积明显，鼻尖向胸前压低，双眼向下。"},
+    {"pair":"vertical-2","A":"down","B":"up","reason":"A额头朝前下倾，鼻尖向胸口方向压低，视线向下；B鼻尖上扬、下巴抬起，眼睛朝上。"},
+    {"pair":"vertical-3","A":"up","B":"down","reason":"A鼻尖朝右上抬起，下巴与颈部伸展，眼睛向上；B头部前俯，鼻尖垂向右下，额头和头顶清楚可见。"},
+    {"pair":"vertical-4","A":"down","B":"up","reason":"A鼻尖与口鼻垂向胸前，头顶向前倾，眼睛看下方；B鼻尖和下巴抬高，眼睛看右上。"},
+    {"pair":"vertical-5","A":"down","B":"up","reason":"A低头，额头覆盖在眼睛上方，鼻尖靠近胸口；B仰头，鼻尖高举，下巴与口鼻底面明显。"},
+    {"pair":"vertical-6","A":"up","B":"down","reason":"A口鼻向左上抬起，视线上扬，下巴离开胸前；B前额向下倾，鼻尖和目光落向左下，头部较收拢。"},
+    {"pair":"vertical-7","A":"down","B":"up","reason":"A侧脸略向下俯，鼻尖落在面部左下，瞳孔朝左下且下巴收拢；B鼻尖向左上抬起，下巴抬高，眼睛朝上。"}
+  ]
+}

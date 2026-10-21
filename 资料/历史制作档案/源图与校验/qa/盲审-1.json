@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {"pair":"horizontal-1","A":"screen-left","B":"screen-right","reason":"A的鼻尖偏向画面左侧，左侧口鼻轮廓更突出；B的鼻尖、口鼻突出部和眼睛共同朝向画面右侧。"},
+    {"pair":"horizontal-2","A":"screen-left","B":"screen-right","reason":"A的口鼻向左伸出，头部左转且目光朝左；B的口鼻向右伸出，头部右转且眼睛朝右。"},
+    {"pair":"horizontal-3","A":"screen-right","B":"screen-left","reason":"A的鼻尖在头部右缘附近，面部朝右展开；B的鼻尖在左缘附近，眼睛与口鼻都朝左。"},
+    {"pair":"horizontal-4","A":"screen-left","B":"screen-right","reason":"A呈左侧面，鼻尖和下巴向左突出；B呈右侧面，鼻尖和下巴向右突出。"},
+    {"pair":"horizontal-5","A":"screen-right","B":"screen-left","reason":"A低头时鼻尖仍明显位于脸部右侧，眼睛朝右；B鼻尖位于脸部左侧，口鼻和眼睛朝左。"},
+    {"pair":"horizontal-6","A":"screen-right","B":"screen-left","reason":"A向右下转头，鼻尖与可见眼睛靠右；B接近正面但鼻尖偏左、两侧脸颊不对称，目光指向左下。"},
+    {"pair":"horizontal-7","A":"screen-left","B":"screen-right","reason":"A低头时鼻尖偏向左侧，左侧口鼻轮廓更突出；B明显向右低头，鼻尖贴近头部右侧轮廓。"},
+    {"pair":"vertical-1","A":"up","B":"down","reason":"A抬起鼻尖，露出下巴与较多颈部白毛，双眼朝上；B头顶占比明显增大，鼻尖和眼睛朝向胸前，下巴收起。"},
+    {"pair":"vertical-2","A":"down","B":"up","reason":"A低头右望，鼻尖低于面部朝向轴且下巴收向胸部；B鼻尖上翘，双眼看向右上，颈部向上伸展。"},
+    {"pair":"vertical-3","A":"up","B":"down","reason":"A鼻尖抬起，目光朝右上且下巴外露；B头部向右下压低，眼睛向下，口鼻接近胸部。"},
+    {"pair":"vertical-4","A":"down","B":"up","reason":"A眼球朝右下，头部俯下且下巴收起；B眼睛朝右上、鼻尖略抬，下巴与颈部之间伸展开。"},
+    {"pair":"vertical-5","A":"down","B":"up","reason":"A头顶与额头朝前显露较多，眼睛、鼻尖向胸前压低；B鼻尖明显向上抬起，眼睛向左上看，颈部伸长。"},
+    {"pair":"vertical-6","A":"up","B":"down","reason":"A鼻尖和目光朝左上，下巴外露且脖子伸直；B头部稍俯、目光向左下，鼻口低垂且下巴收近胸部。"},
+    {"pair":"vertical-7","A":"ambiguous","B":"up","reason":"A面部朝左，但垂直方向接近水平；鼻尖略低于眼线不足以明确区分轻微低头与自然侧脸，因此判为模糊。B鼻尖抬高、眼睛朝左上且下巴外露，明确向上。"}
+  ]
+}
