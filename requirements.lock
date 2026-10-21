@@ -1,0 +1,19 @@
+# 已在 Windows x64 Python 3.10.11 验证的精确依赖
+setuptools==80.9.0
+PySide6-Essentials==6.12.0
+shiboken6==6.12.0
+typing-extensions==4.16.0
+Pillow==12.3.0
+pytest==9.1.1
+colorama==0.4.6
+exceptiongroup==1.3.1
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+tomli==2.5.0
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.9
+altgraph==0.17.5
+pefile==2024.8.26
+pywin32-ctypes==0.2.3

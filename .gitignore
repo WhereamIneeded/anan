@@ -19,3 +19,6 @@ dist/
 .vscode/
 Thumbs.db
 Desktop.ini
+*.egg-info/
+*日志.txt
+.superpowers/

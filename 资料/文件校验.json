@@ -7,7 +7,7 @@
       "SHA256": "bb88f2ae21a67d138c10a8d85a7edc589e6284d13bea54c60881a77d0914afd7"
     },
     {
-      "路径": ".gitignore",
+      "路径": "资料/初始gitignore.txt",
       "字节数": 226,
       "SHA256": "f4ad96c011358751f8c3f77b8862782560fd451ae8a8d20b3ea9f187a595ed70"
     },
@@ -42,7 +42,7 @@
       "SHA256": "cfdccef8bb694ff1c365b5b0883ae62de23e0df84a7f7d7b1ad316df4991d010"
     },
     {
-      "路径": "docs/明日继续提示词.md",
+      "路径": "资料/初始继续提示词.md",
       "字节数": 1642,
       "SHA256": "92a909de1e42cc380e2ff47dceefd3b2b0d9e54d595beb7db714d1202db4b56b"
     },
@@ -52,7 +52,7 @@
       "SHA256": "ec0ef9541cdc792a584c45dfb10fdb06c4e5402d6aa8d8303467289b5022e48a"
     },
     {
-      "路径": "README.md",
+      "路径": "资料/初始交接README.md",
       "字节数": 2675,
       "SHA256": "7577f64e024050585b8516a30b69fe710a4cf383c8777dca1f099c72ae8c8d7b"
     },

@@ -1,0 +1,354 @@
+{
+  "failed": {
+    "frames": [
+      "frames/failed/00.png",
+      "frames/failed/01.png",
+      "frames/failed/02.png",
+      "frames/failed/03.png",
+      "frames/failed/04.png",
+      "frames/failed/05.png",
+      "frames/failed/06.png",
+      "frames/failed/07.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "idle": {
+    "frames": [
+      "frames/idle/00.png",
+      "frames/idle/01.png",
+      "frames/idle/02.png",
+      "frames/idle/03.png",
+      "frames/idle/04.png",
+      "frames/idle/05.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "jumping": {
+    "frames": [
+      "frames/jumping/00.png",
+      "frames/jumping/01.png",
+      "frames/jumping/02.png",
+      "frames/jumping/03.png",
+      "frames/jumping/04.png"
+    ],
+    "durations": [
+      160,
+      160,
+      160,
+      160,
+      160
+    ]
+  },
+  "review": {
+    "frames": [
+      "frames/review/00.png",
+      "frames/review/01.png",
+      "frames/review/02.png",
+      "frames/review/03.png",
+      "frames/review/04.png",
+      "frames/review/05.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "running": {
+    "frames": [
+      "frames/running/00.png",
+      "frames/running/01.png",
+      "frames/running/02.png",
+      "frames/running/03.png",
+      "frames/running/04.png",
+      "frames/running/05.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "running-left": {
+    "frames": [
+      "frames/running-left/00.png",
+      "frames/running-left/01.png",
+      "frames/running-left/02.png",
+      "frames/running-left/03.png",
+      "frames/running-left/04.png",
+      "frames/running-left/05.png",
+      "frames/running-left/06.png",
+      "frames/running-left/07.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "running-right": {
+    "frames": [
+      "frames/running-right/00.png",
+      "frames/running-right/01.png",
+      "frames/running-right/02.png",
+      "frames/running-right/03.png",
+      "frames/running-right/04.png",
+      "frames/running-right/05.png",
+      "frames/running-right/06.png",
+      "frames/running-right/07.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "waiting": {
+    "frames": [
+      "frames/waiting/00.png",
+      "frames/waiting/01.png",
+      "frames/waiting/02.png",
+      "frames/waiting/03.png",
+      "frames/waiting/04.png",
+      "frames/waiting/05.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "waving": {
+    "frames": [
+      "frames/waving/00.png",
+      "frames/waving/01.png",
+      "frames/waving/02.png",
+      "frames/waving/03.png"
+    ],
+    "durations": [
+      190,
+      190,
+      190,
+      190
+    ]
+  },
+  "look": {
+    "frames": [
+      "frames/look/00.png",
+      "frames/look/01.png",
+      "frames/look/02.png",
+      "frames/look/03.png",
+      "frames/look/04.png",
+      "frames/look/05.png",
+      "frames/look/06.png",
+      "frames/look/07.png",
+      "frames/look/08.png",
+      "frames/look/09.png",
+      "frames/look/10.png",
+      "frames/look/11.png",
+      "frames/look/12.png",
+      "frames/look/13.png",
+      "frames/look/14.png",
+      "frames/look/15.png"
+    ],
+    "durations": [
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300,
+      300
+    ]
+  },
+  "scratch": {
+    "frames": [
+      "frames/scratch/00.png",
+      "frames/scratch/01.png",
+      "frames/scratch/02.png",
+      "frames/scratch/03.png",
+      "frames/scratch/04.png",
+      "frames/scratch/03.png",
+      "frames/scratch/04.png",
+      "frames/scratch/05.png"
+    ],
+    "durations": [
+      180,
+      180,
+      160,
+      140,
+      140,
+      140,
+      180,
+      220
+    ]
+  },
+  "prone_enter": {
+    "frames": [
+      "frames/prone/00.png",
+      "frames/prone/01.png",
+      "frames/prone/02.png",
+      "frames/prone/03.png",
+      "frames/prone/04.png"
+    ],
+    "durations": [
+      220,
+      260,
+      300,
+      360,
+      400
+    ]
+  },
+  "prone_sleep": {
+    "frames": [
+      "frames/prone/04.png",
+      "frames/prone/05.png"
+    ],
+    "durations": [
+      1400,
+      1400
+    ]
+  },
+  "prone_exit": {
+    "frames": [
+      "frames/prone/05.png",
+      "frames/prone/04.png",
+      "frames/prone/03.png",
+      "frames/prone/02.png",
+      "frames/prone/01.png",
+      "frames/prone/00.png"
+    ],
+    "durations": [
+      240,
+      200,
+      280,
+      280,
+      260,
+      240
+    ]
+  },
+  "supine_enter": {
+    "frames": [
+      "frames/supine/00.png",
+      "frames/supine/01.png",
+      "frames/supine/02.png",
+      "frames/supine/03.png"
+    ],
+    "durations": [
+      320,
+      400,
+      450,
+      400
+    ]
+  },
+  "supine_sleep": {
+    "frames": [
+      "frames/supine/03.png",
+      "frames/supine/04.png"
+    ],
+    "durations": [
+      1400,
+      1400
+    ]
+  },
+  "supine_exit": {
+    "frames": [
+      "frames/supine/04.png",
+      "frames/supine/03.png",
+      "frames/supine/02.png",
+      "frames/supine/05.png",
+      "frames/supine/01.png",
+      "frames/supine/00.png"
+    ],
+    "durations": [
+      260,
+      240,
+      350,
+      350,
+      350,
+      320
+    ]
+  },
+  "wash": {
+    "frames": [
+      "frames/daily/00.png",
+      "frames/daily/01.png",
+      "frames/daily/00.png",
+      "frames/daily/01.png"
+    ],
+    "durations": [
+      450,
+      500,
+      450,
+      500
+    ]
+  },
+  "yawn": {
+    "frames": [
+      "frames/daily/02.png",
+      "frames/daily/03.png",
+      "frames/daily/02.png"
+    ],
+    "durations": [
+      400,
+      650,
+      400
+    ]
+  },
+  "stretch": {
+    "frames": [
+      "frames/daily/04.png",
+      "frames/daily/05.png",
+      "frames/daily/04.png"
+    ],
+    "durations": [
+      550,
+      850,
+      550
+    ]
+  }
+}
