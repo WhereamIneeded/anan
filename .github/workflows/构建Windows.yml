@@ -3,6 +3,8 @@ on:
   push:
     branches: [main, desktop-implementation]
   workflow_dispatch:
+env:
+  PYTHONUTF8: '1'
 permissions:
   contents: write
 concurrency:
@@ -28,6 +30,8 @@ jobs:
       - name: 运行测试
         run: python -m pytest -q
       - name: 打包并验证启动
+        env:
+          QT_QPA_PLATFORM: offscreen
         run: python scripts/构建.py
       - name: 上传 Windows 成品
         uses: actions/upload-artifact@v4
