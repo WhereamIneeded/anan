@@ -2,9 +2,11 @@
 
 以真实布偶猫安安为原型的独立桌宠，保留原 Pets 的形象与动作，增加自主日常行为。原 ChatGPT Pets 安安保持不变。
 
-**已通过本地 16 项测试、Windows 打包与 EXE 启动验证。** 云端构建状态以 Actions 实际结果为准。
+**已通过远端重新克隆、全新虚拟环境安装、16 项测试、Windows 打包与 EXE 启动验证。** 15 张原照及 329 个原始资料文件校验通过。
 
-- [下载最新版 Windows 成品](https://github.com/WhereamIneeded/anan/releases/latest)
+截至 2026 年 10 月 23 日，GitHub Actions 尚无运行记录，尚未产生 Release。公司电脑现在可以拉取源码执行 `构建.cmd`；首次云端构建成功后，下面的成品发布页才会出现下载文件。
+
+- [Windows 成品发布页（首次发布待构建）](https://github.com/WhereamIneeded/anan/releases/latest)
 - [查看云端构建](https://github.com/WhereamIneeded/anan/actions)
 - [构建和使用说明](docs/构建与使用.md)
 
@@ -18,7 +20,7 @@
 
 首次执行 `git clone https://github.com/WhereamIneeded/anan.git`，进入仓库；已有克隆先保存本地修改，再执行 `git pull --ff-only`。
 
-安装 Windows x64 Python 3.10 后双击 `构建.cmd`，使用精确依赖运行测试并生成成品。也可直接下载 Releases 最新 ZIP，无需安装开发工具。每份成品的 `版本.json` 记录实际源码提交，独立发布标签与源码、成品保持对应。
+安装 Windows x64 Python 3.10 后双击 `构建.cmd`，使用精确依赖运行测试并生成成品。首次云端发布成功后，也可直接下载 Releases 最新 ZIP，无需安装开发工具。每份成品的 `版本.json` 记录实际源码提交，独立发布标签与源码、成品保持对应。
 
 ## 设计和资料
 
