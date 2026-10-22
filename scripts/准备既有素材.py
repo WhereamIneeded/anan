@@ -21,6 +21,9 @@ for state in (source / "qa/frames").iterdir():
         frame.save(target / original.name)
     frames = [p.relative_to(assets).as_posix() for p in sorted(target.glob("*.png"))]
     clips[state.name] = {"frames": frames, "durations": [160 if state.name == "jumping" else 190] * len(frames)}
+    if state.name == "idle":
+        clips[state.name]["durations"] = [3200, 60, 60, 60, 80, 160]
+        clips[state.name]["blend_ms"] = 60
 
 atlas = Image.open(root / "资料/历史制作档案/成品与预览/安安精灵图.png")
 target = assets / "frames/look"

@@ -1,6 +1,5 @@
 """透明桌宠、拖动、缩放和托盘；不读取其他应用的输入。"""
 
-import math
 import time
 from pathlib import Path
 
@@ -10,7 +9,8 @@ from PySide6.QtWidgets import QApplication, QDialog, QLabel, QMenu, QSlider, QSy
 
 from .animation import load_animations, resource_root
 from .behavior import BehaviorController
-from .pointer import Gesture
+from .pointer import Gesture, look_direction
+from .rendering import blend_pixmaps, keep_static_body, stabilize_idle, stabilize_look
 from .settings import load_settings, resize_position, save_settings, visible_position
 
 
@@ -21,11 +21,22 @@ class PetWindow(QWidget):
         self.preferences = load_settings(self.settings_path)
         self.clips = load_animations(resource_root())
         self.pixmaps = {key: [QPixmap(str(p)) for p in clip.frames] for key, clip in self.clips.items()}
+        self.pixmaps["idle"] = stabilize_idle(self.pixmaps["idle"])
+        self.pixmaps["look"] = stabilize_look(self.pixmaps["look"], self.pixmaps["idle"][0])
+        self.frame = self.pixmaps["idle"][0]
+        self.frame_signature = None
+        self.visual_key = "idle"
+        self.transition_source = None
+        self.transition_started = 0
+        self.transition_static = False
         self.controller = BehaviorController({key: c.total_ms for key, c in self.clips.items()})
         self.controller.quiet = self.preferences["quiet"]
         self.gesture = Gesture(QApplication.startDragDistance())
         self.origin_time = time.monotonic()
+        self.previous_advance_ms = 0
+        self.wander_fraction = 0.0
         self.hovering = False
+        self.look_index = 0
         self.drag_offset = None
         self.previous_mouse_x = 0
         self.dialog = None
@@ -48,8 +59,9 @@ class PetWindow(QWidget):
         self.tray.activated.connect(self.tray_activated)
         self.tray.show()
         self.timer = QTimer(self)
+        self.timer.setTimerType(Qt.TimerType.PreciseTimer)
         self.timer.timeout.connect(self.advance)
-        self.timer.start(33)
+        self.timer.start(16)
         for display in QApplication.screens():
             self.watch_screen(display)
         QApplication.instance().screenAdded.connect(self.watch_screen)
@@ -61,7 +73,7 @@ class PetWindow(QWidget):
 
     def act(self, action):
         self.controller.handle(action, self.now())
-        self.update()
+        self.refresh_frame(self.now())
 
     def create_menu(self):
         menu = QMenu(self)
@@ -112,35 +124,66 @@ class PetWindow(QWidget):
 
     def advance(self):
         now = self.now()
+        elapsed = max(0, min(100, now - self.previous_advance_ms))
+        self.previous_advance_ms = now
         before = self.controller.state
         state = self.controller.tick(now)
         if self.preferences["wander"] and not self.controller.quiet and before == "idle" and state == "look":
             self.act("running-left" if self.controller.rng.randrange(2) else "running-right")
             state = self.controller.state
         if self.preferences["wander"] and not self.controller.dragging and state.startswith("running-"):
-            self.move(self.x() + (-1 if state.endswith("left") else 1), self.y())
+            distance = self.wander_fraction + elapsed * 30 / 1000
+            step = int(distance)
+            self.wander_fraction = distance - step
+            self.move(self.x() + (-step if state.endswith("left") else step), self.y())
             self.ensure_visible()
+        else:
+            self.wander_fraction = 0.0
+        self.refresh_frame(now)
+
+    def refresh_frame(self, now):
+        key = self.controller.state
+        index, following, amount = self.clips[key].sample(now - self.controller.started)
+        if self.hovering and key == "idle":
+            delta = QCursor.pos() - self.geometry().center()
+            self.look_index = look_direction(delta.x(), delta.y(), self.look_index, max(8, self.width() * 0.06))
+            key, index = "look", self.look_index
+            following, amount = index, 0
+        amount = round(amount * 16) / 16
+        signature = key, index, following, amount
+        if key != self.visual_key:
+            self.transition_source = self.frame
+            self.transition_started = now
+            self.transition_static = self.visual_key in ("idle", "look") and key in ("idle", "look")
+            self.visual_key = key
+        if signature == self.frame_signature and self.transition_source is None:
+            return
+        pixmap = blend_pixmaps(self.pixmaps[key][index], self.pixmaps[key][following], amount)
+        if self.transition_source is not None:
+            progress = (now - self.transition_started) / 80
+            if progress >= 1:
+                self.transition_source = None
+            else:
+                pixmap = blend_pixmaps(self.transition_source, pixmap, max(0, progress))
+        if key in ("idle", "look") and (self.transition_source is None or self.transition_static):
+            pixmap = keep_static_body(pixmap, self.pixmaps["idle"][0])
+        self.frame, self.frame_signature = pixmap, signature
         self.update()
 
     def paintEvent(self, event):
-        key = self.controller.state
-        index = self.clips[key].frame_index(self.now() - self.controller.started)
-        if self.hovering and key == "idle":
-            delta = QCursor.pos() - self.geometry().center()
-            angle = math.degrees(math.atan2(delta.x(), -delta.y())) % 360
-            key, index = "look", round(angle / 22.5) % 16
-        pixmap = self.pixmaps[key][index]
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.SmoothPixmapTransform)
         # 所有动画画布使用共同底边和中线，避免切换时脚底漂移。
         rect = QRectF(0, 0, self.width(), self.height())
-        painter.drawPixmap(rect, pixmap, QRectF(pixmap.rect()))
+        painter.drawPixmap(rect, self.frame, QRectF(self.frame.rect()))
 
     def enterEvent(self, event):
         self.hovering = True
+        self.refresh_frame(self.now())
 
     def leaveEvent(self, event):
         self.hovering = False
+        self.refresh_frame(self.now())
 
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:

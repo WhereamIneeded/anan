@@ -1,6 +1,7 @@
 """裁取内置图像工具生成的透明分镜，保留原图并写入运行序列。"""
 
 import json
+import runpy
 from pathlib import Path
 from PIL import Image
 
@@ -50,3 +51,5 @@ for key in ("scratch", "wash", "yawn", "stretch", "prone_enter", "prone_sleep", 
         frames.append(background.convert("RGB"))
     frames[0].save(preview_dir / f"{key}.gif", save_all=True, append_images=frames[1:], duration=info["durations"], loop=0)
 print("运行资源共", len(clips), "段动画，新增透明原帧 24 张。")
+if (root / "制作/动画优化/挠耳连续分镜.png").is_file():
+    runpy.run_path(str(root / "scripts/准备挠耳连续素材.py"), run_name="__main__")

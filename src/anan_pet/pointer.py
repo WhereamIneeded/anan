@@ -1,5 +1,17 @@
 """区分单击和拖动，越过阈值后不再恢复为单击。"""
 
+import math
+
+
+def look_direction(dx, dy, previous, dead_zone=12):
+    if dx * dx + dy * dy < dead_zone * dead_zone:
+        return previous
+    angle = math.degrees(math.atan2(dx, -dy)) % 360
+    distance = (angle - previous * 22.5 + 180) % 360 - 180
+    if abs(distance) <= 15.25:
+        return previous
+    return round(angle / 22.5) % 16
+
 
 class Gesture:
     def __init__(self, threshold=10):

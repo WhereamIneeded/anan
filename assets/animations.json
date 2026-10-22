@@ -31,13 +31,14 @@
       "frames/idle/05.png"
     ],
     "durations": [
-      190,
-      190,
-      190,
-      190,
-      190,
-      190
-    ]
+      3200,
+      60,
+      60,
+      60,
+      80,
+      160
+    ],
+    "blend_ms": 60
   },
   "jumping": {
     "frames": [
@@ -207,25 +208,42 @@
   },
   "scratch": {
     "frames": [
-      "frames/scratch/00.png",
-      "frames/scratch/01.png",
-      "frames/scratch/02.png",
-      "frames/scratch/03.png",
-      "frames/scratch/04.png",
-      "frames/scratch/03.png",
-      "frames/scratch/04.png",
-      "frames/scratch/05.png"
+      "frames/scratch-v2/00.png",
+      "frames/scratch-v2/01.png",
+      "frames/scratch-v2/02.png",
+      "frames/scratch-v2/03.png",
+      "frames/scratch-v2/04.png",
+      "frames/scratch-v2/05.png",
+      "frames/scratch-v2/06.png",
+      "frames/scratch-v2/07.png",
+      "frames/scratch-v2/08.png",
+      "frames/scratch-v2/09.png",
+      "frames/scratch-v2/10.png",
+      "frames/scratch-v2/11.png",
+      "frames/scratch-v2/12.png",
+      "frames/scratch-v2/13.png",
+      "frames/scratch-v2/14.png",
+      "frames/scratch-v2/15.png"
     ],
     "durations": [
-      180,
-      180,
-      160,
-      140,
-      140,
-      140,
-      180,
-      220
-    ]
+      120,
+      80,
+      80,
+      80,
+      70,
+      65,
+      60,
+      60,
+      60,
+      60,
+      65,
+      65,
+      80,
+      80,
+      80,
+      150
+    ],
+    "blend_ms": 60
   },
   "prone_enter": {
     "frames": [

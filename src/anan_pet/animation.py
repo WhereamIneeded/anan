@@ -10,18 +10,27 @@ from pathlib import Path
 class AnimationClip:
     frames: list[Path]
     durations: list[int]
+    blend_ms: int = 0
+    loop: bool = False
 
     @property
     def total_ms(self):
         return sum(self.durations)
 
     def frame_index(self, elapsed):
-        remaining = max(0, elapsed) % self.total_ms
+        return self.sample(elapsed)[0]
+
+    def sample(self, elapsed):
+        remaining = max(0, elapsed)
+        remaining = remaining % self.total_ms if self.loop else min(remaining, self.total_ms - 1)
         for i, duration in enumerate(self.durations):
             if remaining < duration:
-                return i
+                following = min(i + 1, len(self.frames) - 1)
+                blend = min(self.blend_ms, duration)
+                amount = max(0, (remaining - duration + blend) / blend) if blend and following != i else 0
+                return i, following, amount
             remaining -= duration
-        return 0
+        return len(self.frames) - 1, len(self.frames) - 1, 0
 
 
 def resource_root():
@@ -40,5 +49,8 @@ def load_animations(root):
             raise ValueError(f"动画时间参数无效：{key}")
         if any(not p.is_file() for p in frames):
             raise ValueError(f"缺少动画文件：{key}")
-        clips[key] = AnimationClip(frames, durations)
+        blend_ms = info.get("blend_ms", 0)
+        if type(blend_ms) is not int or blend_ms < 0:
+            raise ValueError(f"动画过渡时间无效：{key}")
+        clips[key] = AnimationClip(frames, durations, blend_ms, key in ("idle", "look", "prone_sleep", "supine_sleep"))
     return clips
