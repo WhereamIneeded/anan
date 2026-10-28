@@ -47,11 +47,12 @@ def capture(window, name, output):
                 clicked = True
                 events.append({"毫秒": now, "事件": "单击，等待翻回起身后跳跃"})
         controller.tick(now)
-        window.hovering = name == "转头回正" and now < 2400
         direction = (9, 8, 10)[min(now // 800, 2)]
         radians = math.radians(direction * 22.5)
-        delta = QPoint(round(math.sin(radians) * 1000), round(-math.cos(radians) * 1000))
+        distance = window.width() if name == "转头回正" and now < 2400 else window.width() * 2
+        delta = QPoint(round(math.sin(radians) * distance), round(-math.cos(radians) * distance))
         with patch("anan_pet.window.QCursor.pos", return_value=window.geometry().center() + delta):
+            window.update_attention(now)
             window.refresh_frame(now)
         if not states or states[-1]["动画"] != controller.state:
             states.append({"毫秒": now, "动画": controller.state, "阶段": controller.phase})

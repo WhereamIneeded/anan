@@ -35,7 +35,8 @@ except (OSError, subprocess.CalledProcessError):
 (folder / "版本.json").write_text(json.dumps({"版本": __version__, "源码提交": commit, "构建时有未提交修改": dirty}, ensure_ascii=False, indent=2), encoding="utf-8")
 shutil.copy2(root / "docs/构建与使用.md", folder / "使用说明.md")
 shutil.copy2(root / "使用说明.txt", folder / "使用说明.txt")
-archive = Path(shutil.make_archive(str(output / f"安安-Windows-x64-v{__version__}"), "zip", output, "安安"))
+# Release 附件使用 ASCII 技术文件名，避免上传时中文名被重命名导致校验清单失配。
+archive = Path(shutil.make_archive(str(output / f"anan-Windows-x64-v{__version__}"), "zip", output, "安安"))
 checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
 (output / "SHA256SUMS.txt").write_text(checksum + "  " + archive.name + "\n", encoding="utf-8")
 print(f"构建成功：{archive}\nSHA-256：{checksum}")

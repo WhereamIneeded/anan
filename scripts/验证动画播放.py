@@ -20,6 +20,7 @@ from PySide6.QtGui import QColor, QImage, QPainter
 from PySide6.QtWidgets import QApplication
 
 from anan_pet.behavior import BehaviorController
+from anan_pet.pointer import AttentionTracker
 from anan_pet.window import PetWindow
 
 
@@ -63,7 +64,7 @@ def render(window):
 def prepare(window):
     window.controller = BehaviorController({key: clip.total_ms for key, clip in window.clips.items()}, random.Random(0))
     window.controller.next_action = 1_000_000
-    window.hovering = False
+    window.attention = AttentionTracker()
     window.frame = window.pixmaps["idle"][0]
     window.frame_signature = None
     window.visual_key = "idle"
