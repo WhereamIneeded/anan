@@ -341,3 +341,70 @@ $current = Get-AnanCachedPackage $cache
 $result = @{ Updated = $current.Executable -ne $old.Executable; Name = $current.AssetName; Started = @($script:started).Count }
 """)
     assert data == {"Updated": True, "Name": "anan-Windows-x64-v1.2.0.zip", "Started": 1}
+
+
+HIDDEN_START_PROCESS = """
+function Start-Process {
+    param($FilePath, $WorkingDirectory, [switch]$PassThru, $ErrorAction)
+    Microsoft.PowerShell.Management\\Start-Process -FilePath $FilePath -WorkingDirectory $WorkingDirectory -WindowStyle Hidden -PassThru:$PassThru -ErrorAction $ErrorAction
+}
+"""
+
+
+def test_real_process_immediate_failure_is_rejected(area):
+    data, _ = run_ps(area, HIDDEN_START_PROCESS + """
+Start-AnanPackage (Join-Path $env:SystemRoot 'System32/where.exe')
+$result = @{ Accepted = $true }
+""")
+    assert "Error" in data, "真实系统程序立即失败时仍被当成启动成功"
+    assert "启动后立即退出" in data["Error"]
+
+
+def test_real_process_immediate_failure_restores_old_cache(area):
+    old = release(area, "1.1.0")
+    latest = release(area)
+    data, output = run_ps(area, "$script:realStarter = ${function:Start-AnanPackage}\n" + use_release(old) + """
+Invoke-AnanReleaseLauncher -CacheRoot $cache
+$old = Get-AnanCachedPackage $cache
+""" + use_release(latest) + HIDDEN_START_PROCESS + """
+function Start-AnanPackage {
+    param($Executable)
+    if ($Executable -ne $old.Executable) {
+        & $script:realStarter (Join-Path $env:SystemRoot 'System32/where.exe')
+    } else { $script:started += $Executable }
+}
+Invoke-AnanReleaseLauncher -CacheRoot $cache
+$result = @{ Preserved = (Get-AnanCachedPackage $cache).Executable -eq $old.Executable; Started = @($script:started).Count }
+""")
+    assert data == {"Preserved": True, "Started": 1}
+    assert "启动后立即退出" in output
+
+
+@pytest.mark.parametrize("exit_code", [None, 0, 9])
+def test_start_observes_process_and_only_accepts_running_package(area, exit_code):
+    data, _ = run_ps(area, f"""
+$script:observedMilliseconds = 0
+$script:passThru = $false
+$script:disposed = $false
+$script:process = [pscustomobject]@{{ ExitCode = {exit_code or 0} }}
+$script:process | Add-Member ScriptMethod WaitForExit {{
+    param($Milliseconds)
+    $script:observedMilliseconds = $Milliseconds
+    return ${str(exit_code is not None).lower()}
+}}
+$script:process | Add-Member ScriptMethod Dispose {{ $script:disposed = $true }}
+function Start-Process {{
+    param($FilePath, $WorkingDirectory, [switch]$PassThru, $ErrorAction)
+    $script:passThru = [bool]$PassThru
+    if ($PassThru) {{ return $script:process }}
+}}
+try {{ Start-AnanPackage (Join-Path $area '安安.exe') }} catch {{ $message = $_.Exception.Message }}
+$result = @{{ Observed = $script:observedMilliseconds; PassThru = $script:passThru; Disposed = $script:disposed; Error = "$message" }}
+""")
+    assert data["Observed"] == 2000
+    assert data["PassThru"] is True
+    assert data["Disposed"] is True
+    if exit_code is None:
+        assert data["Error"] == ""
+    else:
+        assert "启动后立即退出" in data["Error"]

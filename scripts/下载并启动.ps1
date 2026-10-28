@@ -101,7 +101,12 @@ function Test-AnanPackageRunning {
 
 function Start-AnanPackage {
     param([string]$Executable)
-    Start-Process -FilePath $Executable -WorkingDirectory (Split-Path -Parent $Executable) -ErrorAction Stop
+    $process = Start-Process -FilePath $Executable -WorkingDirectory (Split-Path -Parent $Executable) -PassThru -ErrorAction Stop
+    try {
+        if ($process.WaitForExit(2000)) {
+            throw "安安启动后立即退出（退出码：$($process.ExitCode)），请检查成品运行环境或重新下载。"
+        }
+    } finally { $process.Dispose() }
 }
 
 function Remove-AnanTemporaryDirectory {
