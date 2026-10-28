@@ -8,6 +8,8 @@
 
 普通用户优先下载发布页中的 Windows ZIP，完整解压后双击 `安安.exe`。发布页尚无可下载成品时，可按下文从源码启动或制作成品。
 
+2026 年 10 月 28 日已发布 [1.2.0 Windows 免安装包](https://github.com/WhereamIneeded/anan/releases/tag/desktop-3-1)，对应源码提交 `2366c13`。[云端构建](https://github.com/WhereamIneeded/anan/actions/runs/40646502436) 的 121 项测试、打包及发布后实际下载、校验、解压和启动检查全部通过。
+
 本机构建输出为 `dist/anan-Windows-x64-v1.2.0.zip`，该路径不随 Git 克隆。完整解压后应保留“安安”文件夹中的所有文件；仅复制 EXE 无法保证运行。源码仓库记录代码、素材和构建脚本，成品 ZIP 通过 GitHub Releases 分发；是否已发布以发布页实际附件为准。
 
 下载时请核对附件版本。旧的 1.0.1 不包含低头完整性与去绿边修复；即使 Release 标题写着“最新版”，也要以 ZIP 文件名、包内 `版本.json` 和实际源码提交为准。1.2.0 起附件采用 `anan-Windows-x64-v版本.zip` 的稳定技术名称，包内目录、EXE 和界面仍为中文。
