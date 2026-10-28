@@ -1,6 +1,28 @@
-"""区分单击和拖动，越过阈值后不再恢复为单击。"""
+"""区分单击与拖动，并根据当前鼠标位置判断短暂关注。"""
 
 import math
+
+
+class AttentionTracker:
+    def __init__(self):
+        self.position = None
+        self.last_movement_ms = 0
+        self.active = False
+
+    def update(self, position, center, width, now_ms, eligible=True):
+        moved = position != self.position
+        self.position = position
+        if not eligible:
+            self.active = False
+            return False
+        distance_squared = sum((value - origin) ** 2 for value, origin in zip(position, center))
+        if self.active and (distance_squared > (width * 1.5) ** 2 or now_ms - self.last_movement_ms >= 3000):
+            self.active = False
+        if moved:
+            self.last_movement_ms = now_ms
+            if distance_squared <= (width * 1.2) ** 2:
+                self.active = True
+        return self.active
 
 
 def look_direction(dx, dy, previous, dead_zone=12):

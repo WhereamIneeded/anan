@@ -9,7 +9,7 @@ from PySide6.QtWidgets import QApplication, QDialog, QLabel, QMenu, QSlider, QSy
 
 from .animation import load_animations, resource_root
 from .behavior import BehaviorController, load_behaviors
-from .pointer import Gesture, look_direction
+from .pointer import AttentionTracker, Gesture, look_direction
 from .rendering import align_pixmap, blend_pixmaps, keep_static_body, remove_green_spill, stabilize_idle, stabilize_look
 from .settings import load_settings, resize_position, save_settings, visible_position
 
@@ -44,7 +44,7 @@ class PetWindow(QWidget):
         self.origin_time = time.monotonic()
         self.previous_advance_ms = 0
         self.wander_fraction = 0.0
-        self.hovering = False
+        self.attention = AttentionTracker()
         self.look_index = 0
         self.drag_offset = None
         self.previous_mouse_x = 0
@@ -81,8 +81,10 @@ class PetWindow(QWidget):
         return int((time.monotonic() - self.origin_time) * 1000)
 
     def act(self, action):
-        self.controller.handle(action, self.now())
-        self.refresh_frame(self.now())
+        now = self.now()
+        self.controller.handle(action, now)
+        self.update_attention(now)
+        self.refresh_frame(now)
 
     def create_menu(self):
         menu = QMenu(self)
@@ -138,7 +140,8 @@ class PetWindow(QWidget):
         elapsed = max(0, min(100, now - self.previous_advance_ms))
         self.previous_advance_ms = now
         before = self.controller.state
-        if self.hovering:
+        self.update_attention(now)
+        if self.attention.active:
             self.controller.handle("hover", now)
         state = self.controller.tick(now)
         if self.preferences["wander"] and not self.controller.quiet and before == "idle" and state == "look":
@@ -154,10 +157,15 @@ class PetWindow(QWidget):
             self.wander_fraction = 0.0
         self.refresh_frame(now)
 
+    def update_attention(self, now):
+        position, center = QCursor.pos(), self.geometry().center()
+        eligible = self.isVisible() and self.controller.state == "idle" and not self.controller.dragging and not self.menu.isVisible() and self.dialog is None
+        self.attention.update((position.x(), position.y()), (center.x(), center.y()), self.width(), now, eligible)
+
     def refresh_frame(self, now):
         key = self.controller.state
         index, following, amount = self.clips[key].sample(now - self.controller.started)
-        if self.hovering and key == "idle":
+        if self.attention.active and key == "idle":
             delta = QCursor.pos() - self.geometry().center()
             self.look_index = look_direction(delta.x(), delta.y(), self.look_index, max(8, self.width() * 0.06))
             key, index = "look", self.look_index
@@ -198,14 +206,6 @@ class PetWindow(QWidget):
         # 所有动画画布使用共同底边和中线，避免切换时脚底漂移。
         rect = QRectF(0, 0, self.width(), self.height())
         painter.drawPixmap(rect, self.frame, QRectF(self.frame.rect()))
-
-    def enterEvent(self, event):
-        self.hovering = True
-        self.refresh_frame(self.now())
-
-    def leaveEvent(self, event):
-        self.hovering = False
-        self.refresh_frame(self.now())
 
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:

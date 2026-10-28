@@ -98,8 +98,8 @@ def register_animation(root):
     clips.setdefault("scratch", {"anchor": [123, 241], "loop": False, "transition_ms": 80}).update({
         "anchor": [123, 241],
         "frames": [f"frames/scratch-v2/{index:02}.png" for index in range(16)],
-        "durations": [120, 80, 80, 80, 70, 65, 60, 60, 60, 60, 65, 65, 80, 80, 80, 150],
-        "blend_ms": 60,
+        "durations": [240, 160, 160, 160, 140, 130, 120, 120, 120, 120, 130, 130, 160, 160, 160, 300],
+        "blend_ms": 120,
     })
     path.write_text(json.dumps(clips, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

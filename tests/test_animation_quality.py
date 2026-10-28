@@ -32,7 +32,6 @@ def test_idle_body_stays_identical_during_blink(pet):
 
 
 def test_interpolated_blink_keeps_transparent_body_edges_unchanged(pet):
-    pet.hovering = False
     body = pet.pixmaps["idle"][0].toImage().copy(0, 128, 256, 128)
     for now in range(3120, 3630, 16):
         pet.refresh_frame(now)
@@ -120,10 +119,37 @@ def test_walking_speed_is_independent_of_refresh_rate(pet, monkeypatch, interval
 def test_scratch_contains_continuous_poses_and_short_transitions():
     scratch = load_animations(resource_root())["scratch"]
     assert len(set(scratch.frames)) == 16
-    assert max(scratch.durations[1:-1]) <= 90
-    assert 40 <= scratch.blend_ms <= 80
+    assert max(scratch.durations[1:-1]) <= 180
+    assert 100 <= scratch.blend_ms <= 160
     samples = {(i, j, round(t * 16)) for i, j, t in (scratch.sample(ms) for ms in range(0, scratch.total_ms, 16))}
     assert len(samples) >= 40
+
+
+def test_scratch_timing_is_twice_the_original_without_changing_frames_or_anchor():
+    scratch = load_animations(resource_root())["scratch"]
+    assert scratch.durations == [240, 160, 160, 160, 140, 130, 120, 120, 120, 120, 130, 130, 160, 160, 160, 300]
+    assert scratch.total_ms == 2510
+    assert scratch.blend_ms == 120
+    assert scratch.anchor == (123, 241)
+    assert [path.name for path in scratch.frames] == [f"{index:02}.png" for index in range(16)]
+
+
+def test_registering_scratch_preserves_slower_timing_and_other_animations(tmp_path):
+    import json
+    import runpy
+
+    config = tmp_path / "assets/animations.json"
+    config.parent.mkdir()
+    config.write_bytes((resource_root() / "animations.json").read_bytes())
+    before = json.loads(config.read_text(encoding="utf-8"))
+    register = runpy.run_path(str(Path(__file__).resolve().parents[1] / "scripts/准备挠耳连续素材.py"))["register_animation"]
+    register(tmp_path)
+    after = json.loads(config.read_text(encoding="utf-8"))
+    assert after["scratch"]["durations"] == [240, 160, 160, 160, 140, 130, 120, 120, 120, 120, 130, 130, 160, 160, 160, 300]
+    assert after["scratch"]["blend_ms"] == 120
+    assert after["scratch"]["frames"] == before["scratch"]["frames"]
+    assert after["scratch"]["anchor"] == before["scratch"]["anchor"]
+    assert {key: clip for key, clip in after.items() if key != "scratch"} == {key: clip for key, clip in before.items() if key != "scratch"}
 
 
 def test_displayed_idle_has_no_green_fringe(pet):
@@ -166,7 +192,7 @@ def test_hover_renderer_preserves_lowered_head_after_transition(pet, monkeypatch
     from anan_pet.rendering import remove_green_spill
 
     monkeypatch.setattr("anan_pet.window.QCursor.pos", lambda: pet.geometry().center() + QPoint(-38, 92))
-    pet.hovering = True
+    pet.update_attention(100)
     pet.refresh_frame(100)
     pet.refresh_frame(200)
     assert pet.look_index == 9
@@ -181,13 +207,13 @@ def test_all_hover_directions_preserve_face_and_stable_lower_body(pet, monkeypat
     from anan_pet.rendering import remove_green_spill
 
     pet.set_size(size)
-    pet.hovering = True
     body = pet.pixmaps["idle"][0].toImage().copy(0, 168, 256, 88)
     for direction in range(16):
         angle = math.radians(direction * 22.5)
-        delta = QPoint(round(1000 * math.sin(angle)), round(-1000 * math.cos(angle)))
+        delta = QPoint(round(size * 0.9 * math.sin(angle)), round(-size * 0.9 * math.cos(angle)))
         monkeypatch.setattr("anan_pet.window.QCursor.pos", lambda delta=delta: pet.geometry().center() + delta)
         now = direction * 200
+        pet.update_attention(now)
         pet.refresh_frame(now)
         pet.refresh_frame(now + 100)
         assert pet.look_index == direction
@@ -203,7 +229,6 @@ def test_return_from_lowered_head_does_not_cut_chin_during_transition(pet):
     start = pet.pixmaps["look"][9]
     pet.frame = start
     pet.visual_key = "look"
-    pet.hovering = False
     pet.refresh_frame(0)
     pet.refresh_frame(40)
     expected = blend_pixmaps(start, pet.pixmaps["idle"][0], 0.5).toImage()
@@ -215,12 +240,13 @@ def test_return_from_lowered_head_does_not_cut_chin_during_transition(pet):
 def test_turning_starts_at_last_displayed_pose_and_finishes_at_target(pet, monkeypatch):
     from PySide6.QtCore import QPoint
 
-    pet.hovering = True
     monkeypatch.setattr("anan_pet.window.QCursor.pos", lambda: pet.geometry().center() + QPoint(-38, 92))
+    pet.update_attention(0)
     pet.refresh_frame(0)
     pet.refresh_frame(100)
     previous = pet.frame.toImage()
     monkeypatch.setattr("anan_pet.window.QCursor.pos", lambda: pet.geometry().center() + QPoint(0, 100))
+    pet.update_attention(200)
     pet.refresh_frame(200)
     assert pet.look_index == 8
     assert pet.frame.toImage() == previous, "转头应从刚显示的画面开始，不应瞬间跳到下一方向"
