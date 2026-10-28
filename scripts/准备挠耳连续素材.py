@@ -95,11 +95,12 @@ def prepare_frames(root):
 def register_animation(root):
     path = root / "assets/animations.json"
     clips = json.loads(path.read_text(encoding="utf-8"))
-    clips["scratch"] = {
+    clips.setdefault("scratch", {"anchor": [123, 241], "loop": False, "transition_ms": 80}).update({
+        "anchor": [123, 241],
         "frames": [f"frames/scratch-v2/{index:02}.png" for index in range(16)],
         "durations": [120, 80, 80, 80, 70, 65, 60, 60, 60, 60, 65, 65, 80, 80, 80, 150],
         "blend_ms": 60,
-    }
+    })
     path.write_text(json.dumps(clips, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 

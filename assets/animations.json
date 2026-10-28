@@ -19,7 +19,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "idle": {
     "frames": [
@@ -38,7 +44,27 @@
       80,
       160
     ],
-    "blend_ms": 60
+    "blend_ms": 60,
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": true,
+    "transition_ms": 80,
+    "stabilization": {
+      "body_top": 128,
+      "eyes": [
+        [
+          108,
+          106
+        ],
+        [
+          137,
+          106
+        ]
+      ],
+      "radius": 14
+    }
   },
   "jumping": {
     "frames": [
@@ -54,7 +80,13 @@
       160,
       160,
       160
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "review": {
     "frames": [
@@ -72,7 +104,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "running": {
     "frames": [
@@ -90,7 +128,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "running-left": {
     "frames": [
@@ -112,7 +156,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": true,
+    "transition_ms": 80
   },
   "running-right": {
     "frames": [
@@ -134,7 +184,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": true,
+    "transition_ms": 80
   },
   "waiting": {
     "frames": [
@@ -152,7 +208,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "waving": {
     "frames": [
@@ -166,7 +228,13 @@
       190,
       190,
       190
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "look": {
     "frames": [
@@ -204,7 +272,17 @@
       300,
       300,
       300
-    ]
+    ],
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": true,
+    "transition_ms": 70,
+    "stabilization": {
+      "body_top": 168,
+      "head_bottom": 152
+    }
   },
   "scratch": {
     "frames": [
@@ -243,7 +321,13 @@
       80,
       150
     ],
-    "blend_ms": 60
+    "blend_ms": 60,
+    "anchor": [
+      123,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "prone_enter": {
     "frames": [
@@ -259,7 +343,13 @@
       300,
       360,
       400
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 0
   },
   "prone_sleep": {
     "frames": [
@@ -269,7 +359,13 @@
     "durations": [
       1400,
       1400
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": true,
+    "transition_ms": 0
   },
   "prone_exit": {
     "frames": [
@@ -287,7 +383,13 @@
       280,
       260,
       240
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 0
   },
   "supine_enter": {
     "frames": [
@@ -301,7 +403,13 @@
       400,
       450,
       400
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 0
   },
   "supine_sleep": {
     "frames": [
@@ -311,7 +419,13 @@
     "durations": [
       1400,
       1400
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": true,
+    "transition_ms": 0
   },
   "supine_exit": {
     "frames": [
@@ -329,7 +443,13 @@
       350,
       350,
       320
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 0
   },
   "wash": {
     "frames": [
@@ -343,7 +463,13 @@
       500,
       450,
       500
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "yawn": {
     "frames": [
@@ -355,7 +481,13 @@
       400,
       650,
       400
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   },
   "stretch": {
     "frames": [
@@ -367,6 +499,12 @@
       550,
       850,
       550
-    ]
+    ],
+    "anchor": [
+      128,
+      241
+    ],
+    "loop": false,
+    "transition_ms": 80
   }
 }

@@ -3,6 +3,36 @@
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor, QImage, QLinearGradient, QPainter, QPixmap, QRadialGradient
 
+from .animation import GROUND_ANCHOR
+
+
+def align_pixmap(pixmap, anchor):
+    """按动作的落地点对齐整张姿态，不重新缩放或截取身体。"""
+    if anchor == GROUND_ANCHOR:
+        return pixmap
+    result = QPixmap(pixmap.size())
+    result.fill(Qt.GlobalColor.transparent)
+    painter = QPainter(result)
+    painter.drawPixmap(GROUND_ANCHOR[0] - anchor[0], GROUND_ANCHOR[1] - anchor[1], pixmap)
+    painter.end()
+    return result
+
+
+def remove_green_spill(pixmap):
+    """安安没有绿色毛发，只压低绿幕溢色，保留原始轮廓和透明度。"""
+    source = pixmap.toImage().convertToFormat(QImage.Format.Format_RGBA8888)
+    pixels = bytearray(source.constBits())
+    for y in range(source.height()):
+        start = y * source.bytesPerLine()
+        for offset in range(start, start + source.width() * 4, 4):
+            if pixels[offset + 3]:
+                ceiling = max(pixels[offset], pixels[offset + 2])
+                if pixels[offset + 1] > ceiling:
+                    pixels[offset + 1] = ceiling
+    cleaned = QImage(pixels, source.width(), source.height(), source.bytesPerLine(), QImage.Format.Format_RGBA8888).copy()
+    cleaned.setDevicePixelRatio(source.devicePixelRatio())
+    return QPixmap.fromImage(cleaned)
+
 
 def blend_pixmaps(left, right, amount):
     if amount <= 0:
@@ -26,18 +56,18 @@ def blend_pixmaps(left, right, amount):
     return QPixmap.fromImage(result)
 
 
-def stabilize_idle(pixmaps):
+def stabilize_idle(pixmaps, eyes, radius):
     mask = QImage(pixmaps[0].size(), QImage.Format.Format_ARGB32_Premultiplied)
     mask.fill(Qt.GlobalColor.transparent)
     painter = QPainter(mask)
-    for x in (108, 137):
-        gradient = QRadialGradient(x, 106, 14)
+    for x, y in eyes:
+        gradient = QRadialGradient(x, y, radius)
         gradient.setColorAt(0, QColor(255, 255, 255, 255))
         gradient.setColorAt(0.65, QColor(255, 255, 255, 255))
         gradient.setColorAt(1, QColor(255, 255, 255, 0))
         painter.setBrush(gradient)
         painter.setPen(Qt.PenStyle.NoPen)
-        painter.drawEllipse(x - 14, 92, 28, 28)
+        painter.drawEllipse(x - radius, y - radius, radius * 2, radius * 2)
     painter.end()
     result = []
     for pixmap in pixmaps:
@@ -54,10 +84,10 @@ def stabilize_idle(pixmaps):
     return result
 
 
-def stabilize_look(pixmaps, base):
+def stabilize_look(pixmaps, base, head_bottom, body_top):
     mask = QImage(base.size(), QImage.Format.Format_ARGB32_Premultiplied)
     mask.fill(Qt.GlobalColor.transparent)
-    gradient = QLinearGradient(0, 118, 0, 128)
+    gradient = QLinearGradient(0, head_bottom, 0, body_top)
     gradient.setColorAt(0, QColor(255, 255, 255, 255))
     gradient.setColorAt(1, QColor(255, 255, 255, 0))
     painter = QPainter(mask)
@@ -83,11 +113,11 @@ def stabilize_look(pixmaps, base):
     return result
 
 
-def keep_static_body(pixmap, base):
+def keep_static_body(pixmap, base, top=128):
     # 半透明毛尖混合时会有舍入误差；静止身体直接复用原像素。
     result = pixmap.copy()
     painter = QPainter(result)
-    painter.setClipRect(0, 128, base.width(), base.height() - 128)
+    painter.setClipRect(0, top, base.width(), base.height() - top)
     painter.setCompositionMode(QPainter.CompositionMode.CompositionMode_Source)
     painter.drawPixmap(0, 0, base)
     painter.end()

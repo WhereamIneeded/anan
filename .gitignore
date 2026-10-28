@@ -1,5 +1,6 @@
 # 本地环境和缓存
 .venv/
+.python-version
 venv/
 __pycache__/
 *.py[cod]
@@ -22,3 +23,10 @@ Desktop.ini
 *.egg-info/
 *日志.txt
 .superpowers/
+
+# 隔离开发目录与本地分发副本
+/.Codex/worktrees/
+/安安/
+/安安-Windows-x64-v*.zip
+/安安-v*-覆盖更新/
+/安安-v*-覆盖更新.zip

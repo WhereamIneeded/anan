@@ -6,12 +6,26 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
+GROUND_ANCHOR = (123, 241)
+
+
+@dataclass(frozen=True)
+class Stabilization:
+    body_top: int
+    head_bottom: int | None = None
+    eyes: tuple[tuple[int, int], ...] = ()
+    radius: int = 14
+
+
 @dataclass
 class AnimationClip:
     frames: list[Path]
     durations: list[int]
     blend_ms: int = 0
     loop: bool = False
+    anchor: tuple[int, int] = GROUND_ANCHOR
+    transition_ms: int = 80
+    stabilization: Stabilization | None = None
 
     @property
     def total_ms(self):
@@ -52,5 +66,30 @@ def load_animations(root):
         blend_ms = info.get("blend_ms", 0)
         if type(blend_ms) is not int or blend_ms < 0:
             raise ValueError(f"动画过渡时间无效：{key}")
-        clips[key] = AnimationClip(frames, durations, blend_ms, key in ("idle", "look", "prone_sleep", "supine_sleep"))
+        loop = info.get("loop", False)
+        anchor = info.get("anchor", list(GROUND_ANCHOR))
+        transition_ms = info.get("transition_ms", 80)
+        if type(loop) is not bool or not isinstance(anchor, list) or len(anchor) != 2 or any(type(n) is not int or not 0 <= n <= 256 for n in anchor):
+            raise ValueError(f"动画循环或对齐位置无效：{key}")
+        if type(transition_ms) is not int or not 0 <= transition_ms <= 500:
+            raise ValueError(f"动作切换时间无效：{key}")
+        stabilization = None
+        if "stabilization" in info:
+            policy = info["stabilization"]
+            if not isinstance(policy, dict):
+                raise ValueError(f"姿态稳定配置无效：{key}")
+            body_top = policy.get("body_top")
+            head_bottom = policy.get("head_bottom")
+            eyes = policy.get("eyes", [])
+            radius = policy.get("radius", 14)
+            if type(body_top) is not int or not 0 < body_top <= 256:
+                raise ValueError(f"固定身体区域无效：{key}")
+            if head_bottom is not None and (type(head_bottom) is not int or not 0 <= head_bottom < body_top):
+                raise ValueError(f"完整头部区域无效：{key}")
+            if not isinstance(eyes, list) or any(not isinstance(p, list) or len(p) != 2 or any(type(n) is not int or not 0 <= n < 256 for n in p) for p in eyes):
+                raise ValueError(f"眼睛区域无效：{key}")
+            if type(radius) is not int or not 1 <= radius <= 64 or bool(eyes) == (head_bottom is not None):
+                raise ValueError(f"姿态稳定配置无效：{key}")
+            stabilization = Stabilization(body_top, head_bottom, tuple(map(tuple, eyes)), radius)
+        clips[key] = AnimationClip(frames, durations, blend_ms, loop, tuple(anchor), transition_ms, stabilization)
     return clips

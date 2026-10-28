@@ -26,7 +26,8 @@ for name in ("scratch", "prone", "supine", "daily"):
 
 
 def register(key, source, indexes, durations):
-    clips[key] = {"frames": [f"frames/{source}/{i:02}.png" for i in indexes], "durations": durations}
+    info = clips.setdefault(key, {"anchor": [128, 241], "loop": key in ("prone_sleep", "supine_sleep"), "transition_ms": 0 if key.startswith(("prone_", "supine_")) else 80})
+    info.update(frames=[f"frames/{source}/{i:02}.png" for i in indexes], durations=durations)
 
 
 register("scratch", "scratch", [0, 1, 2, 3, 4, 3, 4, 5], [180, 180, 160, 140, 140, 140, 180, 220])

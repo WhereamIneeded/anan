@@ -8,9 +8,9 @@ from PySide6.QtGui import QCursor, QIcon, QPainter, QPixmap
 from PySide6.QtWidgets import QApplication, QDialog, QLabel, QMenu, QSlider, QSystemTrayIcon, QVBoxLayout, QWidget
 
 from .animation import load_animations, resource_root
-from .behavior import BehaviorController
+from .behavior import BehaviorController, load_behaviors
 from .pointer import Gesture, look_direction
-from .rendering import blend_pixmaps, keep_static_body, stabilize_idle, stabilize_look
+from .rendering import align_pixmap, blend_pixmaps, keep_static_body, remove_green_spill, stabilize_idle, stabilize_look
 from .settings import load_settings, resize_position, save_settings, visible_position
 
 
@@ -20,16 +20,25 @@ class PetWindow(QWidget):
         self.settings_path = settings_path or Path(QStandardPaths.writableLocation(QStandardPaths.StandardLocation.AppDataLocation)) / "偏好.json"
         self.preferences = load_settings(self.settings_path)
         self.clips = load_animations(resource_root())
-        self.pixmaps = {key: [QPixmap(str(p)) for p in clip.frames] for key, clip in self.clips.items()}
-        self.pixmaps["idle"] = stabilize_idle(self.pixmaps["idle"])
-        self.pixmaps["look"] = stabilize_look(self.pixmaps["look"], self.pixmaps["idle"][0])
+        # 加载时只清理一次；各动作共用的帧只解码、去溢色一次。
+        paths = {p for clip in self.clips.values() for p in clip.frames}
+        cache = {p: remove_green_spill(QPixmap(str(p))) for p in paths}
+        self.pixmaps = {key: [align_pixmap(cache[p], clip.anchor) for p in clip.frames] for key, clip in self.clips.items()}
+        for key, clip in self.clips.items():
+            policy = clip.stabilization
+            if policy and policy.eyes:
+                self.pixmaps[key] = stabilize_idle(self.pixmaps[key], policy.eyes, policy.radius)
+            elif policy and policy.head_bottom is not None:
+                self.pixmaps[key] = stabilize_look(self.pixmaps[key], self.pixmaps["idle"][0], policy.head_bottom, policy.body_top)
         self.frame = self.pixmaps["idle"][0]
         self.frame_signature = None
         self.visual_key = "idle"
+        self.visual_index = 0
         self.transition_source = None
         self.transition_started = 0
-        self.transition_static = False
-        self.controller = BehaviorController({key: c.total_ms for key, c in self.clips.items()})
+        self.transition_body_top = None
+        self.transition_duration = 0
+        self.controller = BehaviorController({key: c.total_ms for key, c in self.clips.items()}, config=load_behaviors(resource_root(), self.clips))
         self.controller.quiet = self.preferences["quiet"]
         self.gesture = Gesture(QApplication.startDragDistance())
         self.origin_time = time.monotonic()
@@ -80,9 +89,11 @@ class PetWindow(QWidget):
         menu.addAction("显示安安", self.show_pet)
         menu.addAction("调整大小…", self.size_dialog)
         menu.addSeparator()
-        for title, action in (("打招呼", "waving"), ("挠耳朵", "scratch"), ("舔爪洗脸", "wash"), ("打哈欠", "yawn"), ("伸懒腰", "stretch"), ("趴下睡觉", "sleep"), ("仰卧露肚皮睡", "supine"), ("叫醒安安", "wake")):
-            if action in ("sleep", "supine", "wake") or action in self.clips:
-                menu.addAction(title, lambda checked=False, key=action: self.act(key))
+        menu.addAction("打招呼", lambda: self.act("waving"))
+        for action, spec in self.controller.config.actions.items():
+            if action != "look":
+                menu.addAction(spec.label, lambda checked=False, key=action: self.act(key))
+        menu.addAction("叫醒安安", lambda: self.act("wake"))
         demo = menu.addMenu("已有动作演示")
         for title, key in (("环顾四周", "look"), ("向左走", "running-left"), ("向右走", "running-right"), ("专心思考", "running"), ("期待回应", "waiting"), ("仔细检查", "review"), ("有点失落", "failed")):
             demo.addAction(title, lambda checked=False, state=key: self.act(state))
@@ -127,6 +138,8 @@ class PetWindow(QWidget):
         elapsed = max(0, min(100, now - self.previous_advance_ms))
         self.previous_advance_ms = now
         before = self.controller.state
+        if self.hovering:
+            self.controller.handle("hover", now)
         state = self.controller.tick(now)
         if self.preferences["wander"] and not self.controller.quiet and before == "idle" and state == "look":
             self.act("running-left" if self.controller.rng.randrange(2) else "running-right")
@@ -151,22 +164,31 @@ class PetWindow(QWidget):
             following, amount = index, 0
         amount = round(amount * 16) / 16
         signature = key, index, following, amount
-        if key != self.visual_key:
-            self.transition_source = self.frame
+        clip = self.clips[key]
+        turning = clip.stabilization is not None and clip.stabilization.head_bottom is not None and index != self.visual_index
+        if key != self.visual_key or turning:
+            policies = [self.clips[self.visual_key].stabilization, clip.stabilization]
+            self.transition_body_top = max(p.body_top for p in policies) if all(policies) else None
+            self.transition_duration = clip.transition_ms
+            self.transition_source = self.frame if self.transition_duration else None
             self.transition_started = now
-            self.transition_static = self.visual_key in ("idle", "look") and key in ("idle", "look")
             self.visual_key = key
+        self.visual_index = index
         if signature == self.frame_signature and self.transition_source is None:
             return
         pixmap = blend_pixmaps(self.pixmaps[key][index], self.pixmaps[key][following], amount)
         if self.transition_source is not None:
-            progress = (now - self.transition_started) / 80
+            progress = (now - self.transition_started) / self.transition_duration
             if progress >= 1:
                 self.transition_source = None
             else:
                 pixmap = blend_pixmaps(self.transition_source, pixmap, max(0, progress))
-        if key in ("idle", "look") and (self.transition_source is None or self.transition_static):
-            pixmap = keep_static_body(pixmap, self.pixmaps["idle"][0])
+        if self.transition_source is not None:
+            body_top = self.transition_body_top
+        else:
+            body_top = clip.stabilization.body_top if clip.stabilization else None
+        if body_top is not None:
+            pixmap = keep_static_body(pixmap, self.pixmaps["idle"][0], body_top)
         self.frame, self.frame_signature = pixmap, signature
         self.update()
 
@@ -197,7 +219,7 @@ class PetWindow(QWidget):
         if self.gesture.origin is not None and self.gesture.move(p.x(), p.y()):
             if not self.controller.dragging:
                 self.act("drag_start")
-            self.controller.state = "running-left" if p.x() < self.previous_mouse_x else "running-right"
+            self.controller.set_drag_direction("left" if p.x() < self.previous_mouse_x else "right", self.now())
             self.move(p - self.drag_offset)
             self.previous_mouse_x = p.x()
 

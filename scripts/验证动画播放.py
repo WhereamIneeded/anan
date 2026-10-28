@@ -67,7 +67,10 @@ def prepare(window):
     window.frame = window.pixmaps["idle"][0]
     window.frame_signature = None
     window.visual_key = "idle"
+    window.visual_index = 0
     window.transition_source = None
+    window.transition_duration = 0
+    window.transition_body_top = None
 
 
 def capture(window, action, output):

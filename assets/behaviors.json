@@ -1,0 +1,84 @@
+{
+  "idle_interval_ms": [
+    18000,
+    35000
+  ],
+  "quiet_multiplier": 4,
+  "attention_grace_ms": 5000,
+  "actions": {
+    "scratch": {
+      "label": "挠耳朵",
+      "start": [
+        "scratch"
+      ],
+      "weight": 3,
+      "cooldown_ms": 45000
+    },
+    "wash": {
+      "label": "舔爪洗脸",
+      "start": [
+        "wash"
+      ],
+      "weight": 3,
+      "cooldown_ms": 60000
+    },
+    "yawn": {
+      "label": "打哈欠",
+      "start": [
+        "yawn"
+      ],
+      "weight": 2,
+      "cooldown_ms": 60000
+    },
+    "stretch": {
+      "label": "伸懒腰",
+      "start": [
+        "stretch"
+      ],
+      "weight": 2,
+      "cooldown_ms": 90000
+    },
+    "look": {
+      "label": "环顾四周",
+      "start": [
+        "look"
+      ],
+      "weight": 4,
+      "cooldown_ms": 30000
+    },
+    "sleep": {
+      "label": "趴下睡觉",
+      "start": [
+        "prone_enter"
+      ],
+      "loop": "prone_sleep",
+      "end": [
+        "prone_exit"
+      ],
+      "hold_ms": [
+        90000,
+        240000
+      ],
+      "weight": 1,
+      "cooldown_ms": 180000
+    },
+    "supine": {
+      "label": "仰卧睡觉",
+      "start": [
+        "prone_enter",
+        "supine_enter"
+      ],
+      "loop": "supine_sleep",
+      "end": [
+        "supine_exit",
+        "prone_exit"
+      ],
+      "hold_ms": [
+        90000,
+        240000
+      ],
+      "weight": 1,
+      "cooldown_ms": 240000
+    }
+  }
+}
