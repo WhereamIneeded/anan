@@ -57,6 +57,18 @@ def test_only_pointer_movement_refreshes_attention_timeout():
     assert not attention.update((101, 0), (20, 0), 220, 5000)
 
 
+def test_outer_ring_movement_refreshes_timeout_at_expiry_boundary():
+    attention = tracker()
+    assert attention.update((200, 0), (0, 0), 220, 0)
+    assert attention.update((290, 0), (0, 0), 220, 100)
+    assert attention.update((290, 0), (0, 0), 220, 3099)
+    assert attention.update((291, 0), (0, 0), 220, 3100)
+    assert attention.update((291, 0), (0, 0), 220, 6099)
+    assert not attention.update((291, 0), (0, 0), 220, 6100)
+    assert not attention.update((292, 0), (0, 0), 220, 6200)
+    assert attention.update((264, 0), (0, 0), 220, 6300)
+
+
 def test_ineligible_samples_cancel_attention_without_replaying_movement():
     attention = tracker()
     assert attention.update((100, 0), (0, 0), 220, 0)

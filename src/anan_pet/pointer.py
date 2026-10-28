@@ -16,12 +16,12 @@ class AttentionTracker:
             self.active = False
             return False
         distance_squared = sum((value - origin) ** 2 for value, origin in zip(position, center))
-        if self.active and (distance_squared > (width * 1.5) ** 2 or now_ms - self.last_movement_ms >= 3000):
-            self.active = False
         if moved:
             self.last_movement_ms = now_ms
-            if distance_squared <= (width * 1.2) ** 2:
-                self.active = True
+        if self.active and (distance_squared > (width * 1.5) ** 2 or now_ms - self.last_movement_ms >= 3000):
+            self.active = False
+        if moved and distance_squared <= (width * 1.2) ** 2:
+            self.active = True
         return self.active
 
 
