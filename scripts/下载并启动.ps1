@@ -140,6 +140,7 @@ function Invoke-AnanReleaseLauncher {
     $cached = Get-AnanCachedPackage $CacheRoot
     $temporary = $null
     $published = $false
+    $updating = $false
     try {
         Write-Host '正在前台检查安安最新成品……'
         $assets = Select-AnanReleaseAssets (Get-AnanLatestRelease)
@@ -148,6 +149,7 @@ function Invoke-AnanReleaseLauncher {
             Start-AnanPackage $cached.Executable
             return 0
         }
+        $updating = $true
         if ($cached -and (Test-AnanPackageRunning $cached.Executable)) {
             Write-Host '安安正在运行，请先退出再更新。现有成品保持不变。'
             return 1
@@ -179,9 +181,13 @@ function Invoke-AnanReleaseLauncher {
             else { Remove-Item -LiteralPath (Join-Path $CacheRoot '当前.json') -Force }
         }
         if (-not $cached) { throw "无法下载并启动安安：$($_.Exception.Message) 本机没有已验证的可用缓存。" }
-        Write-Host ("本次更新未完成：$($_.Exception.Message)")
+        Write-Host ("未能获取或启动最新成品：$($_.Exception.Message)")
         Write-Host '继续使用本机已验证的旧版缓存。'
-        if (Test-AnanPackageRunning $cached.Executable) { Write-Host '安安正在运行，请先退出再更新。'; return 1 }
+        if (Test-AnanPackageRunning $cached.Executable) {
+            if ($updating) { Write-Host '安安正在运行，请先退出再更新。'; return 1 }
+            Write-Host '安安已在运行，继续使用本机已验证的缓存。'
+            return 0
+        }
         Start-AnanPackage $cached.Executable
         return 0
     } finally {

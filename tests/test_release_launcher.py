@@ -176,6 +176,22 @@ $result = @{ Started = @($script:started).Count; Preserved = (Get-AnanCachedPack
     assert "已验证" in output and "缓存" in output
 
 
+def test_network_failure_keeps_running_verified_cache_without_update_error(area):
+    folder = release(area)
+    data, output = run_ps(area, use_release(folder) + """
+Invoke-AnanReleaseLauncher -CacheRoot $cache
+$old = Get-AnanCachedPackage $cache
+$script:started = @()
+function Get-AnanLatestRelease { throw '网络不可用或接口请求受限' }
+function Test-AnanPackageRunning { param($Executable) return $true }
+$exitCode = Invoke-AnanReleaseLauncher -CacheRoot $cache
+$result = @{ Started = @($script:started).Count; Preserved = (Get-AnanCachedPackage $cache).Executable -eq $old.Executable; ExitCode = $exitCode }
+""")
+    assert data == {"Started": 0, "Preserved": True, "ExitCode": 0}
+    assert "已在运行" in output
+    assert "先退出再更新" not in output
+
+
 def test_no_release_and_no_cache_reports_chinese_error(area):
     data, _ = run_ps(area, """
 function Get-AnanLatestRelease { throw '仓库尚未发布正式 Release，请等待发布或在浏览器中查看发布页。' }
