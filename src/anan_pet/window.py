@@ -175,9 +175,15 @@ class PetWindow(QWidget):
             position, center = QCursor.pos(), self.geometry().center()
             view = self.play.set_target((position.x(), position.y()), (center.x(), center.y()), self.width(), now)
         self.audio.update(view, enabled=self.preferences["sound_enabled"], quiet=self.controller.quiet, paused=paused)
-        self.props.update(view, visible=self.isVisible() and not self.closed, paused=paused)
+        self.update_props(view, now)
         self.update_play_menu()
         return view
+
+    def update_props(self, view, now):
+        elapsed = now - self.controller.started
+        text = "嗷呜～" if self.controller.state == "yawn" and 400 <= elapsed < 1050 else None
+        self.props.update(view, visible=self.isVisible() and not self.closed,
+                          paused=self.play_paused(), action_text=text)
 
     def update_play_menu(self):
         if hasattr(self, "teaser_action"):
@@ -303,6 +309,7 @@ class PetWindow(QWidget):
 
     def refresh_frame(self, now):
         view = self.play.view
+        self.update_props(view, now)
         active = view.mode != "none"
         render_now = view.session_elapsed_ms if active else now
         render_domain = ("play", view.session_id) if active else ("normal",)
@@ -408,7 +415,7 @@ class PetWindow(QWidget):
         if screens:
             self.move(*visible_position(self.x(), self.y(), self.width(), self.height(), screens))
         if hasattr(self, "play"):
-            self.props.update(self.play.view, visible=self.isVisible() and not self.closed, paused=self.play_paused())
+            self.update_props(self.play.view, self.now())
 
     def set_size(self, size):
         x, y = resize_position(self.x(), self.y(), self.width(), self.height(), size, size)

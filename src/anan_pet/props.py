@@ -87,23 +87,23 @@ class PlayProps:
     def show_feedback(self, view, text):
         self.feedback = (view.session_id, text, view.session_elapsed_ms + 1800)
 
-    def update(self, view, visible=True, paused=False):
+    def update(self, view, visible=True, paused=False, action_text=None):
         if self.feedback is not None:
             session_id, _, until = self.feedback
             if view.session_id != session_id or view.session_elapsed_ms >= until or view.mode == "none":
                 self.feedback = None
         screens = self.screen_rects()
-        if not visible or paused or not screens or view.mode == "none":
+        if not visible or paused or not screens or (view.mode == "none" and not action_text):
             self.hide()
             return
-        text = self.feedback[1] if self.feedback is not None else view.bubble
+        text = action_text if view.mode == "none" else (self.feedback[1] if self.feedback is not None else view.bubble)
         if not text and view.mode in ("teaser", "teaser_swipe") and view.session_elapsed_ms < 4000:
             text = "移动鼠标逗安安，点我拍一下"
         if not text and view.mode == "satisfied" and view.phase_elapsed_ms < 1800:
             text = "喵～吃饱啦 ♡"
         if text:
-            effect = "♡" if view.mode == "satisfied" else "♪"
-            elapsed = view.phase_elapsed_ms if view.mode == "satisfied" else view.session_elapsed_ms
+            effect = "" if view.mode == "none" else ("♡" if view.mode == "satisfied" else "♪")
+            elapsed = 0 if view.mode == "none" else (view.phase_elapsed_ms if view.mode == "satisfied" else view.session_elapsed_ms)
             signature = text, effect, elapsed // 60
             if self.bubble.content_signature != signature:
                 self.bubble.content_signature = signature
