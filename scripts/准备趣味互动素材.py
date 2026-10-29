@@ -91,7 +91,8 @@ def prepare_frames(root):
                 path = target / f'{number:02d}.png'
                 frames[index].save(path)
                 paths.append(path.relative_to(root / 'assets').as_posix())
-            config[name] = {'frames': paths, 'durations': [duration] * len(paths), 'blend_ms': 100, 'loop': loop, 'anchor': [123, 241], 'transition_ms': 120}
+            # 新姿势头部位移较大，缩短淡变以减少双轮廓；保持原动作时长。
+            config[name] = {'frames': paths, 'durations': [duration] * len(paths), 'blend_ms': 40, 'loop': loop, 'anchor': [123, 241], 'transition_ms': 80}
     config_path.write_text(json.dumps(config, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (root / '制作/趣味互动/帧提取记录.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     return report
@@ -122,16 +123,17 @@ def prepare_props(root):
     # 简单道具采用确定性绘图；猫咪全部来自独立生成的新分镜。
     back = Image.new('RGBA', (256, 256))
     draw = ImageDraw.Draw(back)
-    draw.ellipse((91, 226, 155, 242), fill='#a7bbc8', outline='#637f93', width=1)
-    draw.ellipse((96, 229, 150, 239), fill='#506c80')
+    draw.ellipse((91, 235, 155, 249), fill='#a7bbc8', outline='#637f93', width=1)
+    draw.ellipse((96, 238, 150, 247), fill='#506c80')
     back.save(target / 'bowl_back.png')
     front = Image.new('RGBA', (256, 256))
     draw = ImageDraw.Draw(front)
-    draw.polygon([(92, 239), (154, 239), (148, 251), (99, 251)], fill='#c8e2ed')
-    draw.arc((92, 232, 154, 246), 0, 180, fill='#f5fdff', width=3)
-    draw.line((99, 250, 148, 250), fill='#728e9d', width=1)
+    draw.polygon([(92, 247), (154, 247), (148, 253), (99, 253)], fill='#c8e2ed')
+    draw.arc((92, 240, 154, 252), 0, 180, fill='#f5fdff', width=3)
+    draw.line((99, 253, 148, 253), fill='#728e9d', width=1)
     front.save(target / 'bowl_front.png')
-    positions = [(104, 234), (113, 231), (121, 235), (130, 232), (139, 235), (115, 236), (133, 236), (125, 230), (144, 232)]
+    # 碗放在脚爪前方，食物不能落在白爪的不透明区域后面。
+    positions = [(104, 243), (113, 240), (121, 244), (130, 241), (139, 244), (115, 245), (133, 245), (125, 239), (144, 241)]
     for food, color in [('snack', '#b77845'), ('freeze_dried', '#f1c993')]:
         for level, count in [(1, 2), (2, 5), (3, 9)]:
             image = Image.new('RGBA', (256, 256))

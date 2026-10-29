@@ -4,7 +4,7 @@ import json
 
 
 def load_settings(path):
-    result = {"size": 220, "position": None, "quiet": False, "wander": False}
+    result = {"size": 220, "position": None, "quiet": False, "wander": False, "auto_beg": True, "sound_enabled": False}
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
@@ -15,8 +15,10 @@ def load_settings(path):
         pos = data.get("position")
         if isinstance(pos, list) and len(pos) == 2 and all(type(n) is int for n in pos):
             result["position"] = pos
-        for key in ("quiet", "wander"):
+        for key in ("quiet", "wander", "sound_enabled"):
             result[key] = data.get(key) is True
+        if type(data.get("auto_beg")) is bool:
+            result["auto_beg"] = data["auto_beg"]
     except (OSError, ValueError, TypeError, OverflowError):
         pass
     return result

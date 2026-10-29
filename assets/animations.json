@@ -528,13 +528,13 @@
       175,
       175
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": false,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "beg_paw": {
     "frames": [
@@ -557,13 +557,13 @@
       175,
       175
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": false,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "eat_enter": {
     "frames": [
@@ -586,13 +586,13 @@
       150,
       150
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": false,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "eat_loop": {
     "frames": [
@@ -607,13 +607,13 @@
       230,
       230
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": true,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "eat_exit": {
     "frames": [
@@ -628,13 +628,13 @@
       900,
       900
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": false,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "teaser_ready": {
     "frames": [
@@ -649,13 +649,13 @@
       450,
       450
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": true,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "teaser_left": {
     "frames": [
@@ -670,13 +670,13 @@
       250,
       250
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": true,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "teaser_right": {
     "frames": [
@@ -691,13 +691,13 @@
       250,
       250
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": true,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   },
   "teaser_swipe": {
     "frames": [
@@ -712,12 +712,12 @@
       250,
       250
     ],
-    "blend_ms": 100,
+    "blend_ms": 40,
     "loop": false,
     "anchor": [
       123,
       241
     ],
-    "transition_ms": 120
+    "transition_ms": 80
   }
 }

@@ -93,3 +93,15 @@ def test_audio_preparation_preserves_original_and_reproduces_runtime_file(tmp_pa
     result = preparer().prepare_audio(tmp_path)
     assert copied.read_bytes() == original.read_bytes()
     assert result.read_bytes() == (root / 'assets/audio/meow.wav').read_bytes()
+
+
+def test_food_reduction_remains_visible_in_front_of_cat_paws():
+    root = resource_root()
+    clips = load_animations(root)
+    food = Image.open(root / 'props/freeze_dried-3.png').getchannel('A').tobytes()
+    front = Image.open(root / 'props/bowl_front.png').getchannel('A').tobytes()
+    for action in ('idle', 'eat_enter', 'eat_loop', 'eat_exit'):
+        for path in clips[action].frames:
+            cat = Image.open(path).getchannel('A').tobytes()
+            visible = sum(a > 128 and b < 128 and c < 128 for a, b, c in zip(food, cat, front))
+            assert visible >= 40, f'{action}的食物被前爪或碗沿遮住，无法看清食物减少'

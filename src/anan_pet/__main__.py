@@ -16,6 +16,7 @@ def main():
     app.setOrganizationName("安安")
     app.setQuitOnLastWindowClosed(False)
     window = PetWindow()
+    window.exit_requested.connect(app.quit)
     if options.smoke_test:
         QTimer.singleShot(1500, app.quit)
     return app.exec()
