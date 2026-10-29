@@ -1,0 +1,61 @@
+{
+  "说明": "时间单位均为毫秒；自动索食只累计清醒、可见且允许自动互动的时间。",
+  "first_beg_ms": [
+    1200000,
+    2400000
+  ],
+  "after_meal_ms": [
+    3600000,
+    5400000
+  ],
+  "cancel_cooldown_ms": 1800000,
+  "serving_ms": [
+    1000,
+    2000
+  ],
+  "eating_ms": [
+    12000,
+    20000
+  ],
+  "satisfied_ms": [
+    3000,
+    5000
+  ],
+  "beg_expressive_ms": [
+    60000,
+    90000
+  ],
+  "beg_observe_ms": [
+    4000,
+    8000
+  ],
+  "beg_sparse_ms": [
+    20000,
+    40000
+  ],
+  "beg_clip_ms": 1400,
+  "bubble_ms": [
+    3000,
+    5000
+  ],
+  "bubble_gap_ms": 20000,
+  "eat_enter_ms": 1200,
+  "teaser_swipe_ms": 1000,
+  "clips": {
+    "idle": "idle",
+    "look": "look",
+    "beg_call": "beg_call",
+    "beg_paw": "beg_paw",
+    "eat_enter": "eat_enter",
+    "eat_loop": "eat_loop",
+    "eat_exit": "eat_exit",
+    "teaser_ready": "teaser_ready",
+    "teaser_left": "teaser_left",
+    "teaser_right": "teaser_right",
+    "teaser_swipe": "teaser_swipe"
+  },
+  "bubbles": {
+    "beg_snack": "喵～想吃零食，点我喂一份",
+    "beg_freeze_dried": "喵～想吃冻干，点我喂一份"
+  }
+}
