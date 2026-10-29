@@ -95,6 +95,8 @@ def prepare_frames(root):
 def register_animation(root):
     path = root / "assets/animations.json"
     clips = json.loads(path.read_text(encoding="utf-8"))
+    if any(frame.startswith('frames/consistent/') for frame in clips.get('scratch', {}).get('frames', [])):
+        return
     clips.setdefault("scratch", {"anchor": [123, 241], "loop": False, "transition_ms": 80}).update({
         "anchor": [123, 241],
         "frames": [f"frames/scratch-v2/{index:02}.png" for index in range(16)],

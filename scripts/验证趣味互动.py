@@ -46,8 +46,8 @@ def widget_image(widget):
     return image
 
 
-def capture(window, color='#edf1f4'):
-    viewport = QRect(window.x() - 120, window.y() - 100, 560, 440)
+def capture(window, color='#edf1f4', width=560, height=440):
+    viewport = QRect(window.x() - 120, window.y() - 100, width, height)
     image = QImage(viewport.size(), QImage.Format.Format_RGB32)
     image.fill(QColor(color))
     layers = [(window.geometry(), widget_image(window))]

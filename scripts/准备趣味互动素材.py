@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-def subjects(image):
+def subjects(image, expected=16, columns=4):
     width, height = image.size
     remaining = bytearray(value > 8 for value in image.getchannel('A').tobytes())
     found = []
@@ -35,10 +35,10 @@ def subjects(image):
             continue
         xs, ys = [i % width for i in points], [i // width for i in points]
         found.append({'points': points, 'box': (min(xs), min(ys), max(xs) + 1, max(ys) + 1), 'center': (sum(xs) / len(xs), sum(ys) / len(ys))})
-    if len(found) != 16:
-        raise ValueError(f'分镜应有16只完整猫咪，实际为{len(found)}，请检查源图。')
+    if len(found) != expected:
+        raise ValueError(f'分镜应有{expected}只完整猫咪，实际为{len(found)}，请检查源图。')
     found.sort(key=lambda item: item['center'][1])
-    return [item for row in range(4) for item in sorted(found[row * 4:row * 4 + 4], key=lambda item: item['center'][0])]
+    return [item for row in range(expected // columns) for item in sorted(found[row * columns:row * columns + columns], key=lambda item: item['center'][0])]
 
 
 def prepare_frames(root):
@@ -84,6 +84,8 @@ def prepare_frames(root):
             frames.append(frame)
             report.append({'源图': filename, '源图SHA256': hashlib.sha256(source_path.read_bytes()).hexdigest(), '序号': index, '主体范围': box, '统一倍率': scale, '落脚偏移': offset, '成品范围': bounds})
         for name, indices, duration, loop in definitions:
+            if any(path.startswith('frames/consistent/') for path in config.get(name, {}).get('frames', [])):
+                continue
             paths = []
             target = root / 'assets/frames' / name
             target.mkdir(parents=True, exist_ok=True)

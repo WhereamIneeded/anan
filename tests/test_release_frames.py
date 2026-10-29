@@ -53,6 +53,11 @@ def test_regenerating_daily_frames_preserves_pose_and_stage_configuration(tmp_pa
         shutil.copy2(root / name, target)
     config = tmp_path / "assets/animations.json"
     before = json.loads(config.read_text(encoding="utf-8"))
+    # 新版引用独立素材目录，历史准备脚本的预览也需要完整运行输入。
+    for name in {frame for clip in before.values() for frame in clip['frames'] if frame.startswith('frames/consistent/')}:
+        target = tmp_path / 'assets' / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(root / 'assets' / name, target)
     subprocess.run([sys.executable, str(tmp_path / "scripts/准备新增素材.py")], cwd=tmp_path, check=True, capture_output=True)
     assert json.loads(config.read_text(encoding="utf-8")) == before, "重建日常和挠耳帧不能丢失锚点、循环或稳定区域"
     assert (tmp_path / "assets/behaviors.json").read_bytes() == (root / "assets/behaviors.json").read_bytes()

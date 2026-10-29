@@ -286,22 +286,22 @@
   },
   "scratch": {
     "frames": [
-      "frames/scratch-v2/00.png",
-      "frames/scratch-v2/01.png",
-      "frames/scratch-v2/02.png",
-      "frames/scratch-v2/03.png",
-      "frames/scratch-v2/04.png",
-      "frames/scratch-v2/05.png",
-      "frames/scratch-v2/06.png",
-      "frames/scratch-v2/07.png",
-      "frames/scratch-v2/08.png",
-      "frames/scratch-v2/09.png",
-      "frames/scratch-v2/10.png",
-      "frames/scratch-v2/11.png",
-      "frames/scratch-v2/12.png",
-      "frames/scratch-v2/13.png",
-      "frames/scratch-v2/14.png",
-      "frames/scratch-v2/15.png"
+      "frames/consistent/scratch/00.png",
+      "frames/consistent/scratch/01.png",
+      "frames/consistent/scratch/02.png",
+      "frames/consistent/scratch/03.png",
+      "frames/consistent/scratch/04.png",
+      "frames/consistent/scratch/05.png",
+      "frames/consistent/scratch/06.png",
+      "frames/consistent/scratch/07.png",
+      "frames/consistent/scratch/08.png",
+      "frames/consistent/scratch/09.png",
+      "frames/consistent/scratch/10.png",
+      "frames/consistent/scratch/11.png",
+      "frames/consistent/scratch/12.png",
+      "frames/consistent/scratch/13.png",
+      "frames/consistent/scratch/14.png",
+      "frames/consistent/scratch/15.png"
     ],
     "durations": [
       240,
@@ -453,10 +453,10 @@
   },
   "wash": {
     "frames": [
-      "frames/daily/00.png",
-      "frames/daily/01.png",
-      "frames/daily/00.png",
-      "frames/daily/01.png"
+      "frames/consistent/daily/00.png",
+      "frames/consistent/daily/01.png",
+      "frames/consistent/daily/00.png",
+      "frames/consistent/daily/01.png"
     ],
     "durations": [
       450,
@@ -465,7 +465,7 @@
       500
     ],
     "anchor": [
-      128,
+      123,
       241
     ],
     "loop": false,
@@ -473,9 +473,9 @@
   },
   "yawn": {
     "frames": [
-      "frames/daily/02.png",
-      "frames/daily/03.png",
-      "frames/daily/02.png"
+      "frames/consistent/daily/02.png",
+      "frames/consistent/daily/03.png",
+      "frames/consistent/daily/02.png"
     ],
     "durations": [
       400,
@@ -483,7 +483,7 @@
       400
     ],
     "anchor": [
-      128,
+      123,
       241
     ],
     "loop": false,
@@ -491,9 +491,9 @@
   },
   "stretch": {
     "frames": [
-      "frames/daily/04.png",
-      "frames/daily/05.png",
-      "frames/daily/04.png"
+      "frames/consistent/daily/04.png",
+      "frames/consistent/daily/05.png",
+      "frames/consistent/daily/04.png"
     ],
     "durations": [
       550,
@@ -501,7 +501,7 @@
       550
     ],
     "anchor": [
-      128,
+      123,
       241
     ],
     "loop": false,
@@ -509,14 +509,14 @@
   },
   "beg_call": {
     "frames": [
-      "frames/beg_call/00.png",
-      "frames/beg_call/01.png",
-      "frames/beg_call/02.png",
-      "frames/beg_call/03.png",
-      "frames/beg_call/04.png",
-      "frames/beg_call/05.png",
-      "frames/beg_call/06.png",
-      "frames/beg_call/07.png"
+      "frames/consistent/beg_call/00.png",
+      "frames/consistent/beg_call/01.png",
+      "frames/consistent/beg_call/02.png",
+      "frames/consistent/beg_call/03.png",
+      "frames/consistent/beg_call/04.png",
+      "frames/consistent/beg_call/05.png",
+      "frames/consistent/beg_call/06.png",
+      "frames/consistent/beg_call/07.png"
     ],
     "durations": [
       175,
@@ -538,14 +538,14 @@
   },
   "beg_paw": {
     "frames": [
-      "frames/beg_paw/00.png",
-      "frames/beg_paw/01.png",
-      "frames/beg_paw/02.png",
-      "frames/beg_paw/03.png",
-      "frames/beg_paw/04.png",
-      "frames/beg_paw/05.png",
-      "frames/beg_paw/06.png",
-      "frames/beg_paw/07.png"
+      "frames/consistent/beg_paw/00.png",
+      "frames/consistent/beg_paw/01.png",
+      "frames/consistent/beg_paw/02.png",
+      "frames/consistent/beg_paw/03.png",
+      "frames/consistent/beg_paw/04.png",
+      "frames/consistent/beg_paw/05.png",
+      "frames/consistent/beg_paw/06.png",
+      "frames/consistent/beg_paw/07.png"
     ],
     "durations": [
       175,
