@@ -8,9 +8,9 @@
 
 普通用户优先下载发布页中的 Windows ZIP，完整解压后双击 `安安.exe`。发布页尚无可下载成品时，可按下文从源码启动或制作成品。
 
-2026 年 10 月 28 日已发布 [1.2.0 Windows 免安装包](https://github.com/WhereamIneeded/anan/releases/tag/desktop-3-1)，对应源码提交 `2366c13`。[云端构建](https://github.com/WhereamIneeded/anan/actions/runs/40646502436) 的 121 项测试、打包及发布后实际下载、校验、解压和启动检查全部通过。
+2026 年 10 月 29 日已发布 [1.3.0 Windows 免安装包](https://github.com/WhereamIneeded/anan/releases/tag/desktop-4-1)，对应源码提交 `c8ef8dc`。[云端构建](https://github.com/WhereamIneeded/anan/actions/runs/40846652480) 的 218 项测试、打包及发布后实际下载、校验、解压和启动检查通过，本机另外核对实际下载包与175个资源。后续纯文档交付提交不改变包内程序源码。
 
-1.3.0 趣味互动已接入源码，构建与发布结果以[本轮记录](docs/2026-10-29-趣味互动实施记录.md)为准。已保存[玩法调研](docs/趣味玩法调研.md)、[设计方案](docs/superpowers/specs/2026-10-29-趣味互动设计.md)和[实施计划](docs/superpowers/plans/2026-10-29-趣味互动实施计划.md)；中断后从[继续开发入口](docs/继续开发.md)恢复。
+1.3.0 趣味互动已实现并发布，验证边界与人工待验项见[本轮记录](docs/2026-10-29-趣味互动实施记录.md)为准。已保存[玩法调研](docs/趣味玩法调研.md)、[设计方案](docs/superpowers/specs/2026-10-29-趣味互动设计.md)和[实施计划](docs/superpowers/plans/2026-10-29-趣味互动实施计划.md)；中断后从[继续开发入口](docs/继续开发.md)恢复。
 
 本机构建输出为 `dist/anan-Windows-x64-v1.3.0.zip`，该路径不随 Git 克隆。完整解压后应保留“安安”文件夹中的所有文件；仅复制 EXE 无法保证运行。源码仓库记录代码、素材和构建脚本，成品 ZIP 通过 GitHub Releases 分发；是否已发布以发布页实际附件为准。
 
