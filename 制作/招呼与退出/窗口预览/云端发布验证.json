@@ -1,0 +1,69 @@
+{
+  "核对日期": "2026-10-30",
+  "源码提交": "a2933735f974d0ba7cd0b24940bbbc0d9f2ed903",
+  "Actions运行": 40991201336,
+  "Actions地址": "https://github.com/WhereamIneeded/anan/actions/runs/40991201336",
+  "作业结果": "success",
+  "各步骤": [
+    {
+      "名称": "Set up job",
+      "结果": "success"
+    },
+    {
+      "名称": "检出代码",
+      "结果": "success"
+    },
+    {
+      "名称": "配置 Python",
+      "结果": "success"
+    },
+    {
+      "名称": "安装固定依赖",
+      "结果": "success"
+    },
+    {
+      "名称": "运行测试",
+      "结果": "success"
+    },
+    {
+      "名称": "打包并验证启动",
+      "结果": "success"
+    },
+    {
+      "名称": "上传 Windows 成品",
+      "结果": "success"
+    },
+    {
+      "名称": "更新最新版下载",
+      "结果": "success"
+    },
+    {
+      "名称": "验证发布附件下载与启动",
+      "结果": "success"
+    },
+    {
+      "名称": "Post 配置 Python",
+      "结果": "success"
+    },
+    {
+      "名称": "Post 检出代码",
+      "结果": "success"
+    },
+    {
+      "名称": "Complete job",
+      "结果": "success"
+    }
+  ],
+  "测试结果": "311 passed in 123.51s",
+  "下载入口": "Windows PowerShell 5.1生产下载器",
+  "日志摘录": [
+    "2026-10-30T02:24:41.3013571Z 311 passed in 123.51s (0:02:03)",
+    "2026-10-30T02:26:21.0845113Z 发布附件下载、校验、解压和启动通过：desktop-6-1"
+  ],
+  "Release标签": "desktop-6-1",
+  "Release地址": "https://github.com/WhereamIneeded/anan/releases/tag/desktop-6-1",
+  "ZIP名称": "anan-Windows-x64-v1.3.2.zip",
+  "ZIP大小字节": 44213044,
+  "ZIP的SHA256": "a362b15acd84463f10f22a84b49ce53e7b94a429f9f180d70419f31952f097ad",
+  "边界": "自动下载、校验、解压和启动通过；不替代用户观感、真实多屏与无Python目标电脑人工验收。"
+}
