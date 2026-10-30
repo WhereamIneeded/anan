@@ -234,6 +234,42 @@ def test_service_key_never_enters_task_files_even_when_remote_fields_echo_it(pre
     assert all(secret.encode() not in path.read_bytes() for path in output.rglob("*") if path.is_file())
 
 
+@pytest.mark.parametrize("candidate", ["jpeg", "broken_png"])
+def test_real_service_keeps_invalid_candidate_and_usage_for_probe_review(prepared, candidate):
+    import base64
+
+    _, output, _ = prepared
+    service_module = importlib.import_module("anan_pet.image_service")
+    if candidate == "jpeg":
+        stream = io.BytesIO()
+        Image.new("RGB", (1024, 1024), "orange").save(stream, "JPEG")
+        raw = stream.getvalue()
+    else:
+        raw = image_bytes().replace(b"PNG", b"BAD", 1)
+
+    class Response(io.BytesIO):
+        status = 200
+        headers = {"x-request-id": "offline_invalid_candidate"}
+
+    payload = json.dumps({"data": [{"b64_json": base64.b64encode(raw).decode()}],
+                          "usage": {"total_tokens": 37, "output_tokens": 21}}).encode()
+    calls = []
+
+    def transport(*args):
+        calls.append(args)
+        return Response(payload)
+
+    service = service_module.ImageService("sk-offline-invalid-candidate", transport)
+    state = probe().generate_next(output, service)
+    row = state["姿势列表"][0]
+    attempt = row["尝试"][-1]
+    assert len(calls) == 1 and state["请求次数"] == 1
+    assert row["状态"] == attempt["状态"] == "不合格"
+    assert (output / attempt["原始图"]).read_bytes() == raw
+    assert attempt["用量"] == {"total_tokens": 37, "output_tokens": 21}
+    assert not (output / attempt["规范图"]).exists()
+
+
 def test_base_can_be_redone_before_other_attempts_and_old_result_is_retained(prepared):
     _, output, _ = prepared
     original = probe().generate_next(output, FakeService())

@@ -83,11 +83,19 @@ def test_remote_errors_are_sanitized_and_never_retried(error):
 
 @pytest.mark.parametrize("payload", [b"broken", b"{}", b'{"data": []}',
     b'{"data":[{"b64_json":"bad"}]}', b'{"data":[{"url":"https://example.com"}]}',
-    b'{"data":[{"b64_json":"c2VjcmV0"}]}'])
+    b'{"data":[{"b64_json":""}]}'])
 def test_malformed_responses_are_rejected_without_remote_text(payload):
     with pytest.raises(api().ServiceError) as caught:
         api().ImageService(SECRET, lambda *_: Response(payload)).edit("提示", [png()])
     assert caught.value.uncertain and SECRET not in str(caught.value)
+
+
+def test_deep_json_is_converted_to_safe_chinese_service_error():
+    raw = b"[" * 2000 + json.dumps(SECRET).encode() + b"]" * 2000
+    with pytest.raises(api().ServiceError, match="响应格式无效") as caught:
+        api().ImageService(SECRET, lambda *_: Response(raw)).edit("提示", [png()])
+    assert caught.value.uncertain
+    assert SECRET not in str(caught.value) and caught.value.__suppress_context__
 
 
 def test_response_size_is_bounded_and_redirect_is_rejected():

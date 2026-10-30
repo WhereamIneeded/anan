@@ -106,9 +106,9 @@ class ImageService:
             if not isinstance(data, list) or len(data) != 1:
                 raise ValueError
             png = base64.b64decode(data[0]["b64_json"], validate=True)
-            if not png.startswith(PNG_SIGNATURE):
+            if not png:
                 raise ValueError
-        except (ValueError, KeyError, TypeError, IndexError, binascii.Error, UnicodeError):
+        except (ValueError, KeyError, TypeError, IndexError, binascii.Error, UnicodeError, RecursionError):
             raise ServiceError("图片服务响应格式无效，结果未确认。", uncertain=True) from None
         safe_id = (request_id if isinstance(request_id, str) and self._key not in request_id
                    and re.fullmatch(r"[A-Za-z0-9_-]{1,128}", request_id) else None)
