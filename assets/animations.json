@@ -221,20 +221,25 @@
       "frames/waving/00.png",
       "frames/waving/01.png",
       "frames/waving/02.png",
+      "frames/waving/01.png",
+      "frames/waving/02.png",
       "frames/waving/03.png"
     ],
     "durations": [
-      190,
-      190,
-      190,
-      190
+      260,
+      420,
+      520,
+      420,
+      520,
+      660
     ],
     "anchor": [
       123,
       241
     ],
     "loop": false,
-    "transition_ms": 80
+    "transition_ms": 80,
+    "blend_ms": 80
   },
   "look": {
     "frames": [

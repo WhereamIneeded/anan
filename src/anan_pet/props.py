@@ -1,10 +1,19 @@
 """猫碗分层绘制与不接受输入的小型气泡、羽毛棒装饰。"""
 
 import math
+from dataclasses import dataclass
 
 from PySide6.QtCore import QPoint, QRectF, Qt
 from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter, QPixmap
 from PySide6.QtWidgets import QApplication, QWidget
+
+
+@dataclass(frozen=True)
+class ActionFeedback:
+    text: str
+    effect: str = ''
+    elapsed_ms: int = 0
+    opacity: float = 1.0
 
 
 class DecorationWindow(QWidget):
@@ -26,11 +35,13 @@ class DecorationWindow(QWidget):
         self.effect = "♪"
         self.effect_ms = 0
         self.content_signature = None
+        self.content_opacity = 1.0
 
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         painter.setRenderHint(QPainter.RenderHint.SmoothPixmapTransform)
+        painter.setOpacity(self.content_opacity)
         if self.pixmap is not None:
             painter.drawPixmap(self.rect(), self.pixmap)
         elif self.text:
@@ -43,7 +54,7 @@ class DecorationWindow(QWidget):
             # 固定三个短命图形，只根据会话时间绘制，不创建额外窗口或计时器。
             for index in range(3):
                 progress = ((self.effect_ms + index * 550) % 1800) / 1800
-                painter.setOpacity(1 - progress)
+                painter.setOpacity(self.content_opacity * (1 - progress))
                 painter.setPen(QColor("#c48b70" if self.effect == "♪" else "#cc8199"))
                 x = self.width() * (index + 1) / 4 + math.sin(progress * math.pi * 2) * 4
                 y = 27 - progress * 22
@@ -87,29 +98,31 @@ class PlayProps:
     def show_feedback(self, view, text):
         self.feedback = (view.session_id, text, view.session_elapsed_ms + 1800)
 
-    def update(self, view, visible=True, paused=False, action_text=None):
+    def update(self, view, visible=True, paused=False, action_feedback=None):
         if self.feedback is not None:
             session_id, _, until = self.feedback
             if view.session_id != session_id or view.session_elapsed_ms >= until or view.mode == "none":
                 self.feedback = None
         screens = self.screen_rects()
-        if not visible or paused or not screens or (view.mode == "none" and not action_text):
+        if not visible or paused or not screens or (view.mode == "none" and action_feedback is None):
             self.hide()
             return
-        text = action_text if view.mode == "none" else (self.feedback[1] if self.feedback is not None else view.bubble)
+        text = action_feedback.text if view.mode == "none" else (self.feedback[1] if self.feedback is not None else view.bubble)
         if not text and view.mode in ("teaser", "teaser_swipe") and view.session_elapsed_ms < 4000:
-            text = "移动鼠标逗安安，点我拍一下"
+            text = "点我拍棒；双击别处收起"
         if not text and view.mode == "satisfied" and view.phase_elapsed_ms < 1800:
             text = "喵～吃饱啦 ♡"
         if text:
-            effect = "" if view.mode == "none" else ("♡" if view.mode == "satisfied" else "♪")
-            elapsed = 0 if view.mode == "none" else (view.phase_elapsed_ms if view.mode == "satisfied" else view.session_elapsed_ms)
-            signature = text, effect, elapsed // 60
+            effect = action_feedback.effect if view.mode == "none" else ("♡" if view.mode == "satisfied" else "♪")
+            elapsed = action_feedback.elapsed_ms if view.mode == "none" else (view.phase_elapsed_ms if view.mode == "satisfied" else view.session_elapsed_ms)
+            opacity = round(action_feedback.opacity * 16) / 16 if view.mode == "none" else 1.0
+            signature = text, effect, elapsed // 60, opacity
             if self.bubble.content_signature != signature:
                 self.bubble.content_signature = signature
                 self.bubble.text = text
                 self.bubble.effect = effect
                 self.bubble.effect_ms = elapsed // 60 * 60
+                self.bubble.content_opacity = opacity
                 width = min(340, QFontMetrics(self.bubble.font).horizontalAdvance(text) + 28)
                 self.bubble.resize(width, 80)
                 self.bubble.update()

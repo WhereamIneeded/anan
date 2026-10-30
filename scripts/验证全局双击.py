@@ -234,6 +234,7 @@ def verify():
 
 
 if __name__ == "__main__":
+    multiprocessing.freeze_support()
     parser = argparse.ArgumentParser(description="仅操作自有辅助按钮的 Windows 原生端到端验证")
     parser.add_argument("--output", type=Path, help="可选：保存中文 JSON 验证结果")
     arguments = parser.parse_args()

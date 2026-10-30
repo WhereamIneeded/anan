@@ -17,6 +17,7 @@ def main():
     app.setQuitOnLastWindowClosed(False)
     window = PetWindow()
     window.exit_requested.connect(app.quit)
+    app.aboutToQuit.connect(window.shutdown_teaser_exit)
     if options.smoke_test:
         QTimer.singleShot(1500, app.quit)
     return app.exec()

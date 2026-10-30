@@ -166,7 +166,7 @@ def test_controls_hide_text_and_resume_only_inside_original_time_window(scene, c
     assert not window.props.bubble.isVisible(), "关闭控件不能延长动作原定的文字时段"
 
 
-@pytest.mark.parametrize("kind, text", [("beg", "冻干"), ("feed", None), ("teaser", "移动鼠标逗安安，点我拍一下")])
+@pytest.mark.parametrize("kind, text", [("beg", "冻干"), ("feed", None), ("teaser", "点我拍棒；双击别处收起")])
 def test_play_session_owns_the_existing_bubble_without_yawn_residue(scene, kind, text):
     window = open_mouth(scene)
     bubble = window.props.bubble

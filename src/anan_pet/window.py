@@ -1,4 +1,4 @@
-"""透明桌宠、拖动、缩放和托盘；不读取其他应用的输入。"""
+"""透明桌宠、拖动、缩放和托盘；逗猫期间观察窗口外双击以收起玩具。"""
 
 import time
 from pathlib import Path
@@ -10,8 +10,9 @@ from PySide6.QtWidgets import QApplication, QDialog, QLabel, QMenu, QSlider, QSy
 from .animation import load_animations, resource_root
 from .behavior import BehaviorController, load_behaviors
 from .audio import PlayAudio
+from .global_mouse import TeaserExitMonitor
 from .play import PlayController, load_play_config
-from .props import PlayProps
+from .props import ActionFeedback, PlayProps
 from .pointer import AttentionTracker, Gesture, look_direction
 from .rendering import align_pixmap, blend_pixmaps, keep_static_body, remove_green_spill, stabilize_idle, stabilize_look
 from .settings import load_settings, resize_position, save_settings, visible_position
@@ -61,6 +62,7 @@ class PetWindow(QWidget):
         self.audio = PlayAudio(resource_root())
         self.props = PlayProps(self, resource_root())
         self.pending_play = None
+        self.teaser_exit = None
         self.menu_open = False
         self.last_explicit_ms = -5000
         self.closed = False
@@ -176,14 +178,43 @@ class PetWindow(QWidget):
             view = self.play.set_target((position.x(), position.y()), (center.x(), center.y()), self.width(), now)
         self.audio.update(view, enabled=self.preferences["sound_enabled"], quiet=self.controller.quiet, paused=paused)
         self.update_props(view, now)
+        self.sync_teaser_exit()
         self.update_play_menu()
         return view
 
+    def sync_teaser_exit(self):
+        teaser = self.play.mode in ('teaser', 'teaser_swipe') or (self.pending_play is not None and self.pending_play[0] == 'teaser')
+        enabled = teaser and not self.play_paused() and not self.controller.dragging
+        if enabled and self.teaser_exit is None:
+            self.teaser_exit = TeaserExitMonitor(int(self.winId()), self, native=QApplication.platformName() == 'windows')
+            self.teaser_exit.double_clicked.connect(self.handle_teaser_double_click, Qt.ConnectionType.QueuedConnection)
+        if self.teaser_exit is not None:
+            was_enabled = self.teaser_exit.enabled
+            self.teaser_exit.set_enabled(enabled)
+            if enabled and not was_enabled and self.teaser_exit.error:
+                self.props.show_feedback(self.play.view, '双击退出暂不可用，请右键收起')
+
+    def handle_teaser_double_click(self, generation):
+        monitor = self.teaser_exit
+        teaser = self.play.mode in ('teaser', 'teaser_swipe') or (self.pending_play is not None and self.pending_play[0] == 'teaser')
+        if monitor is not None and monitor.enabled and monitor.generation == generation and teaser and not self.play_paused() and not self.controller.dragging:
+            self.end_play('窗口外双击')
+
+    def shutdown_teaser_exit(self):
+        if self.teaser_exit is not None:
+            self.teaser_exit.close()
+
     def update_props(self, view, now):
         elapsed = now - self.controller.started
-        text = "嗷呜～" if self.controller.state == "yawn" and 400 <= elapsed < 1050 else None
+        feedback = None
+        if self.controller.state == 'yawn' and 400 <= elapsed < 1050:
+            feedback = ActionFeedback('嗷呜～')
+        elif self.controller.state == 'waving':
+            end = self.clips['waving'].total_ms - 320
+            if 260 <= elapsed < end:
+                feedback = ActionFeedback('喵～', '♡', elapsed - 260, min(1.0, (end - elapsed) / 240))
         self.props.update(view, visible=self.isVisible() and not self.closed,
-                          paused=self.play_paused(), action_text=text)
+                          paused=self.play_paused(), action_feedback=feedback)
 
     def update_play_menu(self):
         if hasattr(self, "teaser_action"):
@@ -211,6 +242,8 @@ class PetWindow(QWidget):
         self.refresh_frame(now)
 
     def end_play(self, reason="用户结束"):
+        if self.teaser_exit is not None:
+            self.teaser_exit.set_enabled(False)
         now = self.now()
         self.last_explicit_ms = now
         active = self.play.mode != "none"

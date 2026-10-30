@@ -122,7 +122,8 @@ def test_resource_counts_and_complete():
     clips = a.load_animations(a.resource_root())
     expected = {"idle": 6, "running-right": 8, "running-left": 8, "waving": 4, "jumping": 5, "failed": 8, "waiting": 6, "running": 6, "review": 6, "look": 16}
     for key, count in expected.items():
-        assert len(clips[key].frames) == count
+        # 播放序列可以重复姿势；此处检查独立资源数，招呼节奏另有回归。
+        assert len(set(clips[key].frames)) == count
     for clip in clips.values():
         assert len(clip.frames) == len(clip.durations)
         assert all(p.is_file() for p in clip.frames)

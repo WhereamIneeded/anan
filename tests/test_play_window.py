@@ -402,7 +402,7 @@ def test_teaser_starts_with_brief_mouse_and_click_hint(scene):
     w.start_play("teaser")
     bubble = next(item for item in decorations(w) if item.objectName() == "anan-play-bubble")
     assert bubble.isVisible()
-    assert bubble.text == "移动鼠标逗安安，点我拍一下"
+    assert bubble.text == "点我拍棒；双击别处收起"
     for now in (1000, 2000, 3000):
         step(scene, now)
     assert bubble.isVisible()
@@ -447,7 +447,7 @@ def test_meal_feedback_pauses_and_is_cleared_on_session_replacement(scene):
     assert bubble.isVisible()
     assert bubble.text == "安安正在吃呢"
     w.start_play("teaser")
-    assert bubble.text == "移动鼠标逗安安，点我拍一下"
+    assert bubble.text == "点我拍棒；双击别处收起"
     w.end_play("用户结束")
     w.start_play("feed")
     assert not bubble.isVisible(), "新会话不能复活上一餐的点击反馈"
