@@ -5,6 +5,7 @@ import importlib
 import os
 import sys
 import threading
+import time
 from types import SimpleNamespace
 from unittest.mock import Mock
 
@@ -195,10 +196,13 @@ class _FakeApi:
 
     def __init__(self, install=True, uninstall=True):
         self.quit = threading.Event()
+        self.message_ready = threading.Event()
+        self.loop_entered = threading.Event()
         self.callback = None
         self.user32 = SimpleNamespace(
             SetThreadDpiAwarenessContext=Mock(return_value=1),
-            PeekMessageW=Mock(return_value=0),
+            PeekMessageW=Mock(side_effect=self._peek),
+            MsgWaitForMultipleObjects=Mock(side_effect=self._wait),
             GetDoubleClickTime=Mock(return_value=500),
             GetSystemMetrics=Mock(side_effect=lambda index: {36: 8, 37: 10, 68: 4, 69: 5}[index]),
             SetWindowsHookExW=Mock(side_effect=self._install if install else lambda *args: 0),
@@ -223,11 +227,20 @@ class _FakeApi:
         return 1
 
     def _message(self, *args):
+        self.loop_entered.set()
         self.quit.wait(2)
         return 0
 
+    def _peek(self, *args):
+        return int(self.message_ready.is_set())
+
+    def _wait(self, count, handles, wait_all, timeout_ms, wake_mask):
+        self.loop_entered.set()
+        return 0 if self.message_ready.wait(timeout_ms / 1000) else 258
+
     def _post(self, *args):
         self.quit.set()
+        self.message_ready.set()
         return 1
 
 
@@ -323,11 +336,55 @@ def test_message_loop_failure_unhooks_and_stops():
     api = _FakeApi()
     api.user32.GetMessageW.side_effect = None
     api.user32.GetMessageW.return_value = -1
+    api.message_ready.set()
     hook = _native_hook(api, [])
     hook.start()
     hook.thread.join(1)
     hook.close()
     assert hook.error
+    assert not hook.thread.is_alive()
+    api.user32.UnhookWindowsHookEx.assert_called_once()
+
+
+def test_failed_quit_post_cannot_leave_blocked_hooks_between_sessions():
+    for _ in range(3):
+        api = _FakeApi()
+        release_blocked_message = threading.Event()
+
+        def blocked_message(*args):
+            api.loop_entered.set()
+            release_blocked_message.wait()
+            return 0
+
+        api.user32.GetMessageW.side_effect = blocked_message
+        api.user32.PostThreadMessageW.side_effect = None
+        api.user32.PostThreadMessageW.return_value = 0
+        hook = _native_hook(api, [])
+        hook.start()
+        try:
+            assert api.loop_entered.wait(1)
+            started = time.monotonic()
+            hook.close()
+            assert not hook.thread.is_alive(), "退出消息投递失败后不能遗留阻塞线程"
+            assert time.monotonic() - started < 0.75
+            api.user32.UnhookWindowsHookEx.assert_called_once()
+            assert hook.error and "投递" in hook.error
+            api.user32.GetMessageW.assert_not_called()
+        finally:
+            release_blocked_message.set()
+            api.quit.set()
+            hook.thread.join(2)
+
+
+def test_native_wait_failure_unhooks_and_reports_error():
+    api = _FakeApi()
+    api.user32.MsgWaitForMultipleObjects.side_effect = None
+    api.user32.MsgWaitForMultipleObjects.return_value = 0xFFFFFFFF
+    hook = _native_hook(api, [])
+    hook.start()
+    hook.thread.join(1)
+    hook.close()
+    assert hook.error and "等待" in hook.error
     assert not hook.thread.is_alive()
     api.user32.UnhookWindowsHookEx.assert_called_once()
 
@@ -343,3 +400,5 @@ def test_windows_pointer_signatures_preserve_64_bit_handles():
     assert api.kernel32.GetModuleHandleW.restype is ctypes.c_void_p
     assert api.user32.CallNextHookEx.restype is ctypes.c_ssize_t
     assert api.user32.CallNextHookEx.argtypes[2:] == [ctypes.c_size_t, ctypes.c_ssize_t]
+    assert api.user32.MsgWaitForMultipleObjects.restype is ctypes.c_uint32
+    assert api.user32.MsgWaitForMultipleObjects.argtypes[1] == ctypes.POINTER(ctypes.c_void_p)

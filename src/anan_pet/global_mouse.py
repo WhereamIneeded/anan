@@ -105,6 +105,7 @@ class _WinApi:
             (self.user32, "GetSystemMetrics", [integer], integer),
             (self.user32, "PeekMessageW", [ctypes.POINTER(wintypes.MSG), pointer, unsigned, unsigned, unsigned], integer),
             (self.user32, "GetMessageW", [ctypes.POINTER(wintypes.MSG), pointer, unsigned, unsigned], integer),
+            (self.user32, "MsgWaitForMultipleObjects", [unsigned, ctypes.POINTER(pointer), integer, unsigned, unsigned], unsigned),
             (self.user32, "PostThreadMessageW", [unsigned, unsigned, word, long], integer),
             (self.kernel32, "GetCurrentThreadId", [], unsigned),
             (self.kernel32, "GetModuleHandleW", [ctypes.c_wchar_p], pointer),
@@ -143,7 +144,7 @@ class _MouseHook:
         self._stop.set()
         if self.thread.is_alive() and self._thread_id:
             if not self._api.user32.PostThreadMessageW(self._thread_id, 0x12, 0, 0):
-                self.error = _windows_error("无法结束鼠标监听线程")
+                self.error = _windows_error("鼠标监听退出消息投递失败")
         if self.thread.ident is not None:
             self.thread.join(2)
             if self.thread.is_alive():
@@ -175,11 +176,16 @@ class _MouseHook:
                 raise OSError(_windows_error("无法安装全局鼠标监听"))
             self._ready.set()
             while not self._stop.is_set():
-                status = user32.GetMessageW(ctypes.byref(message), None, 0, 0)
-                if status <= 0:
-                    if status < 0:
-                        self.error = _windows_error("鼠标监听消息循环失败")
-                    break
+                # 输入立即唤醒；有界等待确保退出消息投递失败也能检查停止标记。
+                if user32.MsgWaitForMultipleObjects(0, None, False, 100, 0x4FF) == 0xFFFFFFFF:
+                    raise OSError(_windows_error("鼠标监听输入等待失败"))
+                # 系统事件也能唤醒等待，空队列不能直接进入阻塞的 GetMessage。
+                while not self._stop.is_set() and user32.PeekMessageW(ctypes.byref(message), None, 0, 0, 0):
+                    status = user32.GetMessageW(ctypes.byref(message), None, 0, 0)
+                    if status <= 0:
+                        if status < 0:
+                            self.error = _windows_error("鼠标监听消息循环失败")
+                        return
         except Exception as error:
             self.error = str(error)
         finally:

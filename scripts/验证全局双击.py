@@ -188,9 +188,29 @@ def verify():
             assert counts["松开"] == 10 and counts["点击"] == 10, counts
             assert counts["双击"] >= 4, counts
             assert all(not hook.thread.is_alive() and hook.error is None for hook in hooks)
+            # 只替代本监听的退出消息投递，验证真实消息等待仍能自行结束。
+            start()
+            failed_post_hook = hooks[-1]
+            original_post = failed_post_hook._api.user32.PostThreadMessageW
+
+            def fail_post(*args):
+                ctypes.set_last_error(5)
+                return 0
+
+            failed_post_hook._api.user32.PostThreadMessageW = fail_post
+            try:
+                started = time.monotonic()
+                pet.end_play("验证退出消息投递失败")
+                failed_post_ms = round((time.monotonic() - started) * 1000)
+                assert not failed_post_hook.thread.is_alive(), "退出消息失败后仍遗留真实监听线程"
+                assert failed_post_hook.error and "投递失败" in failed_post_hook.error
+                assert failed_post_ms < 750, "异常停止耗时过长"
+            finally:
+                failed_post_hook._api.user32.PostThreadMessageW = original_post
             return {"结果": "通过", "单击不退出": True, "拖动不退出": True,
-                    "双击退出且正常放行": True, "重复会话": len(hooks),
+                    "双击退出且正常放行": True, "重复双击会话": len(hooks) - 1,
                     "监听均已释放": True, "辅助进程按钮": counts,
+                    "退出消息投递失败也释放": True, "异常停止耗时毫秒": failed_post_ms,
                     "双击时限毫秒": user32.GetDoubleClickTime(),
                     "结构字节": {"鼠标钩子": ctypes.sizeof(_MouseData),
                                "输入": ctypes.sizeof(_Input)}}
