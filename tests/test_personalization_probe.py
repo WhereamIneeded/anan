@@ -6,8 +6,10 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import struct
 import sys
 import warnings
+import zlib
 
 import pytest
 from PIL import Image, ImageDraw
@@ -28,6 +30,15 @@ def image_bytes(size=(1024, 1024), mode="RGBA", opaque=False):
     stream = io.BytesIO()
     image.save(stream, "PNG")
     return stream.getvalue()
+
+
+def broken_chunk_png():
+    valid = image_bytes()
+    position = 8
+    while valid[position + 4:position + 8] != b"IDAT":
+        position += 12 + struct.unpack(">I", valid[position:position + 4])[0]
+    empty = struct.pack(">I", 0) + b"IDAT" + struct.pack(">I", zlib.crc32(b"IDAT"))
+    return valid[:position] + empty + valid[position:position + 4] + b"!!!!" + valid[position + 8:]
 
 
 class FakeService:
@@ -100,6 +111,16 @@ def test_prepare_refuses_invalid_photo_nonempty_output_and_oversize(tmp_path, mo
     monkeypatch.setattr(probe(), "MAX_PHOTO_PIXELS", 10)
     with pytest.raises(probe().ProbeError, match="像素"):
         probe().prepare_task(photo, tmp_path / "大图", ROOT / "assets")
+
+
+def test_corrupt_png_photo_stops_with_safe_chinese_error(tmp_path):
+    photo = tmp_path / "坏块照片.png"
+    raw = broken_chunk_png()
+    photo.write_bytes(raw)
+    with pytest.raises(probe().ProbeError, match="照片无法解码") as caught:
+        probe().prepare_task(photo, tmp_path / "结果", ROOT / "assets")
+    assert "!!!!" not in str(caught.value)
+    assert photo.read_bytes() == raw
 
 
 def test_base_confirmation_gates_remaining_calls_and_finished_task_never_repeats(prepared):
@@ -234,7 +255,7 @@ def test_service_key_never_enters_task_files_even_when_remote_fields_echo_it(pre
     assert all(secret.encode() not in path.read_bytes() for path in output.rglob("*") if path.is_file())
 
 
-@pytest.mark.parametrize("candidate", ["jpeg", "broken_png"])
+@pytest.mark.parametrize("candidate", ["jpeg", "broken_png", "broken_chunk"])
 def test_real_service_keeps_invalid_candidate_and_usage_for_probe_review(prepared, candidate):
     import base64
 
@@ -244,8 +265,10 @@ def test_real_service_keeps_invalid_candidate_and_usage_for_probe_review(prepare
         stream = io.BytesIO()
         Image.new("RGB", (1024, 1024), "orange").save(stream, "JPEG")
         raw = stream.getvalue()
-    else:
+    elif candidate == "broken_png":
         raw = image_bytes().replace(b"PNG", b"BAD", 1)
+    else:
+        raw = broken_chunk_png()
 
     class Response(io.BytesIO):
         status = 200
@@ -268,6 +291,41 @@ def test_real_service_keeps_invalid_candidate_and_usage_for_probe_review(prepare
     assert (output / attempt["原始图"]).read_bytes() == raw
     assert attempt["用量"] == {"total_tokens": 37, "output_tokens": 21}
     assert not (output / attempt["规范图"]).exists()
+    assert "!!!!" not in attempt["说明"]
+
+
+def test_subject_is_hashed_and_included_in_all_seven_prompts(tmp_path):
+    photo = tmp_path / "多猫照片.png"
+    photo.write_bytes(image_bytes((60, 80)))
+    before = photo.read_bytes()
+    output = tmp_path / "选择目标"
+    subject = "前方绿眼睛的棕白狸花猫，忽略后方长毛布偶"
+    state = probe().prepare_task(photo, output, ROOT / "assets", subject=subject)
+    assert (output / "目标说明.txt").read_text(encoding="utf-8") == subject
+    assert "目标说明.txt" in state["输入校验"]
+    fake = FakeService()
+    probe().generate_next(output, fake)
+    probe().accept_base(output)
+    for _ in range(6):
+        probe().generate_next(output, fake)
+    assert len(fake.calls) == 7 and all(subject in prompt for prompt, _ in fake.calls)
+    assert photo.read_bytes() == before == (output / "原照.bin").read_bytes()
+
+
+def test_changed_subject_prevents_network(prepared):
+    _, output, _ = prepared
+    (output / "目标说明.txt").write_text("改为另一只猫", encoding="utf-8")
+    fake = FakeService()
+    with pytest.raises(probe().ProbeError, match="校验"):
+        probe().generate_next(output, fake)
+    assert not fake.calls
+
+
+def test_subject_length_is_limited_before_preparing(tmp_path):
+    photo = tmp_path / "照片.png"
+    photo.write_bytes(image_bytes((30, 30)))
+    with pytest.raises(probe().ProbeError, match="目标说明"):
+        probe().prepare_task(photo, tmp_path / "结果", ROOT / "assets", subject="猫" * 301)
 
 
 def test_base_can_be_redone_before_other_attempts_and_old_result_is_retained(prepared):
@@ -387,8 +445,10 @@ def test_cli_help_prepare_without_key_and_noninteractive_generate(prepared, tmp_
     photo, output, _ = prepared
     help_result = run_cli(tmp_path, "--help")
     assert help_result.returncode == 0 and "代表姿势" in help_result.stdout
-    result = run_cli(tmp_path, "prepare", "--photo", str(photo), "--output", str(tmp_path / "命令结果"))
+    result = run_cli(tmp_path, "prepare", "--photo", str(photo), "--output", str(tmp_path / "命令结果"),
+                     "--subject", "只生成照片前方的猫咪")
     assert result.returncode == 0, result.stderr
+    assert (tmp_path / "命令结果/目标说明.txt").read_text(encoding="utf-8") == "只生成照片前方的猫咪"
     result = run_cli(tmp_path, "generate", "--output", str(output))
     assert result.returncode != 0 and "密钥" in result.stderr
     assert read_state(output)["请求次数"] == 0

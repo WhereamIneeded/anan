@@ -18,7 +18,7 @@ from .image_service import MODEL, ServiceError, safe_usage
 MAX_PHOTO_BYTES = 20 * 1024 * 1024
 MAX_PHOTO_PIXELS = 24_000_000
 REQUEST_LIMIT = 10
-PROMPT_VERSION = 1
+PROMPT_VERSION = 2
 POSES = (
     ("idle[0]", "idle-0", "frames/idle/00.png", "正面自然坐姿待机"),
     ("look[4]", "look-4", "frames/look/04.png", "保持坐姿，头部与视线朝向模板方向"),
@@ -93,10 +93,12 @@ def _load(root):
         if path.stat().st_size > 1024 * 1024:
             raise ProbeError("任务文件过大。")
         state = json.loads(path.read_text(encoding="utf-8"))
+        if state.get("格式版本") != 2:
+            raise ProbeError("任务格式不兼容，请保留旧任务并重新准备。")
         if state.get("模型") != MODEL or state.get("提示版本") != PROMPT_VERSION:
             raise ProbeError("任务模型或提示版本已变化，请保留旧任务并另建任务。")
         rows = state["姿势列表"]
-        if (state["格式版本"] != 1 or type(state["请求次数"]) is not int
+        if (type(state["请求次数"]) is not int
                 or not 0 <= state["请求次数"] <= REQUEST_LIMIT
                 or type(state["基准已确认"]) is not bool or len(rows) != len(POSES)):
             raise ValueError
@@ -119,7 +121,7 @@ def _load(root):
                 raise ValueError
         if sorted(seen) != list(range(1, state["请求次数"] + 1)):
             raise ValueError
-        expected = {"原照.bin", "参考.png"} | {f"模板/{item[1]}.png" for item in POSES}
+        expected = {"原照.bin", "参考.png", "目标说明.txt"} | {f"模板/{item[1]}.png" for item in POSES}
         if set(state["输入校验"]) != expected:
             raise ValueError
         for relative, digest in state["输入校验"].items():
@@ -163,13 +165,16 @@ def _clean_photo(raw):
                 stream = io.BytesIO()
                 clean.save(stream, "PNG")
                 return stream.getvalue()
-    except (OSError, ValueError, Image.DecompressionBombError, Image.DecompressionBombWarning):
+    except (OSError, ValueError, SyntaxError, Image.DecompressionBombError, Image.DecompressionBombWarning):
         raise ProbeError("照片无法解码或像素过大，请提供有效的静态照片。") from None
 
 
-def prepare_task(photo, output, assets):
+def prepare_task(photo, output, assets, subject=""):
     """复制原照与动作模板，生成零请求的离线任务。"""
     photo, root, assets = Path(photo).resolve(), Path(output).resolve(), Path(assets).resolve()
+    if not isinstance(subject, str) or len(subject) > 300 or "\x00" in subject:
+        raise ProbeError("目标说明必须是最多 300 字的文本，且不能含空字符。")
+    subject = subject.strip()
     if root.is_relative_to(assets) or assets.is_relative_to(root) or photo.is_relative_to(root):
         raise ProbeError("输出目录不能覆盖照片或安安素材目录。")
     if root.exists() and (not root.is_dir() or any(root.iterdir())):
@@ -179,7 +184,7 @@ def prepare_task(photo, output, assets):
             raise ProbeError("照片文件过大，请限制在 20 MiB 内。")
         raw = photo.read_bytes()
         clean = _clean_photo(raw)
-        inputs = {"原照.bin": raw, "参考.png": clean}
+        inputs = {"原照.bin": raw, "参考.png": clean, "目标说明.txt": subject.encode("utf-8")}
         for _, slug, relative, _ in POSES:
             inputs[f"模板/{slug}.png"] = _path(assets, relative).read_bytes()
     except OSError:
@@ -192,7 +197,7 @@ def prepare_task(photo, output, assets):
             target = _path(root, relative)
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(data)
-        state = {"格式版本": 1, "模型": MODEL, "提示版本": PROMPT_VERSION,
+        state = {"格式版本": 2, "模型": MODEL, "提示版本": PROMPT_VERSION,
                  "说明": "七个代表姿势验证，不是完整动画或已导入角色。",
                  "请求次数": 0, "基准已确认": False, "基准校验": None,
                  "输入校验": {name: _sha(data) for name, data in inputs.items()},
@@ -202,12 +207,14 @@ def prepare_task(photo, output, assets):
     return state
 
 
-def _prompt(index, confirmed):
+def _prompt(index, confirmed, subject):
     identity = ("第一张是用户自有猫咪照片，唯一决定角色身份、花色、毛长、眼色、体态比例。"
                 "第二张是安安动作模板，仅参考姿势、机位、画面占比和脚底落点；"
                 "不能继承安安的长毛、蓝眼或花色，不能把安安直接换色冒充新猫。")
     if confirmed:
         identity += "第三张是用户已确认的个性化待机基准，保持与它一致的猫咪身份、画风和体态比例。"
+    if subject:
+        identity += f"用户对第一张照片的目标选择说明：{subject}。只生成说明选中的这一只猫，忽略照片中的其他猫，不能混合其他猫的外貌。"
     return (identity + f"本次只生成一张代表姿势：{POSES[index][3]}。"
             "绘制完整猫咪，身体不可裁切，四周留白；保持固定镜头尺度和正交视角。"
             "参考模板在1024×1024画布上的相对位置与落地基线，正常坐姿脚底约在画布94%高度，"
@@ -230,7 +237,7 @@ def _normalize(png):
             stream = io.BytesIO()
             result.save(stream, "PNG")
             return stream.getvalue()
-    except (OSError, ValueError, Image.DecompressionBombError):
+    except (OSError, ValueError, SyntaxError, Image.DecompressionBombError):
         raise ProbeError("生成图无法解码或格式不合格。") from None
 
 
@@ -251,7 +258,8 @@ def generate_next(output, service):
         if state["请求次数"] >= REQUEST_LIMIT:
             raise ProbeError("本任务已达到 10 次请求上限，不能继续请求。")
         row = rows[pending]
-        prompt = _prompt(pending, state["基准已确认"])
+        subject = _path(root, "目标说明.txt").read_text(encoding="utf-8")
+        prompt = _prompt(pending, state["基准已确认"], subject)
         images = [_path(root, "参考.png").read_bytes(), _path(root, row["模板"]).read_bytes()]
         if state["基准已确认"]:
             images.append(_path(root, rows[0]["尝试"][-1]["原始图"]).read_bytes())

@@ -29,12 +29,13 @@ def main(argv=None):
         command.add_argument("--output", type=Path, default=ROOT / "build/个性化验证", help="任务目录，默认为项目 build/个性化验证")
         if name == "prepare":
             command.add_argument("--photo", type=Path, required=True, help="用户自有猫咪的单张照片")
+            command.add_argument("--subject", default="", help="多猫照片中的目标猫咪说明，最多300字；默认空")
         if name == "retry":
             command.add_argument("--pose", required=True, help="完整姿势标识，例如 look[4]")
     args = parser.parse_args(argv)
     try:
         if args.command == "prepare":
-            state = prepare_task(args.photo, args.output, ROOT / "assets")
+            state = prepare_task(args.photo, args.output, ROOT / "assets", subject=args.subject)
         elif args.command == "accept":
             state = accept_base(args.output)
         elif args.command == "retry":
