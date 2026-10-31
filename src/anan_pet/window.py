@@ -459,7 +459,7 @@ class PetWindow(QWidget):
         amount = round(amount * 16) / 16
         signature = key, index, following, amount, render_domain, self.props.signature(view)
         clip = self.clips[key]
-        turning = clip.stabilization is not None and clip.stabilization.head_bottom is not None and index != self.visual_index
+        turning = key == "look" and index != self.visual_index
         pose_changed = key != self.visual_key or turning
         if pose_changed or (domain_changed and self.transition_source is not None):
             if pose_changed:

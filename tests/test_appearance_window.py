@@ -7,6 +7,7 @@ import socket
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 import pytest
+from PySide6.QtCore import QPoint
 from PySide6.QtWidgets import QApplication, QWidget
 
 from anan_pet.settings import load_settings
@@ -209,3 +210,33 @@ def test_self_link_current_or_remembered_does_not_break_default_startup(tmp_path
         assert bool(window.appearance_error) == (active is not None)
     finally:
         window.close()
+
+
+def test_custom_pointer_turn_preserves_transition_without_default_body(scene, monkeypatch):
+    window, root = scene
+    assert window.activate_custom_pet(PET_ID)
+    clock = [window.now()]
+    cursor = [window.geometry().center() + QPoint(200, 0)]
+    monkeypatch.setattr(window, "now", lambda: clock[0])
+    monkeypatch.setattr("anan_pet.window.QCursor.pos", lambda: cursor[0])
+    duration = window.clips["look"].transition_ms
+    window.update_attention(clock[0])
+    window.refresh_frame(clock[0])
+    assert window.visual_key == "look" and window.visual_index == 4
+    clock[0] += duration + 1
+    window.refresh_frame(clock[0])
+    assert window.transition_source is None
+    right_frame = pixels(window.frame)
+    cursor[0] = window.geometry().center() + QPoint(-200, 0)
+    clock[0] += 1
+    window.update_attention(clock[0])
+    window.refresh_frame(clock[0])
+    assert window.visual_key == "look" and window.visual_index == 12
+    assert window.transition_source is not None
+    assert window.transition_duration == duration
+    assert window.transition_body_top is None
+    assert pixels(window.frame) == right_frame
+    clock[0] += duration + 1
+    window.refresh_frame(clock[0])
+    assert window.transition_source is None
+    assert pixels(window.frame) == pixels(window.pixmaps["look"][12])
