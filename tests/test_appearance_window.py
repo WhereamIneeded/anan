@@ -1,6 +1,7 @@
 """真实离屏窗口的外观切换、恢复及失败回退。"""
 
 import os
+import json
 import socket
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
@@ -165,3 +166,46 @@ def test_failed_restore_preserves_custom_and_failed_fallback_save_still_starts(s
     assert fallback.pet_name == "安安" and "未保存" in fallback.appearance_error
     assert fallback.preferences["custom_pet"] == PET_ID
     fallback.close()
+
+
+def self_link(root):
+    """创建真实目录自链接，暴露路径解析循环。"""
+    root.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        root.symlink_to(root, target_is_directory=True)
+    except OSError:
+        pytest.skip("当前Windows账号不能创建目录符号链接")
+
+
+def test_self_link_activation_keeps_current_appearance(tmp_path):
+    app = QApplication.instance() or QApplication([])
+    window = PetWindow(tmp_path / "偏好.json")
+    window.timer.stop()
+    original, preferences = window.pixmaps, dict(window.preferences)
+    root = tmp_path / "宠物" / PET_ID
+    self_link(root)
+    try:
+        assert not window.activate_custom_pet(PET_ID)
+        assert window.pixmaps is original and window.preferences == preferences
+        assert window.appearance_error
+    finally:
+        window.close()
+
+
+@pytest.mark.parametrize("active", [PET_ID, None])
+def test_self_link_current_or_remembered_does_not_break_default_startup(tmp_path, active):
+    app = QApplication.instance() or QApplication([])
+    self_link(tmp_path / "宠物" / PET_ID)
+    path = tmp_path / "偏好.json"
+    path.write_text(json.dumps({"active_pet": active, "custom_pet": PET_ID, "size": 280, "quiet": True}), encoding="utf-8")
+    window = PetWindow(path)
+    window.timer.stop()
+    try:
+        assert window.pet_name == "安安"
+        assert window.preferences["active_pet"] is None
+        assert window.preferences["custom_pet"] == PET_ID
+        assert window.preferences["size"] == 280 and window.preferences["quiet"]
+        assert not window.custom_pet_action.isEnabled()
+        assert bool(window.appearance_error) == (active is not None)
+    finally:
+        window.close()

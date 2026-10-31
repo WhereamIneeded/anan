@@ -109,7 +109,12 @@ class PetWindow(QWidget):
         if not valid_pet_id(pet_id):
             raise AppearanceError("自定义宠物标识无效")
         target = self.pets_root / pet_id
-        if not target.resolve().is_relative_to(self.pets_root.resolve()):
+        try:
+            resolved_target = target.resolve()
+            resolved_root = self.pets_root.resolve()
+        except (OSError, RuntimeError) as error:
+            raise AppearanceError("自定义宠物目录无法解析或存在循环链接") from error
+        if not resolved_target.is_relative_to(resolved_root):
             raise AppearanceError("自定义宠物目录越界")
         return load_appearance(resource_root(), target)
 
