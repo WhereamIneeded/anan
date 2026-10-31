@@ -1,10 +1,15 @@
 """本机偏好与屏幕位置计算，不依赖旧电脑路径。"""
 
 import json
+import re
+
+
+def valid_pet_id(value):
+    return isinstance(value, str) and re.fullmatch(r"[0-9a-f]{32}", value) is not None
 
 
 def load_settings(path):
-    result = {"size": 220, "position": None, "quiet": False, "wander": False, "auto_beg": True, "sound_enabled": False}
+    result = {"size": 220, "position": None, "quiet": False, "wander": False, "auto_beg": True, "sound_enabled": False, "active_pet": None, "custom_pet": None}
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
@@ -19,6 +24,9 @@ def load_settings(path):
             result[key] = data.get(key) is True
         if type(data.get("auto_beg")) is bool:
             result["auto_beg"] = data["auto_beg"]
+        for key in ("active_pet", "custom_pet"):
+            if valid_pet_id(data.get(key)):
+                result[key] = data[key]
     except (OSError, ValueError, TypeError, OverflowError):
         pass
     return result

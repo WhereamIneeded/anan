@@ -4,18 +4,19 @@ import time
 from pathlib import Path
 
 from PySide6.QtCore import Qt, QTimer, QRectF, QStandardPaths, Signal
-from PySide6.QtGui import QCursor, QIcon, QPainter, QPixmap
+from PySide6.QtGui import QCursor, QIcon, QPainter
 from PySide6.QtWidgets import QApplication, QDialog, QLabel, QMenu, QSlider, QSystemTrayIcon, QVBoxLayout, QWidget
 
-from .animation import load_animations, resource_root
+from .animation import resource_root
+from .appearance import AppearanceError, load_appearance
 from .behavior import BehaviorController, load_behaviors
 from .audio import PlayAudio
 from .global_mouse import TeaserExitMonitor
 from .play import PlayController, load_play_config
 from .props import ActionFeedback, PlayProps
 from .pointer import AttentionTracker, Gesture, look_direction
-from .rendering import align_pixmap, blend_pixmaps, keep_static_body, remove_green_spill, stabilize_idle, stabilize_look
-from .settings import load_settings, resize_position, save_settings, visible_position
+from .rendering import blend_pixmaps, keep_static_body
+from .settings import load_settings, resize_position, save_settings, valid_pet_id, visible_position
 
 
 class PetWindow(QWidget):
@@ -25,17 +26,22 @@ class PetWindow(QWidget):
         super().__init__()
         self.settings_path = settings_path or Path(QStandardPaths.writableLocation(QStandardPaths.StandardLocation.AppDataLocation)) / "偏好.json"
         self.preferences = load_settings(self.settings_path)
-        self.clips = load_animations(resource_root())
-        # 加载时只清理一次；各动作共用的帧只解码、去溢色一次。
-        paths = {p for clip in self.clips.values() for p in clip.frames}
-        cache = {p: remove_green_spill(QPixmap(str(p))) for p in paths}
-        self.pixmaps = {key: [align_pixmap(cache[p], clip.anchor) for p in clip.frames] for key, clip in self.clips.items()}
-        for key, clip in self.clips.items():
-            policy = clip.stabilization
-            if policy and policy.eyes:
-                self.pixmaps[key] = stabilize_idle(self.pixmaps[key], policy.eyes, policy.radius)
-            elif policy and policy.head_bottom is not None:
-                self.pixmaps[key] = stabilize_look(self.pixmaps[key], self.pixmaps["idle"][0], policy.head_bottom, policy.body_top)
+        self.data_root = self.settings_path.parent
+        self.pets_root = self.data_root / "宠物"
+        self.appearance_error = None
+        selected = self.preferences["active_pet"]
+        try:
+            appearance = self.read_appearance(selected)
+        except AppearanceError as error:
+            self.appearance_error = str(error)
+            appearance = self.read_appearance(None)
+            self.preferences["active_pet"] = None
+            try:
+                save_settings(self.settings_path, self.preferences)
+            except OSError:
+                self.appearance_error += "；默认选择暂未保存，下次启动会重新检查"
+        self.pet_name = appearance.name
+        self.clips, self.pixmaps = appearance.clips, appearance.pixmaps
         self.frame = self.pixmaps["idle"][0]
         self.cat_frame = self.frame
         self.frame_signature = None
@@ -66,11 +72,11 @@ class PetWindow(QWidget):
         self.menu_open = False
         self.last_explicit_ms = -5000
         self.closed = False
-        self.setWindowTitle("安安 · 桌面宠物")
+        self.setWindowTitle(f"{self.pet_name} · 桌面宠物")
         self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint | Qt.WindowType.Tool)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setMouseTracking(True)
-        self.setToolTip("安安：单击跳跃，拖动移动，右键打开设置")
+        self.setToolTip(f"{self.pet_name}：单击跳跃，拖动移动，右键打开设置")
         self.resize(self.preferences["size"], self.preferences["size"])
         screen = QApplication.primaryScreen()
         area = screen.availableGeometry() if screen is not None else None
@@ -81,7 +87,7 @@ class PetWindow(QWidget):
         icon = QIcon(self.pixmaps["idle"][0])
         self.setWindowIcon(icon)
         self.tray = QSystemTrayIcon(icon, self)
-        self.tray.setToolTip("安安桌面宠物")
+        self.tray.setToolTip(f"{self.pet_name}桌面宠物")
         self.tray.setContextMenu(self.menu)
         self.tray.activated.connect(self.tray_activated)
         self.tray.show()
@@ -94,6 +100,87 @@ class PetWindow(QWidget):
         QApplication.instance().screenAdded.connect(self.watch_screen)
         QApplication.instance().screenRemoved.connect(lambda _: self.ensure_visible())
         self.show()
+        if self.appearance_error:
+            self.tray.showMessage("已恢复默认安安", self.appearance_error)
+
+    def read_appearance(self, pet_id):
+        if pet_id is None:
+            return load_appearance(resource_root())
+        if not valid_pet_id(pet_id):
+            raise AppearanceError("自定义宠物标识无效")
+        target = self.pets_root / pet_id
+        if not target.resolve().is_relative_to(self.pets_root.resolve()):
+            raise AppearanceError("自定义宠物目录越界")
+        return load_appearance(resource_root(), target)
+
+    def update_appearance_menu(self):
+        self.restore_default_action.setEnabled(self.preferences["active_pet"] is not None)
+        selected = self.preferences["custom_pet"]
+        available = selected is not None and selected != self.preferences["active_pet"]
+        if available:
+            try:
+                self.read_appearance(selected)
+            except AppearanceError:
+                available = False
+        self.custom_pet_action.setEnabled(available)
+
+    def activate_custom_pet(self, pet_id):
+        if not valid_pet_id(pet_id):
+            self.appearance_error = "自定义宠物标识无效"
+            self.tray.showMessage("外观未切换", self.appearance_error)
+            return False
+        return self.change_appearance(pet_id)
+
+    def restore_default_pet(self):
+        if self.preferences["active_pet"] is None:
+            return True
+        return self.change_appearance(None)
+
+    def change_appearance(self, pet_id):
+        try:
+            appearance = self.read_appearance(pet_id)
+            preferences = dict(self.preferences, active_pet=pet_id)
+            if pet_id is not None:
+                preferences["custom_pet"] = pet_id
+            save_settings(self.settings_path, preferences)
+        except (AppearanceError, OSError) as error:
+            self.appearance_error = str(error)
+            self.tray.showMessage("外观未切换", self.appearance_error)
+            return False
+        self.end_play("切换外观")
+        now = self.now()
+        self.controller.handle("drag_end", now)
+        self.preferences = preferences
+        self.pet_name = appearance.name
+        self.clips, self.pixmaps = appearance.clips, appearance.pixmaps
+        self.gesture = Gesture(QApplication.startDragDistance())
+        self.drag_offset = None
+        self.attention = AttentionTracker()
+        self.look_index = 0
+        self.transition_source = None
+        self.transition_body_top = None
+        self.transition_duration = 0
+        self.transition_started = now
+        self.visual_key, self.visual_index = "idle", 0
+        self.frame_signature = self.render_domain = self.last_render_ms = None
+        self.frame = self.cat_frame = self.pixmaps["idle"][0]
+        self.last_explicit_ms = self.previous_advance_ms = now
+        self.wander_fraction = 0.0
+        self.appearance_error = None
+        icon = QIcon(self.frame)
+        self.setWindowIcon(icon)
+        self.tray.setIcon(icon)
+        self.setWindowTitle(f"{self.pet_name} · 桌面宠物")
+        self.setToolTip(f"{self.pet_name}：单击跳跃，拖动移动，右键打开设置")
+        self.tray.setToolTip(f"{self.pet_name}桌面宠物")
+        self.show_pet_action.setText(f"显示{self.pet_name}")
+        self.wake_pet_action.setText(f"叫醒{self.pet_name}")
+        self.quit_pet_action.setText(f"退出{self.pet_name}")
+        if self.dialog is not None:
+            self.dialog.setWindowTitle(f"{self.pet_name}的大小")
+        self.update_appearance_menu()
+        self.update()
+        return True
 
     def now(self):
         return int((time.monotonic() - self.origin_time) * 1000)
@@ -109,14 +196,14 @@ class PetWindow(QWidget):
 
     def create_menu(self):
         menu = QMenu(self)
-        menu.addAction("显示安安", self.show_pet)
+        self.show_pet_action = menu.addAction(f"显示{self.pet_name}", self.show_pet)
         menu.addAction("调整大小…", self.size_dialog)
         menu.addSeparator()
         menu.addAction("打招呼", lambda: self.act("waving"))
         for action, spec in self.controller.config.actions.items():
             if action != "look":
                 menu.addAction(spec.label, lambda checked=False, key=action: self.act(key))
-        menu.addAction("叫醒安安", lambda: self.act("wake"))
+        self.wake_pet_action = menu.addAction(f"叫醒{self.pet_name}", lambda: self.act("wake"))
         demo = menu.addMenu("已有动作演示")
         for title, key in (("环顾四周", "look"), ("向左走", "running-left"), ("向右走", "running-right"), ("专心思考", "running"), ("期待回应", "waiting"), ("仔细检查", "review"), ("有点失落", "failed")):
             demo.addAction(title, lambda checked=False, state=key: self.act(state))
@@ -145,7 +232,12 @@ class PetWindow(QWidget):
         wander.setChecked(self.preferences["wander"])
         wander.toggled.connect(self.set_wander)
         menu.addAction("暂时隐藏（托盘可恢复）", self.hide)
-        menu.addAction("退出安安", self.quit)
+        menu.addSeparator()
+        self.restore_default_action = menu.addAction("恢复默认安安", self.restore_default_pet)
+        self.custom_pet_action = menu.addAction("切换到自定义宠物", lambda: self.activate_custom_pet(self.preferences["custom_pet"]))
+        self.update_appearance_menu()
+        menu.aboutToShow.connect(self.update_appearance_menu)
+        self.quit_pet_action = menu.addAction(f"退出{self.pet_name}", self.quit)
         menu.aboutToShow.connect(lambda: self.set_menu_open(True))
         menu.aboutToHide.connect(lambda: self.set_menu_open(False))
         return menu
@@ -466,7 +558,7 @@ class PetWindow(QWidget):
         self.last_explicit_ms = self.now()
         self.sync_play(self.last_explicit_ms)
         self.dialog = QDialog(self)
-        self.dialog.setWindowTitle("安安的大小")
+        self.dialog.setWindowTitle(f"{self.pet_name}的大小")
         layout = QVBoxLayout(self.dialog)
         label = QLabel(f"大小：{self.width()} 像素")
         slider = QSlider(Qt.Orientation.Horizontal)
